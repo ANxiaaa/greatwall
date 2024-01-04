@@ -1,0 +1,218 @@
+@charset "UTF-8";
+.seachsd{
+    padding-top: 2.5rem;
+}
+.top_seach{
+	width: 100%;
+    padding: 1rem 0;
+    background-color: #f6f6f6;
+}
+.w1500{
+    padding: 0 6.5rem;
+}
+.top_seach .formbox{
+	width:70%;
+	margin:auto;
+}
+.top_seach .formbox input.txt{
+	width:calc(100% - 3rem);
+	height:1.5rem;
+	background-color: #fff;
+	font-size: 0.45rem;
+	padding:0 0.5rem;
+}
+.top_seach .formbox input.submit{
+	display: inline-block;
+    vertical-align: top;
+    height:1.5rem;
+    line-height: 1.5rem;
+    width:2.5rem;
+    font-size: 0.4rem;
+    background-color: #F6AB00;
+    color: #fff;
+    margin: 0;
+    line-height: 1;
+    font-weight: 500;
+    transition: all 0.4s;
+}
+.result-box{
+    padding: 2rem 0 2rem 0;
+    background-color: #f6f6f6;
+}
+.result-box .result-tit{
+    font-size: .6rem;
+    line-height: .7rem;
+    color: #666;
+}
+.result-box .sub-nav{
+    border-bottom: 1px solid #e5e5e5;
+    margin-top: .5rem;
+}
+.result-box .sub-nav .swiper-slide{
+margin-right: 1.75rem;
+}
+.result-box .sub-nav .swiper-slide a:after{
+    display: none;
+}
+.result-box .sub-nav .swiper-slide.cur a{
+    font-weight: normal;
+}
+.result-box .result-list{
+    margin-top: 1.25rem;
+}
+.result-box .pro-list .row{
+    margin: 0 -.35rem;
+}
+.result-box .pro-list .item{
+    box-sizing: border-box;
+    padding: 0 .35rem;
+    margin-bottom: .7rem;
+}
+.result-box .pro-list .con-box{
+    display: block;
+}
+.result-box .pro-list .img{
+    border-radius: 3px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+.result-box .pro-list img{
+    width: 100%;
+}
+.result-box .pro-list .text{
+    margin-top: .4rem;
+}
+.result-box .pro-list .tit{
+    font-size: .45rem;
+    line-height: .55rem;
+    color: #333;
+    transition: all .2s;
+}
+.result-box .pro-list .more{
+    font-size: .3rem;
+    line-height: .4rem;
+    color: #666;
+    margin-top: .25rem;
+}
+.result-box .news-lists .row{
+    margin: 0 -.75rem;
+}
+.result-box .news-lists .news-item{
+    padding: 0 .75rem;
+    box-sizing: border-box;
+        width: 50%;
+    float: left;
+}
+.result-box .news-lists .con-box{
+    display: block;
+    padding: .5rem 0 .5rem .75rem;
+    position: relative;
+    font-size: .35rem;
+    line-height: .4rem;
+    color: #666;
+    border-bottom: 1px dotted #ddd;
+    transition: all .2s;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all .3s;
+}
+.result-box .news-lists .con-box:before{
+    content: "";
+    position: absolute;
+    left: .25rem;
+    top: 50%;
+    width: 6px;
+    height: 6px;
+    background-color: #888888;
+    border-radius: 100%;
+    transform: translateY(-50%);
+    transition: all .2s;
+}
+
+
+.search-nav{
+    overflow: hidden;
+}
+.search-nav .swiper-slide{
+    width: auto;
+    margin-right: 2.5rem;
+}
+.search-nav .swiper-slide:last-child{
+    margin-right: 0;
+}
+.search-nav .swiper-slide a{
+    display: block;
+    font-size: .35rem;
+    line-height: 1.5rem;
+    color: #555;
+    transition: all .3s;
+}
+.search-nav .swiper-slide a:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #F6AB00;
+    transition: all .3s;
+    
+}
+.search-nav .swiper-slide a:after {
+    display: block;
+    content: attr(title);
+    font-weight: bold;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+.search-nav .swiper-slide.cur a{
+     color: #F6AB00;
+}
+.search-nav .swiper-slide.cur a:before{
+    width: 100%;
+}
+
+.result-box .search-nav{
+    border-bottom: 1px solid #e5e5e5;
+    margin-top: .5rem;
+}
+.result-box .search-nav .swiper-slide{
+    margin-right: 1.75rem;
+}
+.result-box .search-nav .swiper-slide a:after{
+    display: none;
+}
+.result-box .search-nav .swiper-slide.cur a{
+    font-weight: normal;
+    /* background-color: #fff; */
+}
+.result-box .page{
+    margin-top: 1.25rem;
+}
+.view{
+    padding: 0 5%;
+}
+
+@media (max-width: 996px){
+    .seachsd{
+        margin-top: ;
+    }
+	.top_seach .formbox{
+			width:100%;
+	}
+	.result-box .news-lists .news-item{
+	    padding: 0 .75rem;
+	    box-sizing: border-box;
+	        width: 100%;
+	    float: left;
+	}
+	.result-box .result-list{
+		margin-top:0.6rem;
+	}
+    .w1500{
+        padding: 1.6rem 10%;
+    }
+
+}

@@ -1,0 +1,8 @@
+echo static_file('web/js/countup/jquery.waypoints.min.js');
+echo static_file('web/js/countup/jquery.countup.js');
+js”– π”√À≥–Ú
+
+$('.counter').countUp({
+	delay: 5,
+	time: 1000
+});
