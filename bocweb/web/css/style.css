@@ -17,6 +17,8 @@ img {
 header {
   font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Tahoma, sans-serif;
   font-size: 12px;
+  position: sticky;
+  top: -20px;
 }
 header .headerTop {
   height: 20px;
@@ -33,7 +35,6 @@ header .headerTop .container .lang {
 header .headerContent {
   height: 60px;
   border-bottom: 1px solid #bbb;
-  position: relative;
 }
 header .headerContent .container {
   display: flex;

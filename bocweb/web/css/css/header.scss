@@ -2,6 +2,8 @@ header {
   font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Tahoma,
     sans-serif;
   font-size: 12px;
+  position: sticky;
+  top: -20px;
   .headerTop {
     height: 20px;
     border-bottom: 1px solid #000;
@@ -17,7 +19,6 @@ header {
   .headerContent {
     height: 60px;
     border-bottom: 1px solid #bbb;
-    position: relative;
     .container {
       display: flex;
       justify-content: space-between;
@@ -61,7 +62,8 @@ header {
               top: 100%;
               width: 100vw;
               height: 150px;
-              left: 0;right: 0;
+              left: 0;
+              right: 0;
               cursor: default;
               background: #c00;
             }
