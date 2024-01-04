@@ -1,6 +1,15 @@
-.container {
-    display: block;
-    margin: auto;
-    width: 1200px;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-@import "css/header.scss"
+img{
+  background: #000;
+}
+.container {
+  width: 92%;
+  margin: 0 auto;
+  max-width: 1560px;
+}
+
+@import "css/header.scss";
