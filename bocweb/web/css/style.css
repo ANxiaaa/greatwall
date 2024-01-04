@@ -98,4 +98,48 @@ header .headerContent .container .container-right .search {
   height: 20px;
 }
 
+footer .footer-content {
+  padding-top: 30px;
+  display: flex;
+}
+footer .footer-content .container {
+  justify-content: space-between;
+  display: flex;
+}
+footer .footer-content .container .logoBox .logo {
+  width: 120px;
+  height: 30px;
+}
+footer .footer-content .container .logoBox .share {
+  display: flex;
+}
+footer .footer-content .container .logoBox .share img {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+}
+footer .footer-content .container .logoBox .cqc {
+  display: flex;
+}
+footer .footer-content .container .logoBox .cqc img {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+}
+footer .footer-content .container .btmNav {
+  display: flex;
+}
+footer .footer-content .container .btmNav .navBox {
+  margin: 0 30px;
+}
+footer .footer-content .container .btmNav .navBox .navTitle {
+  font-weight: bold;
+}
+footer .footer-content .container .btmTel {
+  width: 200px;
+}
+footer .footer-content .container .btmTel .telItem {
+  margin-bottom: 20px;
+}
+
 /*# sourceMappingURL=style.css.map */

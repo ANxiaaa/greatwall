@@ -18,7 +18,9 @@ document.oncontextmenu=stop;
 <body>
 
     <?php include_once VIEWPATH . 'inc/header.php'; ?>
-   
+
+    <div style="height: 2000px;"></div>
+
     <?php include_once VIEWPATH . 'inc/footer.php'; ?>
 
     <?php
@@ -27,7 +29,7 @@ document.oncontextmenu=stop;
     echo static_file('web/js/swiper/swiper.min.js');
     ?>
     <script>
-        $(function() {
+        $(function () {
 
         })
     </script>

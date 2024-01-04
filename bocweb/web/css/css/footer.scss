@@ -1,0 +1,47 @@
+footer {
+  .footer-content {
+    padding-top: 30px;
+    display: flex;
+    .container {
+      justify-content: space-between;
+      display: flex;
+      .logoBox {
+        .logo {
+          width: 120px;
+          height: 30px;
+        }
+        .share {
+          display: flex;
+          img {
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+          }
+        }
+        .cqc {
+          display: flex;
+          img {
+            width: 60px;
+            height: 60px;
+            margin-right: 10px;
+          }
+        }
+      }
+      .btmNav {
+        display: flex;
+        .navBox {
+          margin: 0 30px;
+          .navTitle {
+            font-weight: bold;
+          }
+        }
+      }
+      .btmTel{
+        width: 200px;
+        .telItem{
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
