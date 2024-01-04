@@ -14,11 +14,11 @@
 function stop(){return false;}
 document.oncontextmenu=stop;
 </script> -->
-<?php include_once VIEWPATH . 'inc/header.php'; ?>
 
 <body>
-   
 
+    <?php include_once VIEWPATH . 'inc/header.php'; ?>
+   
     <?php include_once VIEWPATH . 'inc/footer.php'; ?>
 
     <?php

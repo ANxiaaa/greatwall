@@ -21,15 +21,17 @@
     echo static_file('jquery-3.5.1.min.js');
     echo static_file('web/css/hamburgers.css');
     echo static_file('web/css/video.css');
-    echo static_file('web/css/bootstrap.css');
-    echo static_file('web/css/boc_reset.css');
-    echo static_file('web/css/hover.css');
-    echo static_file('web/css/bocami.css');
-    echo static_file('web/css/mob.css');
+    echo static_file('web/css/animate.css');
+    echo static_file('web/css/style.css');
+    // echo static_file('web/css/bootstrap.css');
+    // echo static_file('web/css/boc_reset.css');
+    // echo static_file('web/css/hover.css');
+    // echo static_file('web/css/bocami.css');
+    // echo static_file('web/css/mob.css');
 
     echo static_file('jquery.easing.1.3.js'); //动画过度效果
     echo static_file('jquery.transit.js'); //css3,JQ调用 看js
-    echo static_file('html5.js');//IE（包括IE6）支持HTML5元素方法
-    echo static_file('prefixfree.min.js');//CSS3无前缀脚本
-    echo static_file('new_bocfe.js');
+    // echo static_file('html5.js');//IE（包括IE6）支持HTML5元素方法
+    // echo static_file('prefixfree.min.js');//CSS3无前缀脚本
+    // echo static_file('new_bocfe.js');
 ?>
