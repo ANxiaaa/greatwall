@@ -7,6 +7,26 @@
 body {
   overflow-x: hidden;
 }
+body .swiper-button-next,
+body .swiper-button-prev {
+  background: rgba(7, 29, 73, 0.1);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .swiper-button-next img,
+body .swiper-button-prev img {
+  width: 22px;
+  height: 14px;
+}
+body .swiper-button-next {
+  right: 0;
+}
+body .swiper-button-prev {
+  left: 0;
+}
 
 img {
   user-select: none;
@@ -340,26 +360,6 @@ footer .footerBtm .container a:last-child {
   height: 100%;
   object-fit: cover;
 }
-.home #banner .swiper-button-next,
-.home #banner .swiper-button-prev {
-  background: rgba(7, 29, 73, 0.1);
-  width: 80px;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.home #banner .swiper-button-next img,
-.home #banner .swiper-button-prev img {
-  width: 22px;
-  height: 14px;
-}
-.home #banner .swiper-button-next {
-  right: 0;
-}
-.home #banner .swiper-button-prev {
-  left: 0;
-}
 .home #banner .banner-progress {
   position: absolute;
   left: 0;
@@ -391,7 +391,8 @@ footer .footerBtm .container a:last-child {
   background: #071d49;
   height: 540px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .home #searchBox .overturnBox {
   width: 255px;
@@ -420,6 +421,236 @@ footer .footerBtm .container a:last-child {
 }
 .home #searchBox .overturnBox .overturnWrap .overturnItem.rotate {
   transform: rotateY(0deg);
+}
+.home #searchBox .inputBox {
+  width: 790px;
+  height: 88px;
+  background: #fff;
+  position: relative;
+}
+.home #searchBox .inputBox .search {
+  width: 20px;
+  height: 21px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 48px;
+  margin: auto;
+}
+.home #searchBox .inputBox input {
+  outline: none;
+  border: none;
+  background: none;
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding-left: 100px;
+  font-size: 18px;
+  font-family: Alibaba PuHuiTi 2;
+  color: #071d49;
+  padding-right: 30px;
+}
+.home #searchBox .inputBox input::placeholder {
+  color: rgba(7, 29, 73, 0.5);
+}
+.home .recommendation {
+  height: 960px;
+  position: relative;
+}
+.home .recommendation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #071d49;
+  z-index: 0;
+  right: 50%;
+}
+.home .recommendation::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #f5f5f5;
+  z-index: 0;
+  left: 50%;
+}
+.home .recommendation .container {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.home .recommendation .container .recommendation-left {
+  padding-top: 120px;
+  margin-left: -50px;
+  width: 640px;
+  position: relative;
+  z-index: 1;
+  background: #071d49;
+}
+.home .recommendation .container .recommendation-left .topName {
+  display: flex;
+  font-size: 18px;
+  font-family: Alibaba PuHuiTi 2;
+  font-weight: normal;
+  color: #fff;
+}
+.home .recommendation .container .recommendation-left .topName .gongwenbao {
+  width: 22px;
+  height: 20px;
+  margin-right: 5px;
+}
+.home .recommendation .container .recommendation-left .recommendationTitle {
+  width: 542px;
+  font-size: 56px;
+  font-family: Alibaba PuHuiTi 2;
+  color: #ffffff;
+  line-height: 60px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 46px;
+}
+.home .recommendation .container .recommendation-left .entranceBtn {
+  width: 200px;
+  height: 54px;
+  background: #ffd100;
+  line-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+.home .recommendation .container .recommendation-left .entranceBtn .rightIcon {
+  margin-left: 18px;
+  width: 7px;
+  height: 10px;
+  transition: transform 0.5s;
+}
+.home .recommendation .container .recommendation-left .entranceBtn:hover .rightIcon {
+  transform: translateX(5px);
+}
+.home .recommendation .container .recommendation-left .quantou {
+  width: 525px;
+  height: 467px;
+  position: absolute;
+  left: -15px;
+  bottom: 0;
+}
+.home .recommendation .container .recommendation-right {
+  flex: 1;
+  width: 0;
+  background: #f5f5f5;
+  position: relative;
+  padding-top: 67px;
+  padding-left: 50px;
+  margin-right: -110px;
+}
+.home .recommendation .container .recommendation-right .rightTitle {
+  font-size: 28px;
+  font-family: Alibaba PuHuiTi 2;
+  color: #071d49;
+  font-weight: bold;
+  line-height: 30px;
+  margin-bottom: 27px;
+}
+.home .recommendation .container .recommendation-right .recommendationNames {
+  display: flex;
+  flex-wrap: wrap;
+}
+.home .recommendation .container .recommendation-right .recommendationNames .nameItem {
+  padding-right: 30px;
+  margin-right: 30px;
+  border-right: 1px solid rgba(18, 40, 82, 0.2);
+  font-size: 18px;
+  font-family: Alibaba PuHuiTi 2;
+  color: rgba(7, 29, 73, 0.5);
+}
+.home .recommendation .container .recommendation-right #recommendationSwiper {
+  margin-top: 60px;
+  width: 100%;
+  height: 685px;
+}
+.home .recommendation .container .recommendation-right #recommendationSwiper .swiper-button-prev {
+  transform: translateX(-50px);
+}
+.home .recommendation .container .recommendation-right #recommendationSwiper .recommendationItem {
+  background: #fff;
+  width: 570px;
+  padding: 50px 54px;
+  position: relative;
+}
+.home .recommendation .container .recommendation-right #recommendationSwiper .recommendationItem .itemTitle {
+  font-size: 36px;
+  margin-bottom: 30px;
+  font-family: Alibaba PuHuiTi 2;
+  color: #071d49;
+  font-weight: bold;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(18, 40, 82, 0.15);
+}
+.home .recommendation .container .recommendation-right #recommendationSwiper .recommendationItem .itemmsg {
+  font-size: 18px;
+  position: relative;
+  font-family: Alibaba PuHuiTi 2;
+  z-index: 1;
+  color: #122852;
+}
+.home .recommendation .container .recommendation-right #recommendationSwiper .recommendationItem .itemmsg .msg {
+  padding-left: 10px;
+  position: relative;
+}
+.home .recommendation .container .recommendation-right #recommendationSwiper .recommendationItem .itemmsg .msg::before {
+  position: absolute;
+  content: "";
+  width: 4px;
+  height: 4px;
+  background: currentColor;
+  border-radius: 50%;
+  top: 11px;
+  left: 0px;
+}
+.home .recommendation .container .recommendation-right #recommendationSwiper .recommendationItem .itemBtn {
+  width: 145px;
+  height: 54px;
+  background: #ffd100;
+  line-height: 54px;
+  margin-top: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  z-index: 1;
+}
+.home .recommendation .container .recommendation-right #recommendationSwiper .recommendationItem .itemBtn .rightIcon {
+  margin-left: 18px;
+  width: 7px;
+  height: 10px;
+  transition: transform 0.5s;
+}
+.home .recommendation .container .recommendation-right #recommendationSwiper .recommendationItem .itemBtn:hover .rightIcon {
+  transform: translateX(5px);
+}
+.home .recommendation .container .recommendation-right #recommendationSwiper .recommendationItem .msgBg {
+  position: absolute;
+  width: 418px;
+  height: 428px;
+  left: 0;
+  bottom: 0;
+  z-index: 0;
+}
+.home .recommendation .container .recommendation-right #recommendationSwiper .recommendationItem .msgImg {
+  position: absolute;
+  width: 320px;
+  bottom: 12px;
+  right: 14px;
+  z-index: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
