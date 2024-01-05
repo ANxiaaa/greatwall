@@ -15,6 +15,10 @@ body {
   overflow-x: hidden;
 }
 
+img {
+  user-select: none;
+}
+
 .container {
   width: 92%;
   margin: 0 auto;

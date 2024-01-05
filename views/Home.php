@@ -11,9 +11,9 @@ document.oncontextmenu=stop;
 </script> -->
 
 <body>
-
   <?php include_once VIEWPATH . 'inc/header.php'; ?>
   <div class="home">
+    <!-- 轮播图 -->
     <div class="swiper-container" id="banner">
       <div class="swiper-wrapper" id="banner-wrapper"></div>
       <div class="swiper-button-next">
@@ -25,6 +25,13 @@ document.oncontextmenu=stop;
       <div class="banner-progress">
         <div class="progressCount" id="progressCount"></div>
         <div class="progressBar"></div>
+      </div>
+    </div>
+    <!-- 搜索 -->
+    <div id="searchBox">
+      <div class="overturnBox">
+        <img class="overturnBg" draggable="false" src="<?php echo static_file('web/img/overturnBg.webp') ?>" alt="">
+        <div class="overturnWrap" id="overturnWrap"></div>
       </div>
     </div>
   </div>
@@ -67,11 +74,30 @@ document.oncontextmenu=stop;
           loop: true,
           onSlideChangeStart(swiper) {
             const index = swiper.activeIndex % data.length
-            console.log(index, data[index], data);
             $("#progressCount").width(index == 0 ? 184 : 34 + (index - 1) * 30)
           },
         });
       });
+      // -------
+      fetchData().then(data => {
+        const overturnWrap = $('#overturnWrap')
+        const dom = data.map(item => {
+          return `<img class="overturnItem" draggable="false" src="/greatwall/bocweb/web/img/banner${item.name}.png" alt="" />`
+        })
+        overturnWrap.html(dom)
+        const items = overturnWrap.find('.overturnItem');
+        const currentIndex = { count: 1 };
+        items[0].classList.add('rotate');
+        const timer = setInterval(() => {
+          console.log(items, 'itemsitems');
+          items.removeClass('rotate');
+          items[currentIndex.count].classList.add('rotate');
+          currentIndex.count++;
+          if (currentIndex.count === items.length) {
+            currentIndex.count = 0;
+          }
+        }, 1500);
+      })
     })
   </script>
 </body>
