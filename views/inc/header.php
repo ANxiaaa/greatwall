@@ -27,7 +27,70 @@
           <div class="navItem">
             <span class="navName">首页</span>
             <div class="activeLine"></div>
-            <div class="navSel"></div>
+            <div class="navSel">
+              <div class="container">
+                <div class="navSelItem">
+                  <div class="selTitle">品牌形象</div>
+                  <div class="selName">
+                    <span>手册下载</span>
+                  </div>
+                  <div class="selName">
+                    <span>手册下载</span>
+                  </div>
+                  <div class="selName">
+                    <span>手册下载</span>
+                  </div>
+                  <div class="selName">
+                    <span>手册下载</span>
+                  </div>
+                </div>
+                <div class="navSelItem">
+                  <div class="selTitle">品牌形象</div>
+                  <div class="selName">
+                    <span>手册下载</span>
+                  </div>
+                  <div class="selName">
+                    <span>手册下载</span>
+                  </div>
+                  <div class="selName">
+                    <span>手册下载</span>
+                  </div>
+                  <div class="selName">
+                    <span>手册下载</span>
+                  </div>
+                </div>
+                <div class="navSelItem">
+                  <div class="selTitle">品牌形象</div>
+                  <div class="selName">
+                    <span>手册下载</span>
+                  </div>
+                  <div class="selName">
+                    <span>手册下载</span>
+                  </div>
+                  <div class="selName">
+                    <span>手册下载</span>
+                  </div>
+                  <div class="selName">
+                    <span>手册下载</span>
+                  </div>
+                </div>
+                <div class="navSelItem">
+                  <div class="selTitle">品牌形象</div>
+                  <div class="selName">
+                    <span>手册下载</span>
+                  </div>
+                  <div class="selName">
+                    <span>手册下载</span>
+                  </div>
+                  <div class="selName">
+                    <span>手册下载</span>
+                  </div>
+                  <div class="selName">
+                    <span>手册下载</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="navItem">
             <span class="navName">产品中心</span>

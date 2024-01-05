@@ -4,12 +4,12 @@ header {
   font-size: 12px;
   position: sticky;
   top: -44px;
-  background: #fff;
+  background: $mainBackground;
   .headerTop {
     height: 44px;
     padding: 13px 0;
-    border-bottom: 1px solid rgba($prColor, 0.1);
-    color: $prColor;
+    border-bottom: 1px solid rgba($primaryColor, 0.1);
+    color: $primaryColor;
     font-weight: bold;
     font-size: 13px;
     font-family: OPPOSans;
@@ -28,7 +28,7 @@ header {
           margin: 0 24px;
           width: 1px;
           height: 14px;
-          background: $prColor;
+          background: $primaryColor;
           opacity: 0.2;
         }
       }
@@ -51,8 +51,7 @@ header {
   }
   .headerContent {
     height: 98px;
-    border-bottom: 1px solid #bbb;
-    .container {
+    > .container {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -80,22 +79,73 @@ header {
           .navItem {
             margin: 0 10px;
             cursor: pointer;
-            // position: relative;
             .navName {
               padding: 0 50px;
               white-space: pre;
               font-weight: bold;
             }
             .navSel {
-              display: none;
+              height: 0;
+              overflow: hidden;
+              border-top: 1px solid $borderColor;
+              border-bottom: 1px solid $borderColor;
               position: absolute;
               top: 100%;
               width: 100%;
-              height: 150px;
               left: 0;
               right: 0;
               cursor: default;
-              background: #c00;
+              background: $mainBackground;
+              transition: height 0.2s;
+              > .container {
+                height: 280px;
+                padding-top: 48px;
+                display: flex;
+                line-height: 1;
+                .navSelItem {
+                  width: 480px;
+                  height: 160px;
+                  padding-left: 40px;
+                  border-right: 1px solid rgba($primaryColor, 0.1);
+                  .selTitle {
+                    font-size: 18px;
+                    font-family: OPPOSans;
+                    font-weight: bold;
+                    color: $primaryColor;
+                    line-height: 24px;
+                    margin-bottom: 25px;
+                  }
+                  .selName span {
+                    font-size: 16px;
+                    font-family: OPPOSans;
+                    font-weight: 500;
+                    color: $textColor2;
+                    line-height: 30px;
+                    cursor: pointer;
+                    z-index: 1;
+                    position: relative;
+                    // text-decoration: underline $yellowBackground;
+                    &::after {
+                      content: "";
+                      position: absolute;
+                      bottom: 2px;
+                      width: 100%;
+                      left: 0;
+                      height: 4px;
+                      display: none;
+                      z-index: -1;
+                      background: $yellowBackground;
+                    }
+                    &:hover {
+                      font-weight: bold;
+                      color: $primaryColor;
+                      &::after {
+                        display: block;
+                      }
+                    }
+                  }
+                }
+              }
             }
             .activeLine {
               position: relative;
@@ -109,7 +159,7 @@ header {
                 top: 6px;
                 content: "";
                 height: 6px;
-                background: $prColor;
+                background: $primaryColor;
                 transition: top 0.1s;
               }
             }
@@ -121,7 +171,7 @@ header {
               }
 
               .navSel {
-                display: block;
+                height: 280px;
               }
             }
           }

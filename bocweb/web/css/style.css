@@ -21,7 +21,7 @@ header .headerTop {
   height: 44px;
   padding: 13px 0;
   border-bottom: 1px solid rgba(7, 29, 73, 0.1);
-  color: #071D49;
+  color: #071d49;
   font-weight: bold;
   font-size: 13px;
   font-family: OPPOSans;
@@ -45,7 +45,7 @@ header .headerTop .container .container-right .rightLine {
   margin: 0 24px;
   width: 1px;
   height: 14px;
-  background: #071D49;
+  background: #071d49;
   opacity: 0.2;
 }
 header .headerTop .container .lang {
@@ -65,28 +65,27 @@ header .headerTop .container .tm {
 }
 header .headerContent {
   height: 98px;
-  border-bottom: 1px solid #bbb;
 }
-header .headerContent .container {
+header .headerContent > .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
 }
-header .headerContent .container .container-left {
+header .headerContent > .container .container-left {
   display: flex;
   align-items: center;
 }
-header .headerContent .container .container-left .logo {
+header .headerContent > .container .container-left .logo {
   width: 414px;
   height: 60px;
 }
-header .headerContent .container .container-right {
+header .headerContent > .container .container-right {
   display: flex;
   align-items: center;
   height: 100%;
 }
-header .headerContent .container .container-right .nav {
+header .headerContent > .container .container-right .nav {
   line-height: 98px;
   height: 100%;
   display: flex;
@@ -95,49 +94,100 @@ header .headerContent .container .container-right .nav {
   font-family: Alibaba PuHuiTi 2;
   color: #333;
 }
-header .headerContent .container .container-right .nav .navItem {
+header .headerContent > .container .container-right .nav .navItem {
   margin: 0 10px;
   cursor: pointer;
 }
-header .headerContent .container .container-right .nav .navItem .navName {
+header .headerContent > .container .container-right .nav .navItem .navName {
   padding: 0 50px;
   white-space: pre;
   font-weight: bold;
 }
-header .headerContent .container .container-right .nav .navItem .navSel {
-  display: none;
+header .headerContent > .container .container-right .nav .navItem .navSel {
+  height: 0;
+  overflow: hidden;
+  border-top: 1px solid #F5F5F5;
+  border-bottom: 1px solid #F5F5F5;
   position: absolute;
   top: 100%;
   width: 100%;
-  height: 150px;
   left: 0;
   right: 0;
   cursor: default;
-  background: #c00;
+  background: #fff;
+  transition: height 0.2s;
 }
-header .headerContent .container .container-right .nav .navItem .activeLine {
+header .headerContent > .container .container-right .nav .navItem .navSel > .container {
+  height: 280px;
+  padding-top: 48px;
+  display: flex;
+  line-height: 1;
+}
+header .headerContent > .container .container-right .nav .navItem .navSel > .container .navSelItem {
+  width: 480px;
+  height: 160px;
+  padding-left: 40px;
+  border-right: 1px solid rgba(7, 29, 73, 0.1);
+}
+header .headerContent > .container .container-right .nav .navItem .navSel > .container .navSelItem .selTitle {
+  font-size: 18px;
+  font-family: OPPOSans;
+  font-weight: bold;
+  color: #071d49;
+  line-height: 24px;
+  margin-bottom: 25px;
+}
+header .headerContent > .container .container-right .nav .navItem .navSel > .container .navSelItem .selName span {
+  font-size: 16px;
+  font-family: OPPOSans;
+  font-weight: 500;
+  color: #666;
+  line-height: 30px;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+}
+header .headerContent > .container .container-right .nav .navItem .navSel > .container .navSelItem .selName span::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  width: 100%;
+  left: 0;
+  height: 4px;
+  display: none;
+  z-index: -1;
+  background: #FFD100;
+}
+header .headerContent > .container .container-right .nav .navItem .navSel > .container .navSelItem .selName span:hover {
+  font-weight: bold;
+  color: #071d49;
+}
+header .headerContent > .container .container-right .nav .navItem .navSel > .container .navSelItem .selName span:hover::after {
+  display: block;
+}
+header .headerContent > .container .container-right .nav .navItem .activeLine {
   position: relative;
   width: 100%;
   height: 6px;
   top: -6px;
   overflow: hidden;
 }
-header .headerContent .container .container-right .nav .navItem .activeLine::after {
+header .headerContent > .container .container-right .nav .navItem .activeLine::after {
   position: absolute;
   width: 100%;
   top: 6px;
   content: "";
   height: 6px;
-  background: #071D49;
+  background: #071d49;
   transition: top 0.1s;
 }
-header .headerContent .container .container-right .nav .navItem:hover .activeLine::after {
+header .headerContent > .container .container-right .nav .navItem:hover .activeLine::after {
   top: 0;
 }
-header .headerContent .container .container-right .nav .navItem:hover .navSel {
-  display: block;
+header .headerContent > .container .container-right .nav .navItem:hover .navSel {
+  height: 280px;
 }
-header .headerContent .container .container-right .search {
+header .headerContent > .container .container-right .search {
   width: 17px;
   height: 18px;
   cursor: pointer;
