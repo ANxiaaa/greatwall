@@ -3,9 +3,15 @@
   margin: 0;
   box-sizing: border-box;
 }
-img{
+
+body {
+  overflow-x: hidden;
+}
+
+img {
   background: #000;
 }
+
 .container {
   width: 92%;
   margin: 0 auto;

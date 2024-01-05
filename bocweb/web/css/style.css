@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 img {
   background: #000;
 }
@@ -19,6 +23,7 @@ header {
   font-size: 12px;
   position: sticky;
   top: -20px;
+  background: #fff;
 }
 header .headerTop {
   height: 20px;
