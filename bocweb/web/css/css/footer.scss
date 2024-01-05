@@ -1,46 +1,120 @@
 footer {
   .footer-content {
-    padding-top: 30px;
+    padding-top: 76px;
+    border-top: 1px solid $borderColor;
     display: flex;
+    padding-bottom: 56px;
     .container {
       justify-content: space-between;
       display: flex;
       .logoBox {
         .logo {
-          width: 120px;
-          height: 30px;
+          width: 194px;
+          height: 79px;
+          margin-bottom: 37px;
         }
         .share {
           display: flex;
-          img {
-            width: 30px;
-            height: 30px;
-            margin-right: 5px;
+          .shareItem {
+            width: 44px;
+            height: 44px;
+            margin-right: 4px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $btnBackground;
+            cursor: pointer;
+            .weixin {
+              width: 21px;
+              height: 17px;
+            }
+            .zheshisha {
+              width: 19px;
+              height: 17px;
+            }
+            .douyin {
+              width: 17px;
+              height: 19px;
+            }
+            &:hover {
+              background: $yellowBackground;
+            }
           }
         }
         .cqc {
-          display: flex;
-          img {
-            width: 60px;
-            height: 60px;
-            margin-right: 10px;
-          }
+          width: 362px;
+          height: 82px;
         }
       }
       .btmNav {
+        padding-top: 30px;
+        margin-left: 116px;
         display: flex;
         .navBox {
-          margin: 0 30px;
+          margin-right: 150px;
           .navTitle {
             font-weight: bold;
+            font-size: 20px;
+            font-family: OPPOSans;
+            color: $primaryColor;
+            line-height: 28px;
+            margin-bottom: 25px;
+          }
+          .navItem {
+            font-size: 16px;
+            user-select: none;
+            cursor: pointer;
+            font-family: OPPOSans;
+            font-weight: 400;
+            color: $primaryColor;
+            line-height: 24px;
+            opacity: 0.5;
+            &:hover {
+              opacity: 1;
+            }
           }
         }
       }
-      .btmTel{
-        width: 200px;
-        .telItem{
+      .btmTel {
+        // margin-left: 46px;
+        .telItem {
           margin-bottom: 20px;
+          color: $primaryColor;
+          font-weight: bold;
+          line-height: 24px;
+          font-family: OPPOSans;
+          .p1 {
+            font-size: 16px;
+          }
+          .p2 {
+            font-size: 22px;
+          }
+          .p3 {
+            font-size: 16px;
+          }
         }
+      }
+    }
+  }
+  .footerBtm .container {
+    line-height: 70px;
+    border-top: 1px solid $borderColor;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    font-family: OPPOSans;
+    font-weight: 500;
+    color: $primaryColor;
+    a {
+      color: $primaryColor;
+      text-decoration: none;
+      margin-right: 30px;
+      &:hover {
+        text-decoration: underline;
+      }
+      &:last-child {
+        margin-right: 0;
       }
     }
   }

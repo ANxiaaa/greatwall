@@ -106,8 +106,8 @@ header .headerContent > .container .container-right .nav .navItem .navName {
 header .headerContent > .container .container-right .nav .navItem .navSel {
   height: 0;
   overflow: hidden;
-  border-top: 1px solid #F5F5F5;
-  border-bottom: 1px solid #F5F5F5;
+  border-top: 1px solid #f5f5f5;
+  border-bottom: 1px solid #f5f5f5;
   position: absolute;
   top: 100%;
   width: 100%;
@@ -156,7 +156,7 @@ header .headerContent > .container .container-right .nav .navItem .navSel > .con
   height: 4px;
   display: none;
   z-index: -1;
-  background: #FFD100;
+  background: #ffd100;
 }
 header .headerContent > .container .container-right .nav .navItem .navSel > .container .navSelItem .selName span:hover {
   font-weight: bold;
@@ -194,47 +194,118 @@ header .headerContent > .container .container-right .search {
 }
 
 footer .footer-content {
-  padding-top: 30px;
+  padding-top: 76px;
+  border-top: 1px solid #f5f5f5;
   display: flex;
+  padding-bottom: 56px;
 }
 footer .footer-content .container {
   justify-content: space-between;
   display: flex;
 }
 footer .footer-content .container .logoBox .logo {
-  width: 120px;
-  height: 30px;
+  width: 194px;
+  height: 79px;
+  margin-bottom: 37px;
 }
 footer .footer-content .container .logoBox .share {
   display: flex;
 }
-footer .footer-content .container .logoBox .share img {
-  width: 30px;
-  height: 30px;
-  margin-right: 5px;
+footer .footer-content .container .logoBox .share .shareItem {
+  width: 44px;
+  height: 44px;
+  margin-right: 4px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+  cursor: pointer;
+}
+footer .footer-content .container .logoBox .share .shareItem .weixin {
+  width: 21px;
+  height: 17px;
+}
+footer .footer-content .container .logoBox .share .shareItem .zheshisha {
+  width: 19px;
+  height: 17px;
+}
+footer .footer-content .container .logoBox .share .shareItem .douyin {
+  width: 17px;
+  height: 19px;
+}
+footer .footer-content .container .logoBox .share .shareItem:hover {
+  background: #ffd100;
 }
 footer .footer-content .container .logoBox .cqc {
-  display: flex;
-}
-footer .footer-content .container .logoBox .cqc img {
-  width: 60px;
-  height: 60px;
-  margin-right: 10px;
+  width: 362px;
+  height: 82px;
 }
 footer .footer-content .container .btmNav {
+  padding-top: 30px;
+  margin-left: 116px;
   display: flex;
 }
 footer .footer-content .container .btmNav .navBox {
-  margin: 0 30px;
+  margin-right: 150px;
 }
 footer .footer-content .container .btmNav .navBox .navTitle {
   font-weight: bold;
+  font-size: 20px;
+  font-family: OPPOSans;
+  color: #071d49;
+  line-height: 28px;
+  margin-bottom: 25px;
 }
-footer .footer-content .container .btmTel {
-  width: 200px;
+footer .footer-content .container .btmNav .navBox .navItem {
+  font-size: 16px;
+  user-select: none;
+  cursor: pointer;
+  font-family: OPPOSans;
+  font-weight: 400;
+  color: #071d49;
+  line-height: 24px;
+  opacity: 0.5;
+}
+footer .footer-content .container .btmNav .navBox .navItem:hover {
+  opacity: 1;
 }
 footer .footer-content .container .btmTel .telItem {
   margin-bottom: 20px;
+  color: #071d49;
+  font-weight: bold;
+  line-height: 24px;
+  font-family: OPPOSans;
+}
+footer .footer-content .container .btmTel .telItem .p1 {
+  font-size: 16px;
+}
+footer .footer-content .container .btmTel .telItem .p2 {
+  font-size: 22px;
+}
+footer .footer-content .container .btmTel .telItem .p3 {
+  font-size: 16px;
+}
+footer .footerBtm .container {
+  line-height: 70px;
+  border-top: 1px solid #f5f5f5;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-family: OPPOSans;
+  font-weight: 500;
+  color: #071d49;
+}
+footer .footerBtm .container a {
+  color: #071d49;
+  text-decoration: none;
+  margin-right: 30px;
+}
+footer .footerBtm .container a:hover {
+  text-decoration: underline;
+}
+footer .footerBtm .container a:last-child {
+  margin-right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
