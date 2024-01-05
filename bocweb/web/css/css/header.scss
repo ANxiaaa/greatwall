@@ -3,22 +3,54 @@ header {
     sans-serif;
   font-size: 12px;
   position: sticky;
-  top: -20px;
+  top: -44px;
   background: #fff;
   .headerTop {
-    height: 20px;
-    border-bottom: 1px solid #000;
+    height: 44px;
+    padding: 13px 0;
+    border-bottom: 1px solid rgba($prColor, 0.1);
+    color: $prColor;
+    font-weight: bold;
+    font-size: 13px;
+    font-family: OPPOSans;
+    user-select: none;
     .container {
       display: flex;
       justify-content: space-between;
+      .container-left,
+      .container-right {
+        display: flex;
+        align-items: center;
+        .leftLine {
+          margin: 0 7px;
+        }
+        .rightLine {
+          margin: 0 24px;
+          width: 1px;
+          height: 14px;
+          background: $prColor;
+          opacity: 0.2;
+        }
+      }
       .lang {
-        width: 10px;
-        height: 10px;
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+      }
+      .jd {
+        width: 20px;
+        height: 15px;
+        margin-right: 5px;
+      }
+      .tm {
+        width: 17px;
+        height: 16px;
+        margin-right: 5px;
       }
     }
   }
   .headerContent {
-    height: 60px;
+    height: 98px;
     border-bottom: 1px solid #bbb;
     .container {
       display: flex;
@@ -28,19 +60,9 @@ header {
       .container-left {
         display: flex;
         align-items: center;
-        .logo1 {
-          width: 120px;
-          height: 100%;
-        }
-        .line {
-          width: 1px;
-          height: 30px;
-          background: #000;
-          margin: 0 20px;
-        }
-        .logo2 {
-          width: 100px;
-          height: 100%;
+        .logo {
+          width: 414px;
+          height: 60px;
         }
       }
       .container-right {
@@ -48,28 +70,55 @@ header {
         align-items: center;
         height: 100%;
         .nav {
+          line-height: 98px;
+          height: 100%;
           display: flex;
           justify-content: space-between;
+          font-size: 20px;
+          font-family: Alibaba PuHuiTi 2;
+          color: $textColor1;
           .navItem {
-            padding: 0 20px;
             margin: 0 10px;
             cursor: pointer;
+            // position: relative;
             .navName {
-              line-height: 60px;
+              padding: 0 50px;
+              white-space: pre;
+              font-weight: bold;
             }
             .navSel {
               display: none;
               position: absolute;
               top: 100%;
-              width: 100vw;
+              width: 100%;
               height: 150px;
               left: 0;
               right: 0;
               cursor: default;
               background: #c00;
             }
+            .activeLine {
+              position: relative;
+              width: 100%;
+              height: 6px;
+              top: -6px;
+              overflow: hidden;
+              &::after {
+                position: absolute;
+                width: 100%;
+                top: 6px;
+                content: "";
+                height: 6px;
+                background: $prColor;
+                transition: top 0.1s;
+              }
+            }
             &:hover {
-              background: #999;
+              .activeLine {
+                &::after {
+                  top: 0;
+                }
+              }
 
               .navSel {
                 display: block;
@@ -78,8 +127,9 @@ header {
           }
         }
         .search {
-          width: 20px;
-          height: 20px;
+          width: 17px;
+          height: 18px;
+          cursor: pointer;
         }
       }
     }
