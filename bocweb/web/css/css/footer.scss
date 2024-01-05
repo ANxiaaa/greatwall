@@ -49,11 +49,13 @@ footer {
       }
       .btmNav {
         padding-top: 30px;
-        margin-left: 116px;
+        margin-left: 7%;
         display: flex;
+        flex: 1;
         .navBox {
-          margin-right: 150px;
+          width: 30%;
           .navTitle {
+            white-space: pre;
             font-weight: bold;
             font-size: 20px;
             font-family: OPPOSans;
@@ -62,6 +64,7 @@ footer {
             margin-bottom: 25px;
           }
           .navItem {
+            white-space: pre;
             font-size: 16px;
             user-select: none;
             cursor: pointer;
@@ -86,12 +89,15 @@ footer {
           font-family: OPPOSans;
           .p1 {
             font-size: 16px;
+            white-space: pre;
           }
           .p2 {
             font-size: 22px;
+            white-space: pre;
           }
           .p3 {
             font-size: 16px;
+            white-space: pre;
           }
         }
       }

@@ -243,13 +243,15 @@ footer .footer-content .container .logoBox .cqc {
 }
 footer .footer-content .container .btmNav {
   padding-top: 30px;
-  margin-left: 116px;
+  margin-left: 7%;
   display: flex;
+  flex: 1;
 }
 footer .footer-content .container .btmNav .navBox {
-  margin-right: 150px;
+  width: 30%;
 }
 footer .footer-content .container .btmNav .navBox .navTitle {
+  white-space: pre;
   font-weight: bold;
   font-size: 20px;
   font-family: OPPOSans;
@@ -258,6 +260,7 @@ footer .footer-content .container .btmNav .navBox .navTitle {
   margin-bottom: 25px;
 }
 footer .footer-content .container .btmNav .navBox .navItem {
+  white-space: pre;
   font-size: 16px;
   user-select: none;
   cursor: pointer;
@@ -279,12 +282,15 @@ footer .footer-content .container .btmTel .telItem {
 }
 footer .footer-content .container .btmTel .telItem .p1 {
   font-size: 16px;
+  white-space: pre;
 }
 footer .footer-content .container .btmTel .telItem .p2 {
   font-size: 22px;
+  white-space: pre;
 }
 footer .footer-content .container .btmTel .telItem .p3 {
   font-size: 16px;
+  white-space: pre;
 }
 footer .footerBtm .container {
   line-height: 70px;
