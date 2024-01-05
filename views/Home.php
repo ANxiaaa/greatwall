@@ -2,12 +2,7 @@
 <html>
 
 <head>
-    <?php include_once VIEWPATH . 'inc/head.php'; ?>
-    <style type="text/css">
-
-
-    </style>
-
+  <?php include_once VIEWPATH . 'inc/head.php'; ?>
 </head>
 <!-- 禁用右键: -->
 <!-- <script>
@@ -17,22 +12,68 @@ document.oncontextmenu=stop;
 
 <body>
 
-    <?php include_once VIEWPATH . 'inc/header.php'; ?>
+  <?php include_once VIEWPATH . 'inc/header.php'; ?>
+  <div class="home">
+    <div class="swiper-container" id="banner">
+      <div class="swiper-wrapper" id="banner-wrapper"></div>
+      <div class="swiper-button-next">
+        <img draggable="false" src="<?php echo static_file('web/img/homeBannerRight.webp') ?>" alt="">
+      </div>
+      <div class="swiper-button-prev">
+        <img draggable="false" src="<?php echo static_file('web/img/homeBannerLeft.webp') ?>" alt="">
+      </div>
+      <div class="banner-progress">
+        <div class="progressCount" id="progressCount"></div>
+        <div class="progressBar"></div>
+      </div>
+    </div>
+  </div>
+  <div style="height: 2000px;"></div>
 
-    <div style="height: 2000px;"></div>
+  <?php include_once VIEWPATH . 'inc/footer.php'; ?>
 
-    <?php include_once VIEWPATH . 'inc/footer.php'; ?>
-
-    <?php
-    echo static_file('web/js/main.js');
-    echo static_file('web/js/swiper/swiper.min.css');
-    echo static_file('web/js/swiper/swiper.min.js');
-    ?>
-    <script>
-        $(function () {
-
+  <?php
+  echo static_file('web/js/main.js');
+  echo static_file('web/js/swiper/swiper.min.css');
+  echo static_file('web/js/swiper/swiper.min.js');
+  ?>
+  <script>
+    const fetchData = () => {
+      return new Promise(resolve => {
+        setTimeout(function () {
+          resolve([
+            { name: '1' },
+            { name: '2' },
+            { name: '3' },
+            { name: '4' },
+            { name: '5' },
+            { name: '6' }
+          ]);
+        }, 1000);
+      });
+    }
+    $(function () {
+      fetchData().then(data => {
+        const swiperWrapper = $("#banner-wrapper");
+        const dom = data.map(item => {
+          return `<div class='swiper-slide'>
+            <img class="bannerImg" draggable="false" src="/greatwall/bocweb/web/img/banner${item.name}.png" alt="" />
+          </div>`
         })
-    </script>
+        swiperWrapper.html(dom)
+        const mySwiper = new Swiper('#banner', {
+          prevButton: '.swiper-button-prev',
+          nextButton: '.swiper-button-next',
+          loop: true,
+          onSlideChangeStart(swiper) {
+            const index = swiper.activeIndex % data.length
+            console.log(index, data[index], data);
+            $("#progressCount").width(index == 0 ? 184 : 34 + (index - 1) * 30)
+          },
+        });
+      });
+    })
+  </script>
 </body>
 
 </html>

@@ -1,0 +1,65 @@
+.home {
+  #banner {
+    width: 100%;
+    height: 820px;
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .bannerImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      background: rgba($primaryColor, 0.1);
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 22px;
+        height: 14px;
+      }
+    }
+    .swiper-button-next {
+      right: 0;
+    }
+    .swiper-button-prev {
+      left: 0;
+    }
+    .banner-progress {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 43px;
+      margin: auto;
+      width: 184px;
+      height: 20px;
+      z-index: 1;
+      display: flex;
+      justify-content: space-between;
+      .progressCount,
+      .progressBar {
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: width 0.3s ease-out;
+      }
+      .progressCount {
+        background-image: url("../../web/img/progressCount.webp");
+      }
+      .progressBar {
+        width: 0;
+        flex: 1;
+        background-position: right top;
+        background-image: url("../../web/img/progressBar.webp");
+      }
+    }
+  }
+}

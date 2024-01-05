@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .container {
   width: 92%;
   margin: 0 auto;
@@ -16,6 +20,7 @@ header {
   position: sticky;
   top: -44px;
   background: #fff;
+  z-index: 99;
 }
 header .headerTop {
   height: 44px;
@@ -312,6 +317,71 @@ footer .footerBtm .container a:hover {
 }
 footer .footerBtm .container a:last-child {
   margin-right: 0;
+}
+
+.home #banner {
+  width: 100%;
+  height: 820px;
+}
+.home #banner .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home #banner .swiper-slide .bannerImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.home #banner .swiper-button-next,
+.home #banner .swiper-button-prev {
+  background: rgba(7, 29, 73, 0.1);
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home #banner .swiper-button-next img,
+.home #banner .swiper-button-prev img {
+  width: 22px;
+  height: 14px;
+}
+.home #banner .swiper-button-next {
+  right: 0;
+}
+.home #banner .swiper-button-prev {
+  left: 0;
+}
+.home #banner .banner-progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 43px;
+  margin: auto;
+  width: 184px;
+  height: 20px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+}
+.home #banner .banner-progress .progressCount,
+.home #banner .banner-progress .progressBar {
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: width 0.3s ease-out;
+}
+.home #banner .banner-progress .progressCount {
+  background-image: url("../../web/img/progressCount.webp");
+}
+.home #banner .banner-progress .progressBar {
+  width: 0;
+  flex: 1;
+  background-position: right top;
+  background-image: url("../../web/img/progressBar.webp");
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -5,6 +5,7 @@ header {
   position: sticky;
   top: -44px;
   background: $mainBackground;
+  z-index: 99;
   .headerTop {
     height: 44px;
     padding: 13px 0;
