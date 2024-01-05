@@ -54,7 +54,7 @@
 
 路径                  | 对应模板文件
 --------------------|----------------------------
-index.php/          | **welcome.php**
+index.php/          | **Home.php**
 index.php/list      | list.php
 index.php/list/1/23 | list.php
 index.php/list/show | list/show.php

@@ -41,7 +41,7 @@ $uri = explode('/', $url);
 
 $reg = array();
 if (!$url) {
-	$view_file = 'welcome.php';
+	$view_file = 'Home.php';
 	$url_base = '/';
 }else{
 
@@ -66,7 +66,7 @@ if (!$url) {
 }
 
 if ($url == 'index') {
-	$view_file = 'welcome.php';
+	$view_file = 'Home.php';
 }
 
 if ($view_file) {
