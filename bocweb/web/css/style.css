@@ -578,6 +578,9 @@ footer .footerBtm .container a:last-child {
 .home .recommendation .container .recommendation-right #recommendationSwiper .swiper-button-prev {
   transform: translateX(-50px);
 }
+.home .recommendation .container .recommendation-right #recommendationSwiper .swiper-slide-active {
+  background: #c00 !important;
+}
 .home .recommendation .container .recommendation-right #recommendationSwiper .recommendationItem {
   background: #fff;
   width: 570px;

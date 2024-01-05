@@ -70,7 +70,7 @@ document.oncontextmenu=stop;
             <div class="swiper-wrapper" id="recommendationSwiperWrap">
               <div class="swiper-slide recommendationItem">
                 <div class="itemTitle">
-                  工业级日式省力钳
+                  工业级日式省力钳111
                 </div>
                 <div class="itemmsg">
                   <div class="msg">工业级日式省力钳工业级日式省力钳工业级日式省力钳</div>
@@ -185,6 +185,10 @@ document.oncontextmenu=stop;
           loop: true,
           nextButton: '.recommendation-right .swiper-button-next',
           prevButton: '.recommendation-right .swiper-button-prev',
+          onSlideChangeStart(swiper) {
+            // index + 2
+            console.log(swiper.activeIndex);
+          },
         });
       })
     })
