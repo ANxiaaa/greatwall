@@ -148,26 +148,10 @@
         z-index: 1;
         background: $primaryColor;
         .topName {
-          display: flex;
-          font-size: 18px;
-          font-family: Alibaba PuHuiTi 2;
-          font-weight: normal;
           color: $textColor3;
-          .gongwenbao {
-            width: 22px;
-            height: 20px;
-            margin-right: 5px;
-          }
         }
-        .recommendationTitle {
-          width: 542px;
-          font-size: 56px;
-          font-family: Alibaba PuHuiTi 2;
-          color: #ffffff;
-          line-height: 60px;
-          font-weight: bold;
-          margin-top: 30px;
-          margin-bottom: 46px;
+        .topTitle {
+          color: #fff;
         }
         .entranceBtn {
           width: 200px;
@@ -234,7 +218,7 @@
           .swiper-button-prev {
             transform: translateX(-50px);
           }
-          .swiper-slide-active{
+          .swiper-slide-active {
             background: #c00 !important;
           }
           .recommendationItem {
@@ -313,6 +297,28 @@
               z-index: 0;
             }
           }
+        }
+      }
+    }
+  }
+  .news {
+    height: 1220px;
+    background: url(../../web/img/newsBg.webp);
+    background-size: cover;
+    padding-top: 120px;
+    position: relative;
+    .container {
+      #newsSwiper {
+        height: 715px;
+        overflow: inherit;
+        .newsItem {
+          background: #fff;
+        }
+        .swiper-slide-active {
+          transition: box-shadow 0.5s;
+          border: 1px solid #e3e5e6;
+          box-shadow: 0px 0px 21px 0px rgba(0, 99, 190, 0.2);
+          z-index: 1;
         }
       }
     }

@@ -43,11 +43,13 @@ document.oncontextmenu=stop;
     <div class="recommendation">
       <div class="container">
         <div class="recommendation-left">
-          <div class="topName">
-            <img class="gongwenbao" draggable="false" src="<?php echo static_file('web/img/gongwenbao.webp') ?>" alt="">
-            <span>新品推荐</span>
+          <div class="partTitle">
+            <div class="topName">
+              <img class="topImg" draggable="false" src="<?php echo static_file('web/img/gongwenbao.webp') ?>" alt="">
+              <span>新品推荐</span>
+            </div>
+            <div class="topTitle">致力于成为全球优秀的工业级全场景工业需求解决者</div>
           </div>
-          <div class="recommendationTitle">致力于成为全球优秀的工业级全场景工业需求解决者</div>
           <div class="entranceBtn">
             <span>查看全系列产品</span>
             <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>" alt="">
@@ -105,94 +107,141 @@ document.oncontextmenu=stop;
         </div>
       </div>
     </div>
-  </div>
-  <div style="height: 2000px;"></div>
+    <!-- 新闻 -->
+    <div class="news">
+      <div class="container">
+        <div class="partTitle">
+          <div class="topName">
+            <img class="topImg" draggable="false" src="<?php echo static_file('web/img/xwzx.webp') ?>" alt="">
+            <span>新闻中心</span>
+          </div>
+          <div class="topTitle">共同见证长城精工的</div>
+        </div>
+        <div class="swiper-container" id="newsSwiper">
+          <div class="swiper-wrapper" id="newsSwiperWrap">
+            <div class="swiper-slide newsItem">Slide 1</div>
+            <div class="swiper-slide newsItem">Slide 2</div>
+            <div class="swiper-slide newsItem">Slide 3</div>
+            <div class="swiper-slide newsItem">Slide 4</div>
+            <div class="swiper-slide newsItem">Slide 5</div>
+            <div class="swiper-slide newsItem">Slide 6</div>
+            <div class="swiper-slide newsItem">Slide 7</div>
+            <div class="swiper-slide newsItem">Slide 8</div>
+          </div>
+        </div>
+        <div class="swiper-button-next">
+          <img draggable="false" src="<?php echo static_file('web/img/homeBannerRight.webp') ?>" alt="">
+        </div>
+        <div class="swiper-button-prev">
+          <img draggable="false" src="<?php echo static_file('web/img/homeBannerLeft.webp') ?>" alt="">
+        </div>
+      </div>
+    </div>
 
-  <?php include_once VIEWPATH . 'inc/footer.php'; ?>
+    <?php include_once VIEWPATH . 'inc/footer.php'; ?>
 
-  <?php
-  echo static_file('web/js/main.js');
-  echo static_file('web/js/swiper/swiper.min.css');
-  echo static_file('web/js/swiper/swiper.min.js');
-  ?>
-  <script>
-    const fetchData = () => {
-      return new Promise(resolve => {
-        setTimeout(function () {
-          resolve([
-            { name: '1' },
-            { name: '2' },
-            { name: '3' },
-            { name: '4' },
-            { name: '5' },
-            { name: '6' }
-          ]);
-        }, 1000);
-      });
-    }
-    const searchFn = (e) => {
-      if (e.code == 'Enter') {
-        console.log(e.target.value);
+    <?php
+    echo static_file('web/js/main.js');
+    echo static_file('web/js/swiper/swiper.min.css');
+    echo static_file('web/js/swiper/swiper.min.js');
+    ?>
+    <script>
+      const fetchData = () => {
+        return new Promise(resolve => {
+          setTimeout(function () {
+            resolve([
+              { name: '1' },
+              { name: '2' },
+              { name: '3' },
+              { name: '4' },
+              { name: '5' },
+              { name: '6' }
+            ]);
+          }, 1000);
+        });
       }
-    }
-    $(function () {
-      fetchData().then(data => {
-        const swiperWrapper = $("#banner-wrapper");
-        const dom = data.map(item => {
-          return `<div class='swiper-slide'>
+      const searchFn = (e) => {
+        if (e.code == 'Enter') {
+          console.log(e.target.value);
+        }
+      }
+      $(function () {
+        fetchData().then(data => {
+          const swiperWrapper = $("#banner-wrapper");
+          const dom = data.map(item => {
+            return `<div class='swiper-slide'>
             <img class="bannerImg" draggable="false" src="/greatwall/bocweb/web/img/banner${item.name}.png" alt="" />
           </div>`
-        })
-        swiperWrapper.html(dom)
-        const mySwiper = new Swiper('#banner', {
-          prevButton: '#banner .swiper-button-prev',
-          nextButton: '#banner .swiper-button-next',
-          loop: true,
-          onSlideChangeStart(swiper) {
-            const index = swiper.activeIndex % data.length
-            $("#progressCount").width(index == 0 ? 184 : 34 + (index - 1) * 30)
-          },
+          })
+          swiperWrapper.html(dom)
+          const mySwiper = new Swiper('#banner', {
+            prevButton: '#banner .swiper-button-prev',
+            nextButton: '#banner .swiper-button-next',
+            loop: true,
+            onSlideChangeStart(swiper) {
+              const index = swiper.activeIndex % data.length
+              $("#progressCount").width(index == 0 ? 184 : 34 + (index - 1) * 30)
+            },
+          });
         });
-      });
-      // -------
-      fetchData().then(data => {
-        const overturnWrap = $('#overturnWrap')
-        const dom = data.map(item => {
-          return `<img class="overturnItem" draggable="false" src="/greatwall/bocweb/web/img/banner${item.name}.png" alt="" />`
+        // -------
+        fetchData().then(data => {
+          const overturnWrap = $('#overturnWrap')
+          const dom = data.map(item => {
+            return `<img class="overturnItem" draggable="false" src="/greatwall/bocweb/web/img/banner${item.name}.png" alt="" />`
+          })
+          overturnWrap.html(dom)
+          const items = overturnWrap.find('.overturnItem');
+          const currentIndex = { count: 1 };
+          items[0].classList.add('rotate');
+          const timer = setInterval(() => {
+            items.removeClass('rotate');
+            items[currentIndex.count].classList.add('rotate');
+            currentIndex.count++;
+            if (currentIndex.count === items.length) {
+              currentIndex.count = 0;
+            }
+          }, 1500);
         })
-        overturnWrap.html(dom)
-        const items = overturnWrap.find('.overturnItem');
-        const currentIndex = { count: 1 };
-        items[0].classList.add('rotate');
-        const timer = setInterval(() => {
-          items.removeClass('rotate');
-          items[currentIndex.count].classList.add('rotate');
-          currentIndex.count++;
-          if (currentIndex.count === items.length) {
-            currentIndex.count = 0;
-          }
-        }, 1500);
-      })
-      // ----
-      fetchData().then(data => {
-        const recommendationSwiperWrap = $('#recommendationSwiperWrap')
-        data.map(item => {
+        // ----
+        fetchData().then(data => {
+          const recommendationSwiperWrap = $('#recommendationSwiperWrap')
+          data.map(item => {
 
-        })
-        const swiper = new Swiper('#recommendationSwiper', {
-          slidesPerView: 2,
-          spaceBetween: 12,
-          loop: true,
-          nextButton: '.recommendation-right .swiper-button-next',
-          prevButton: '.recommendation-right .swiper-button-prev',
-          onSlideChangeStart(swiper) {
-            // index + 2
-            console.log(swiper.activeIndex);
-          },
+          })
+          const swiper = new Swiper('#recommendationSwiper', {
+            slidesPerView: 2,
+            spaceBetween: 12,
+            loop: true,
+            nextButton: '.recommendation-right .swiper-button-next',
+            prevButton: '.recommendation-right .swiper-button-prev',
+            onSlideChangeStart(swiper) {
+              // index + 2
+              console.log(swiper.activeIndex);
+            },
+          });
         });
+        // ------
+        fetchData().then(data => {
+          const recommendationSwiperWrap = $('#newsSwiperWrap')
+          data.map(item => {
+
+          })
+          const swiper = new Swiper('#newsSwiper', {
+            slidesPerView: 3,
+            loop: true,
+            // spaceBetween: true,
+            nextButton: '.news .swiper-button-next',
+            prevButton: '.news .swiper-button-prev',
+            onSlideChangeStart(swiper) {
+              // index + 2
+              console.log(swiper.activeIndex);
+
+            },
+          });
+        })
       })
-    })
-  </script>
+    </script>
 </body>
 
 </html>

@@ -17,6 +17,29 @@ $borderColor2: #122852;
 
 body {
   overflow-x: hidden;
+  .partTitle {
+    .topName {
+      display: flex;
+      font-size: 18px;
+      font-family: Alibaba PuHuiTi 2;
+      font-weight: normal;
+      color: $primaryColor;
+      .topImg {
+        height: 20px;
+        margin-right: 5px;
+      }
+    }
+    .topTitle {
+      width: 542px;
+      font-size: 56px;
+      font-family: Alibaba PuHuiTi 2;
+      color: $primaryColor;
+      line-height: 60px;
+      font-weight: bold;
+      margin-top: 30px;
+      margin-bottom: 46px;
+    }
+  }
   .swiper-button-next,
   .swiper-button-prev {
     background: rgba($primaryColor, 0.1);
