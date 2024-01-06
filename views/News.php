@@ -20,10 +20,10 @@ document.oncontextmenu=stop;
 
     <div class="aboutUsTab">
       <div class="container">
-        <div class="tabItem active">
+        <div class="tabItem bd">
           <a href="<?php echo site_url('About_US') ?>" class="navName">长城精工</a>
         </div>
-        <div class="tabItem">
+        <div class="tabItem active">
           <a href="<?php echo site_url('News') ?>" class="navName">新闻动态</a>
         </div>
         <div class="tabItem">

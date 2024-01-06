@@ -79,6 +79,86 @@ body {
       height: calc(14px * var(--ratio));
     }
   }
+  #aboutUsBanner {
+    width: 100%;
+    height: calc(580px * var(--ratio));
+    .swiper-slide {
+      text-align: center;
+      font-size: calc(18px * var(--ratio));
+      background: #eee;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .bannerImg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .aboutUsTab {
+    height: calc(72px * var(--ratio));
+    background: $mainBackground;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: calc(1px * var(--ratio));
+      width: 50%;
+      z-index: 0;
+      border-bottom: calc(2px * var(--ratio)) solid $primaryColor;
+    }
+    .container {
+      margin-left: calc(100px * var(--ratio));
+      display: flex;
+      z-index: 1;
+      position: relative;
+      background: $mainBackground;
+      .tabItem {
+        font-size: calc(18px * var(--ratio));
+        font-family: Alibaba PuHuiTi 2;
+        height: 100%;
+        line-height: calc(70px * var(--ratio));
+        border-bottom: calc(2px * var(--ratio)) solid transparent;
+        position: relative;
+        font-weight: bold;
+        cursor: pointer;
+        a {
+          height: 100%;
+          display: block;
+          color: rgba($primaryColor, 0.5);
+          text-decoration: none;
+          padding: 0 calc(60px * var(--ratio));
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          height: calc(14px * var(--ratio));
+          width: calc(1px * var(--ratio));
+          background: rgba($primaryColor, 0.1);
+        }
+        &.bd {
+          border-color: $primaryColor;
+        }
+        &.active,
+        &:hover {
+          a {
+            color: $primaryColor;
+          }
+        }
+        &.active {
+          border-color: $primaryColor;
+          &::after {
+            height: calc(41px * var(--ratio));
+            background: $primaryColor;
+          }
+        }
+      }
+    }
+  }
 
   .swiper-button-next {
     right: 0;
