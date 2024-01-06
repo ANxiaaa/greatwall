@@ -34,51 +34,52 @@ document.oncontextmenu=stop;
         </div>
       </div>
     </div>
+  </div>
 
-    <?php include_once VIEWPATH . 'inc/footer.php'; ?>
+  <?php include_once VIEWPATH . 'inc/footer.php'; ?>
 
-    <?php
-    echo static_file('web/js/main.js');
-    echo static_file('web/js/swiper/swiper.min.css');
-    echo static_file('web/js/swiper/swiper.min.js');
-    ?>
-    <script>
-      const fetchData = () => {
-        return new Promise(resolve => {
-          setTimeout(function () {
-            resolve([
-              { name: '1' },
-              { name: '2' },
-              { name: '3' },
-              { name: '4' },
-              { name: '5' },
-              { name: '6' }
-            ]);
-          }, 100);
-        });
+  <?php
+  echo static_file('web/js/main.js');
+  echo static_file('web/js/swiper/swiper.min.css');
+  echo static_file('web/js/swiper/swiper.min.js');
+  ?>
+  <script>
+    const fetchData = () => {
+      return new Promise(resolve => {
+        setTimeout(function () {
+          resolve([
+            { name: '1' },
+            { name: '2' },
+            { name: '3' },
+            { name: '4' },
+            { name: '5' },
+            { name: '6' }
+          ]);
+        }, 100);
+      });
+    }
+    const searchFn = (e) => {
+      if (e.code == 'Enter') {
+        console.log(e.target.value);
       }
-      const searchFn = (e) => {
-        if (e.code == 'Enter') {
-          console.log(e.target.value);
-        }
-      }
-      $(function () {
-        fetchData().then(data => {
-          const swiperWrapper = $("#banner-wrapper");
-          const dom = data.map(item => {
-            return `<div class='swiper-slide'>
+    }
+    $(function () {
+      fetchData().then(data => {
+        const swiperWrapper = $("#banner-wrapper");
+        const dom = data.map(item => {
+          return `<div class='swiper-slide'>
             <img class="bannerImg" draggable="false" src="/greatwall/bocweb/web/img/banner${item.name}.png" alt="" />
           </div>`
-          })
-          swiperWrapper.html(dom)
-          const mySwiper = new Swiper('#banner', {
-            loop: true,
-            effect: 'fade',
-            autoplay : 5000,
-          });
+        })
+        swiperWrapper.html(dom)
+        const mySwiper = new Swiper('#banner', {
+          loop: true,
+          effect: 'fade',
+          autoplay: 5000,
         });
-      })
-    </script>
+      });
+    })
+  </script>
 </body>
 
 </html>

@@ -152,111 +152,111 @@ document.oncontextmenu=stop;
         </div>
       </div>
     </div>
+  </div>
+  <?php include_once VIEWPATH . 'inc/footer.php'; ?>
 
-    <?php include_once VIEWPATH . 'inc/footer.php'; ?>
-
-    <?php
-    echo static_file('web/js/main.js');
-    echo static_file('web/js/swiper/swiper.min.css');
-    echo static_file('web/js/swiper/swiper.min.js');
-    ?>
-    <script>
-      const fetchData = () => {
-        return new Promise(resolve => {
-          setTimeout(function () {
-            resolve([
-              { name: '1' },
-              { name: '2' },
-              { name: '3' },
-              { name: '4' },
-              { name: '5' },
-              { name: '6' }
-            ]);
-          }, 100);
-        });
+  <?php
+  echo static_file('web/js/main.js');
+  echo static_file('web/js/swiper/swiper.min.css');
+  echo static_file('web/js/swiper/swiper.min.js');
+  ?>
+  <script>
+    const fetchData = () => {
+      return new Promise(resolve => {
+        setTimeout(function () {
+          resolve([
+            { name: '1' },
+            { name: '2' },
+            { name: '3' },
+            { name: '4' },
+            { name: '5' },
+            { name: '6' }
+          ]);
+        }, 100);
+      });
+    }
+    const searchFn = (e) => {
+      if (e.code == 'Enter') {
+        console.log(e.target.value);
       }
-      const searchFn = (e) => {
-        if (e.code == 'Enter') {
-          console.log(e.target.value);
-        }
-      }
-      $(function () {
-        fetchData().then(data => {
-          const swiperWrapper = $("#banner-wrapper");
-          const dom = data.map(item => {
-            return `<div class='swiper-slide'>
+    }
+    $(function () {
+      fetchData().then(data => {
+        const swiperWrapper = $("#banner-wrapper");
+        const dom = data.map(item => {
+          return `<div class='swiper-slide'>
             <img class="bannerImg" draggable="false" src="/greatwall/bocweb/web/img/banner${item.name}.png" alt="" />
           </div>`
-          })
-          swiperWrapper.html(dom)
-          const mySwiper = new Swiper('#banner', {
-            prevButton: '#banner .swiper-button-prev',
-            nextButton: '#banner .swiper-button-next',
-            loop: true,
-            onSlideChangeStart(swiper) {
-              const index = swiper.activeIndex % data.length
-              $("#progressCount").width(index == 0 ? 184 : 34 + (index - 1) * 30)
-            },
-          });
-        });
-        // -------
-        fetchData().then(data => {
-          const overturnWrap = $('#overturnWrap')
-          const dom = data.map(item => {
-            return `<img class="overturnItem" draggable="false" src="/greatwall/bocweb/web/img/banner${item.name}.png" alt="" />`
-          })
-          overturnWrap.html(dom)
-          const items = overturnWrap.find('.overturnItem');
-          const currentIndex = { count: 1 };
-          items[0].classList.add('rotate');
-          const timer = setInterval(() => {
-            items.removeClass('rotate');
-            items[currentIndex.count].classList.add('rotate');
-            currentIndex.count++;
-            if (currentIndex.count === items.length) {
-              currentIndex.count = 0;
-            }
-          }, 1500);
         })
-        // ----
-        fetchData().then(data => {
-          const recommendationSwiperWrap = $('#recommendationSwiperWrap')
-          data.map(item => {
-
-          })
-          const swiper = new Swiper('#recommendationSwiper', {
-            slidesPerView: 2,
-            spaceBetween: 12,
-            loop: true,
-            nextButton: '.recommendation-right .swiper-button-next',
-            prevButton: '.recommendation-right .swiper-button-prev',
-            onSlideChangeStart(swiper) {
-              // index + 2
-              console.log(swiper.activeIndex);
-            },
-          });
+        swiperWrapper.html(dom)
+        const mySwiper = new Swiper('#banner', {
+          prevButton: '#banner .swiper-button-prev',
+          nextButton: '#banner .swiper-button-next',
+          loop: true,
+          onSlideChangeStart(swiper) {
+            const index = swiper.activeIndex % data.length
+            $("#progressCount").width(index == 0 ? 184 : 34 + (index - 1) * 30)
+          },
         });
-        // ------
-        fetchData().then(data => {
-          const recommendationSwiperWrap = $('#newsSwiperWrap')
-          data.map(item => {
-
-          })
-          const swiper = new Swiper('#newsSwiper', {
-            slidesPerView: 3,
-            loop: true,
-            // spaceBetween: true,
-            nextButton: '.news .swiper-button-next',
-            prevButton: '.news .swiper-button-prev',
-            onSlideChangeStart(swiper) {
-              // index + 2
-              console.log(swiper.activeIndex);
-
-            },
-          });
+      });
+      // -------
+      fetchData().then(data => {
+        const overturnWrap = $('#overturnWrap')
+        const dom = data.map(item => {
+          return `<img class="overturnItem" draggable="false" src="/greatwall/bocweb/web/img/banner${item.name}.png" alt="" />`
         })
+        overturnWrap.html(dom)
+        const items = overturnWrap.find('.overturnItem');
+        const currentIndex = { count: 1 };
+        items[0].classList.add('rotate');
+        const timer = setInterval(() => {
+          items.removeClass('rotate');
+          items[currentIndex.count].classList.add('rotate');
+          currentIndex.count++;
+          if (currentIndex.count === items.length) {
+            currentIndex.count = 0;
+          }
+        }, 1500);
       })
-    </script>
+      // ----
+      fetchData().then(data => {
+        const recommendationSwiperWrap = $('#recommendationSwiperWrap')
+        data.map(item => {
+
+        })
+        const swiper = new Swiper('#recommendationSwiper', {
+          slidesPerView: 2,
+          spaceBetween: 12,
+          loop: true,
+          nextButton: '.recommendation-right .swiper-button-next',
+          prevButton: '.recommendation-right .swiper-button-prev',
+          onSlideChangeStart(swiper) {
+            // index + 2
+            console.log(swiper.activeIndex);
+          },
+        });
+      });
+      // ------
+      fetchData().then(data => {
+        const recommendationSwiperWrap = $('#newsSwiperWrap')
+        data.map(item => {
+
+        })
+        const swiper = new Swiper('#newsSwiper', {
+          slidesPerView: 3,
+          loop: true,
+          // spaceBetween: true,
+          nextButton: '.news .swiper-button-next',
+          prevButton: '.news .swiper-button-prev',
+          onSlideChangeStart(swiper) {
+            // index + 2
+            console.log(swiper.activeIndex);
+
+          },
+        });
+      })
+    })
+  </script>
 </body>
 
 </html>
