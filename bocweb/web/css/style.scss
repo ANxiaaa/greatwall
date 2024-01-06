@@ -4,6 +4,7 @@ $textColor1: #333;
 $textColor2: #666;
 $textColor3: #fff;
 $textColor4: #122852;
+$textColor5: #c7c7c7;
 $mainBackground: #fff;
 $btnBackground: #eee;
 $inputBackground: #fff;
@@ -42,6 +43,27 @@ body {
       font-weight: bold;
       margin-top: calc(30px * var(--ratio));
       margin-bottom: calc(46px * var(--ratio));
+    }
+  }
+  .yellowBtn {
+    background: $yellowBackground;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    z-index: 1;
+    .rightIcon {
+      margin-left: calc(18px * var(--ratio));
+      width: calc(7px * var(--ratio));
+      height: calc(10px * var(--ratio));
+      transition: transform 0.5s;
+    }
+    &:hover {
+      .rightIcon {
+        transform: translateX(calc(5px * var(--ratio)));
+      }
     }
   }
   .swiper-button-next,
@@ -90,6 +112,11 @@ img {
 @media screen and (max-width: 2360px) {
   body {
     --ratio: 1.1;
+  }
+}
+@media screen and (max-width: 2150px) {
+  body {
+    --ratio: 1;
   }
 }
 @media screen and (max-width: 2000px) {

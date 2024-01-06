@@ -50,7 +50,7 @@ document.oncontextmenu=stop;
             </div>
             <div class="topTitle">致力于成为全球优秀的工业级全场景工业需求解决者</div>
           </div>
-          <div class="entranceBtn">
+          <div class="entranceBtn yellowBtn">
             <span>查看全系列产品</span>
             <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>" alt="">
           </div>
@@ -81,7 +81,7 @@ document.oncontextmenu=stop;
                   <div class="msg">工业级日式省力钳工业级日式省力钳工业级日式省力钳</div>
                   <div class="msg">工业级日式省力钳工业级日式省力钳工业级日式省力钳</div>
                 </div>
-                <div class="itemBtn">
+                <div class="itemBtn yellowBtn">
                   <span>了解更多</span>
                   <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
                     alt="">
@@ -119,7 +119,22 @@ document.oncontextmenu=stop;
         </div>
         <div class="swiper-container" id="newsSwiper">
           <div class="swiper-wrapper" id="newsSwiperWrap">
-            <div class="swiper-slide newsItem">Slide 1</div>
+            <div class="swiper-slide newsItem">
+              <div class="newsDate">
+                <img class="rili" draggable="false" src="<?php echo static_file('web/img/rili.webp') ?>" alt="">
+                <span>2023-10-12</span>
+              </div>
+              <div class="newsImgBox">
+                <img class="newsImg" draggable="false" src="<?php echo static_file('web/img/banner2.png') ?>" alt="">
+              </div>
+              <div class="newsTitle">长城精工入选国家级专精特新重点“小巨人”企业长城精工入选国家级专精特新重点“小巨人”企业</div>
+              <div class="newsMsg">长城精工入选国家级专精特新重点“小巨人”企业长城精工入选国家级专精特新重点“小巨人”企业</div>
+              <div class="newsBtn yellowBtn">
+                <span>了解更多</span>
+                <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
+                  alt="">
+              </div>
+            </div>
             <div class="swiper-slide newsItem">Slide 2</div>
             <div class="swiper-slide newsItem">Slide 3</div>
             <div class="swiper-slide newsItem">Slide 4</div>
@@ -157,7 +172,7 @@ document.oncontextmenu=stop;
               { name: '5' },
               { name: '6' }
             ]);
-          }, 1000);
+          }, 100);
         });
       }
       const searchFn = (e) => {
