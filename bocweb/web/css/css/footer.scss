@@ -7,6 +7,7 @@ footer {
     .container {
       justify-content: space-between;
       display: flex;
+      padding-left: calc(150px * var(--ratio));
       .logoBox {
         .logo {
           width: calc(194px * var(--ratio));

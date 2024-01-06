@@ -25,7 +25,7 @@
       <div class="container-right">
         <div class="nav">
           <div class="navItem">
-            <span class="navName">首页</span>
+            <a href="<?php echo site_url('Home') ?>" class="navName">首页</a>
             <div class="activeLine"></div>
             <div class="navSel">
               <div class="container">
@@ -96,7 +96,8 @@
             <span class="navName">产品中心</span>
           </div>
           <div class="navItem">
-            <span class="navName">关于我们</span>
+            <!-- <span class="navName">关于我们</span> -->
+            <a href="<?php echo site_url('About_US') ?>" class="navName">关于我们</a>
           </div>
           <div class="navItem">
             <span class="navName">品牌形象</span>

@@ -274,6 +274,7 @@
     padding-top: calc(120px * var(--ratio));
     position: relative;
     .container {
+      padding-left: calc(150px * var(--ratio));
       #newsSwiper {
         height: calc(715px * var(--ratio));
         overflow: inherit;
