@@ -1,5 +1,6 @@
 // --
 $primaryColor: #071d49;
+$yellotextColor: #ffd100;
 $textColor1: #333;
 $textColor2: #666;
 $textColor3: #fff;
@@ -23,6 +24,9 @@ body {
   --ratio: 1;
   background: $mainBackground;
   overflow-x: hidden;
+  .yellotext {
+    color: $yellotextColor;
+  }
   .partTitle {
     .topName {
       display: flex;

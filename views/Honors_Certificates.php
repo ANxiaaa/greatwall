@@ -15,7 +15,7 @@ document.oncontextmenu=stop;
 
     <div class="aboutUs">
         <div class="swiper-container" id="aboutUsBanner">
-            <div class="swiper-wrapper" id="banner-wrapper"></div>
+            <div class="swiper-wrapper" id="aboutUsBanner-wrapper"></div>
         </div>
 
         <div class="aboutUsTab">
@@ -65,14 +65,14 @@ document.oncontextmenu=stop;
         }
         $(function () {
             fetchData().then(data => {
-                const swiperWrapper = $("#banner-wrapper");
+                const swiperWrapper = $("#aboutUsBanner-wrapper");
                 const dom = data.map(item => {
                     return `<div class='swiper-slide'>
             <img class="bannerImg" draggable="false" src="/greatwall/bocweb/web/img/banner${item.name}.png" alt="" />
           </div>`
                 })
                 swiperWrapper.html(dom)
-                const mySwiper = new Swiper('#banner', {
+                const mySwiper = new Swiper('#aboutUsBanner', {
                     loop: true,
                     effect: 'fade',
                     autoplay: 5000,

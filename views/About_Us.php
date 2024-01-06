@@ -15,7 +15,7 @@ document.oncontextmenu=stop;
 
   <div class="aboutUs">
     <div class="swiper-container" id="aboutUsBanner">
-      <div class="swiper-wrapper" id="banner-wrapper"></div>
+      <div class="swiper-wrapper" id="aboutUsBanner-wrapper"></div>
     </div>
 
     <div class="aboutUsTab">
@@ -222,7 +222,30 @@ document.oncontextmenu=stop;
 
     <div id="course">
       <div class="courseContent">
-        <div class="container"></div>
+        <div class="container">
+          <div class="courseName">
+            发展历程
+          </div>
+          <div class="courseName2">
+            <span class="yellotext">荣获</span> “国家级专精特新重点小巨人”、“国家知识产权优势企业”
+          </div>
+          <div class="swiperBox">
+            <div class="swiper-container" id="yearBanner">
+              <div class="swiper-wrapper" id="yearBanner-wrapper">
+                <div class='swiper-slide'>
+
+                </div>
+              </div>
+            </div>
+            <div class="swiper-container" id="courseBanner">
+              <div class="swiper-wrapper" id="courseBanner-wrapper">
+                <div class='swiper-slide'>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -249,6 +272,29 @@ document.oncontextmenu=stop;
         }, 100);
       });
     }
+    const yearData = () => {
+      return new Promise(resolve => {
+        setTimeout(function () {
+          resolve([
+            { year: '2021' },
+            { year: '2022' },
+            { year: '2023' },
+            { year: '2024' },
+            { year: '2025' },
+            { year: '2027' },
+            { year: '2028' },
+            { year: '2029' },
+            { year: '2020' },
+            { year: '2031' },
+            { year: '2032' },
+            { year: '2033' },
+            { year: '2034' },
+            { year: '2035' },
+            { year: '2036' },
+          ]);
+        }, 100);
+      });
+    }
     const searchFn = (e) => {
       if (e.code == 'Enter') {
         console.log(e.target.value);
@@ -266,18 +312,45 @@ document.oncontextmenu=stop;
       // observer.observe(courseDOM[0]);
 
       fetchData().then(data => {
-        const swiperWrapper = $("#banner-wrapper");
+        const swiperWrapper = $("#aboutUsBanner-wrapper");
         const dom = data.map(item => {
           return `<div class='swiper-slide'>
             <img class="bannerImg" draggable="false" src="/greatwall/bocweb/web/img/banner${item.name}.png" alt="" />
           </div>`
         })
         swiperWrapper.html(dom)
-        const mySwiper = new Swiper('#banner', {
+        const mySwiper = new Swiper('#aboutUsBanner', {
           loop: true,
           effect: 'fade',
           autoplay: 5000,
         });
+      });
+      yearData().then(data => {
+        const swiperWrapper = $("#courseBanner-wrapper");
+        const yearBanner = $("#yearBanner-wrapper");
+        const dom = data.map((item, index) => {
+          return `<div class='swiper-slide'>
+            slide${index}
+          </div>`
+        })
+        swiperWrapper.html(dom)
+        yearBanner.html(dom)
+        const yearSwiper = new Swiper('#yearBanner', {
+          direction: 'vertical',
+          slidesPerView: 10,
+          centeredSlides: true,
+          slideToClickedSlide: true,
+        });
+        const mySwiper = new Swiper('#courseBanner', {
+          direction: 'vertical',
+          slidesPerView: 10,
+          centeredSlides: true,
+          mousewheelControl: true,
+          freeMode: true,
+          slideToClickedSlide: true,
+        });
+        mySwiper.params.control = yearSwiper;
+        yearSwiper.params.control = mySwiper;
       });
     })
   </script>

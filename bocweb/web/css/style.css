@@ -9,6 +9,9 @@ body {
   background: #fff;
   overflow-x: hidden;
 }
+body .yellotext {
+  color: #ffd100;
+}
 body .partTitle .topName {
   display: flex;
   align-items: center;
@@ -953,7 +956,6 @@ footer .footerBtm .container a:last-child {
 }
 .aboutUs #course {
   height: 1300px;
-  overflow-y: auto;
 }
 .aboutUs #course .courseContent {
   height: 100%;
@@ -963,8 +965,37 @@ footer .footerBtm .container a:last-child {
   top: 98px;
 }
 .aboutUs #course .courseContent .container {
-  padding: 0 150px;
+  padding: 200px 150px 0;
   height: 100%;
+  color: #071d49;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.aboutUs #course .courseContent .container .courseName {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 22px;
+}
+.aboutUs #course .courseContent .container .courseName2 {
+  font-weight: bold;
+  font-size: 22px;
+}
+.aboutUs #course .courseContent .container .swiperBox {
+  display: flex;
+  justify-content: space-between;
+  height: 0;
+  flex: 1;
+  overflow: hidden;
+  margin-top: 60px;
+  padding-left: 96px;
+}
+.aboutUs #course .courseContent .container .swiperBox #courseBanner {
+  width: 100%;
+  margin-top: -100px;
+}
+.aboutUs #course .courseContent .container .swiperBox #courseBanner .swiper-slide-active {
+  height: 200px !important;
 }
 
 /*# sourceMappingURL=style.css.map */
