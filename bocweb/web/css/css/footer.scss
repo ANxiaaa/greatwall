@@ -1,41 +1,41 @@
 footer {
   .footer-content {
-    padding-top: 76px;
-    border-top: 1px solid $borderColor;
+    padding-top: calc(76px * var(--ratio));
+    border-top: calc(1px * var(--ratio)) solid $borderColor;
     display: flex;
-    padding-bottom: 56px;
+    padding-bottom: calc(56px * var(--ratio));
     .container {
       justify-content: space-between;
       display: flex;
       .logoBox {
         .logo {
-          width: 194px;
-          height: 79px;
-          margin-bottom: 37px;
+          width: calc(194px * var(--ratio));
+          height: calc(79px * var(--ratio));
+          margin-bottom: calc(37px * var(--ratio));
         }
         .share {
           display: flex;
           .shareItem {
-            width: 44px;
-            height: 44px;
-            margin-right: 4px;
-            margin-bottom: 15px;
+            width: calc(44px * var(--ratio));
+            height: calc(44px * var(--ratio));
+            margin-right: calc(4px * var(--ratio));
+            margin-bottom: calc(15px * var(--ratio));
             display: flex;
             align-items: center;
             justify-content: center;
             background: $btnBackground;
             cursor: pointer;
             .weixin {
-              width: 21px;
-              height: 17px;
+              width: calc(21px * var(--ratio));
+              height: calc(17px * var(--ratio));
             }
             .zheshisha {
-              width: 19px;
-              height: 17px;
+              width: calc(19px * var(--ratio));
+              height: calc(17px * var(--ratio));
             }
             .douyin {
-              width: 17px;
-              height: 19px;
+              width: calc(17px * var(--ratio));
+              height: calc(19px * var(--ratio));
             }
             &:hover {
               background: $yellowBackground;
@@ -43,12 +43,12 @@ footer {
           }
         }
         .cqc {
-          width: 362px;
-          height: 82px;
+          width: calc(362px * var(--ratio));
+          height: calc(82px * var(--ratio));
         }
       }
       .btmNav {
-        padding-top: 30px;
+        padding-top: calc(30px * var(--ratio));
         margin-left: 7%;
         display: flex;
         flex: 1;
@@ -57,21 +57,21 @@ footer {
           .navTitle {
             white-space: pre;
             font-weight: bold;
-            font-size: 20px;
+            font-size: calc(20px * var(--ratio));
             font-family: OPPOSans;
             color: $primaryColor;
-            line-height: 28px;
-            margin-bottom: 25px;
+            line-height: calc(28px * var(--ratio));
+            margin-bottom: calc(25px * var(--ratio));
           }
           .navItem {
             white-space: pre;
-            font-size: 16px;
+            font-size: calc(16px * var(--ratio));
             user-select: none;
             cursor: pointer;
             font-family: OPPOSans;
             font-weight: 400;
             color: $primaryColor;
-            line-height: 24px;
+            line-height: calc(24px * var(--ratio));
             opacity: 0.5;
             &:hover {
               opacity: 1;
@@ -80,23 +80,23 @@ footer {
         }
       }
       .btmTel {
-        // margin-left: 46px;
+        // margin-left: calc(46px * var(--ratio));
         .telItem {
-          margin-bottom: 20px;
+          margin-bottom: calc(20px * var(--ratio));
           color: $primaryColor;
           font-weight: bold;
-          line-height: 24px;
+          line-height: calc(24px * var(--ratio));
           font-family: OPPOSans;
           .p1 {
-            font-size: 16px;
+            font-size: calc(16px * var(--ratio));
             white-space: pre;
           }
           .p2 {
-            font-size: 22px;
+            font-size: calc(22px * var(--ratio));
             white-space: pre;
           }
           .p3 {
-            font-size: 16px;
+            font-size: calc(16px * var(--ratio));
             white-space: pre;
           }
         }
@@ -104,18 +104,18 @@ footer {
     }
   }
   .footerBtm .container {
-    line-height: 70px;
-    border-top: 1px solid $borderColor;
+    line-height: calc(70px * var(--ratio));
+    border-top: calc(1px * var(--ratio)) solid $borderColor;
     display: flex;
     justify-content: space-between;
-    font-size: 13px;
+    font-size: calc(13px * var(--ratio));
     font-family: OPPOSans;
     font-weight: 500;
     color: $primaryColor;
     a {
       color: $primaryColor;
       text-decoration: none;
-      margin-right: 30px;
+      margin-right: calc(30px * var(--ratio));
       &:hover {
         text-decoration: underline;
       }

@@ -1,18 +1,18 @@
 header {
   font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Tahoma,
     sans-serif;
-  font-size: 12px;
+  font-size: calc(12px * var(--ratio));
   position: sticky;
-  top: -44px;
+  top: calc(-44px * var(--ratio));
   background: $mainBackground;
   z-index: 99;
   .headerTop {
-    height: 44px;
-    padding: 13px 0;
-    border-bottom: 1px solid rgba($primaryColor, 0.1);
+    height: calc(44px * var(--ratio));
+    padding: calc(13px * var(--ratio)) 0;
+    border-bottom: calc(1px * var(--ratio)) solid rgba($primaryColor, 0.1);
     color: $primaryColor;
     font-weight: bold;
-    font-size: 13px;
+    font-size: calc(13px * var(--ratio));
     font-family: OPPOSans;
     user-select: none;
     .container {
@@ -23,35 +23,35 @@ header {
         display: flex;
         align-items: center;
         .leftLine {
-          margin: 0 7px;
+          margin: 0 calc(7px * var(--ratio));
         }
         .rightLine {
-          margin: 0 24px;
-          width: 1px;
-          height: 14px;
+          margin: 0 calc(24px * var(--ratio));
+          width: calc(1px * var(--ratio));
+          height: calc(14px * var(--ratio));
           background: $primaryColor;
           opacity: 0.2;
         }
       }
       .lang {
-        width: 16px;
-        height: 16px;
-        margin-right: 5px;
+        width: calc(16px * var(--ratio));
+        height: calc(16px * var(--ratio));
+        margin-right: calc(5px * var(--ratio));
       }
       .jd {
-        width: 20px;
-        height: 15px;
-        margin-right: 5px;
+        width: calc(20px * var(--ratio));
+        height: calc(15px * var(--ratio));
+        margin-right: calc(5px * var(--ratio));
       }
       .tm {
-        width: 17px;
-        height: 16px;
-        margin-right: 5px;
+        width: calc(17px * var(--ratio));
+        height: calc(16px * var(--ratio));
+        margin-right: calc(5px * var(--ratio));
       }
     }
   }
   .headerContent {
-    height: 98px;
+    height: calc(98px * var(--ratio));
     > .container {
       display: flex;
       justify-content: space-between;
@@ -61,8 +61,8 @@ header {
         display: flex;
         align-items: center;
         .logo {
-          width: 414px;
-          height: 60px;
+          width: calc(414px * var(--ratio));
+          height: calc(60px * var(--ratio));
         }
       }
       .container-right {
@@ -70,26 +70,26 @@ header {
         align-items: center;
         height: 100%;
         .nav {
-          line-height: 98px;
+          line-height: calc(98px * var(--ratio));
           height: 100%;
           display: flex;
           justify-content: space-between;
-          font-size: 20px;
+          font-size: calc(20px * var(--ratio));
           font-family: Alibaba PuHuiTi 2;
           color: $textColor1;
           .navItem {
-            margin: 0 10px;
+            margin: 0 calc(10px * var(--ratio));
             cursor: pointer;
             .navName {
-              padding: 0 50px;
+              padding: 0 calc(50px * var(--ratio));
               white-space: pre;
               font-weight: bold;
             }
             .navSel {
               height: 0;
               overflow: hidden;
-              border-top: 1px solid $borderColor;
-              border-bottom: 1px solid $borderColor;
+              border-top: calc(1px * var(--ratio)) solid $borderColor;
+              border-bottom: calc(1px * var(--ratio)) solid $borderColor;
               position: absolute;
               top: 100%;
               width: 100%;
@@ -99,29 +99,29 @@ header {
               background: $mainBackground;
               transition: height 0.2s;
               > .container {
-                height: 280px;
-                padding-top: 48px;
+                height: calc(280px * var(--ratio));
+                padding-top: calc(48px * var(--ratio));
                 display: flex;
                 line-height: 1;
                 .navSelItem {
-                  width: 480px;
-                  height: 160px;
-                  padding-left: 40px;
-                  border-right: 1px solid rgba($primaryColor, 0.1);
+                  width: calc(480px * var(--ratio));
+                  height: calc(160px * var(--ratio));
+                  padding-left: calc(40px * var(--ratio));
+                  border-right: calc(1px * var(--ratio)) solid rgba($primaryColor, 0.1);
                   .selTitle {
-                    font-size: 18px;
+                    font-size: calc(18px * var(--ratio));
                     font-family: OPPOSans;
                     font-weight: bold;
                     color: $primaryColor;
-                    line-height: 24px;
-                    margin-bottom: 25px;
+                    line-height: calc(24px * var(--ratio));
+                    margin-bottom: calc(25px * var(--ratio));
                   }
                   .selName span {
-                    font-size: 16px;
+                    font-size: calc(16px * var(--ratio));
                     font-family: OPPOSans;
                     font-weight: 500;
                     color: $textColor2;
-                    line-height: 30px;
+                    line-height: calc(30px * var(--ratio));
                     cursor: pointer;
                     z-index: 1;
                     position: relative;
@@ -129,10 +129,10 @@ header {
                     &::after {
                       content: "";
                       position: absolute;
-                      bottom: 2px;
+                      bottom: calc(2px * var(--ratio));
                       width: 100%;
                       left: 0;
-                      height: 4px;
+                      height: calc(4px * var(--ratio));
                       display: none;
                       z-index: -1;
                       background: $yellowBackground;
@@ -151,15 +151,15 @@ header {
             .activeLine {
               position: relative;
               width: 100%;
-              height: 6px;
-              top: -6px;
+              height: calc(6px * var(--ratio));
+              top: calc(-6px * var(--ratio));
               overflow: hidden;
               &::after {
                 position: absolute;
                 width: 100%;
-                top: 6px;
+                top: calc(6px * var(--ratio));
                 content: "";
-                height: 6px;
+                height: calc(6px * var(--ratio));
                 background: $primaryColor;
                 transition: top 0.1s;
               }
@@ -172,14 +172,14 @@ header {
               }
 
               .navSel {
-                height: 280px;
+                height: calc(280px * var(--ratio));
               }
             }
           }
         }
         .search {
-          width: 17px;
-          height: 18px;
+          width: calc(17px * var(--ratio));
+          height: calc(18px * var(--ratio));
           cursor: pointer;
         }
       }
