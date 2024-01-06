@@ -11,6 +11,7 @@ $inputBackground: #fff;
 $yellowBackground: #ffd100;
 $borderColor: #f5f5f5;
 $borderColor2: #122852;
+$boxShadowColor: #122852;
 
 * {
   padding: 0;
@@ -20,6 +21,7 @@ $borderColor2: #122852;
 
 body {
   --ratio: 1;
+  background: $mainBackground;
   overflow-x: hidden;
   .partTitle {
     .topName {
@@ -110,7 +112,7 @@ body {
       border-bottom: calc(2px * var(--ratio)) solid $primaryColor;
     }
     .container {
-      margin-left: calc(100px * var(--ratio));
+      left: calc(100px * var(--ratio));
       display: flex;
       z-index: 1;
       position: relative;

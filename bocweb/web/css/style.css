@@ -6,6 +6,7 @@
 
 body {
   --ratio: 1;
+  background: #fff;
   overflow-x: hidden;
 }
 body .partTitle .topName {
@@ -95,7 +96,7 @@ body .aboutUsTab::before {
   border-bottom: calc(2px * var(--ratio)) solid #071d49;
 }
 body .aboutUsTab .container {
-  margin-left: calc(100px * var(--ratio));
+  left: calc(100px * var(--ratio));
   display: flex;
   z-index: 1;
   position: relative;
@@ -828,8 +829,127 @@ footer .footerBtm .container a:last-child {
 .home .news .container #newsSwiper .swiper-slide-active {
   transition: box-shadow 0.5s;
   border: calc(1px * var(--ratio)) solid #e3e5e6;
-  box-shadow: 0 0 calc(21px * var(--ratio)) 0 rgba(0, 99, 190, 0.2);
+  box-shadow: 0 0 calc(21px * var(--ratio)) 0 hsla(209, 100%, 37%, 0.2);
   z-index: 1;
+}
+
+.aboutUs .company {
+  padding-top: 98px;
+  height: 1220px;
+  background: url("../../web/img/companyBg.webp") no-repeat, #fff;
+  background-size: contain;
+}
+.aboutUs .company .container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 150px;
+}
+.aboutUs .company .companyLeft {
+  font-family: Alibaba PuHuiTi 2;
+  width: 734px;
+  color: #071d49;
+}
+.aboutUs .company .companyLeft .companyName {
+  font-size: 42px;
+  line-height: 60px;
+  font-weight: bold;
+  margin-bottom: 36px;
+}
+.aboutUs .company .companyLeft .companyMsg {
+  margin-bottom: 100px;
+}
+.aboutUs .company .companyLeft .companyMsg p {
+  font-size: 22px;
+  line-height: 36px;
+}
+.aboutUs .company .companyLeft .companyMsg p + p {
+  margin-top: 36px;
+}
+.aboutUs .company .companyLeft .companyLeftBtm .companyInfoItem {
+  position: relative;
+  border: 1px solid rgba(18, 40, 82, 0.1);
+  box-shadow: 0 5px 10px 0px rgba(18, 40, 82, 0.1);
+  padding: 38px 62px;
+  white-space: pre;
+  font-size: 18px;
+  color: #122852;
+  line-height: 28px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.aboutUs .company .companyLeft .companyLeftBtm .companyInfoItem .infoInex {
+  position: absolute;
+  right: 0;
+  bottom: -20px;
+  font-size: 120px;
+  line-height: 1;
+  font-style: italic;
+  font-weight: bold;
+  color: rgba(7, 29, 73, 0.05);
+  user-select: none;
+}
+.aboutUs .company .companyLeft .companyLeftBtm .companyInfoItem::before {
+  content: "";
+  position: absolute;
+  background: url("../../web/img/companyInfoBg.webp");
+  width: 10px;
+  height: 13px;
+  left: 37px;
+  top: 43px;
+  background-size: cover;
+}
+.aboutUs .company .companyRight {
+  flex: 1;
+  margin-left: 144px;
+  padding-top: 96px;
+}
+.aboutUs .company .companyRight .numInfoItem {
+  width: 560px;
+  color: #071d49;
+  border-bottom: 1px solid rgba(7, 29, 73, 0.2);
+  margin-bottom: 50px;
+}
+.aboutUs .company .companyRight .numInfoItem .numBoxWrap {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.aboutUs .company .companyRight .numInfoItem .numBoxWrap .numBox {
+  display: flex;
+  height: 100%;
+  user-select: none;
+  overflow: hidden;
+}
+.aboutUs .company .companyRight .numInfoItem .numBoxWrap .numBox .digit {
+  height: 60px;
+  font-size: 60px;
+  line-height: 1;
+  transform: translateY(calc(var(--num) * -60px));
+  transition: transform 0.3s;
+}
+.aboutUs .company .companyRight .numInfoItem .numBoxWrap .numUnit {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  line-height: 1;
+  user-select: none;
+  font-size: 22px;
+}
+.aboutUs .company .companyRight .numInfoItem .numBoxWrap .numUnit .unit {
+  font-size: 14px;
+}
+.aboutUs .company .companyRight .numInfoItem .numInfoName {
+  margin-top: 26px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.aboutUs .company .companyRight .numInfoItem .numInfoMsg {
+  font-size: 18px;
+  font-style: italic;
+  line-height: 24px;
+  opacity: 0.5;
+  margin-bottom: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */

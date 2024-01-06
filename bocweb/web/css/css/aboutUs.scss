@@ -1,4 +1,122 @@
 .aboutUs {
-  
-  
+  .company {
+    padding-top: 98px;
+    height: 1220px;
+    background: url("../../web/img/companyBg.webp") no-repeat, $mainBackground;
+    background-size: contain;
+    .container {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 150px;
+    }
+    .companyLeft {
+      font-family: Alibaba PuHuiTi 2;
+      width: 734px;
+      color: $primaryColor;
+      .companyName {
+        font-size: 42px;
+        line-height: 60px;
+        font-weight: bold;
+        margin-bottom: 36px;
+      }
+      .companyMsg {
+        margin-bottom: 100px;
+        p {
+          font-size: 22px;
+          line-height: 36px;
+          + p {
+            margin-top: 36px;
+          }
+        }
+      }
+      .companyLeftBtm {
+        .companyInfoItem {
+          position: relative;
+          border: 1px solid rgba($borderColor2, 0.1);
+          box-shadow: 0 5px 10px 0px rgba($boxShadowColor, 0.1);
+          padding: 38px 62px;
+          white-space: pre;
+          font-size: 18px;
+          color: $textColor4;
+          line-height: 28px;
+          margin-bottom: 20px;
+          overflow: hidden;
+          .infoInex {
+            position: absolute;
+            right: 0;
+            bottom: -20px;
+            font-size: 120px;
+            line-height: 1;
+            font-style: italic;
+            font-weight: bold;
+            color: rgba($primaryColor, 0.05);
+            user-select: none;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            background: url("../../web/img/companyInfoBg.webp");
+            width: 10px;
+            height: 13px;
+            left: 37px;
+            top: 43px;
+            background-size: cover;
+          }
+        }
+      }
+    }
+    .companyRight {
+      flex: 1;
+      margin-left: 144px;
+      padding-top: 96px;
+      .numInfoItem {
+        width: 560px;
+        color: $primaryColor;
+        border-bottom: 1px solid rgba($primaryColor, 0.2);
+        margin-bottom: 50px;
+        .numBoxWrap {
+          height: 60px;
+          display: flex;
+          align-items: center;
+          .numBox {
+            display: flex;
+            height: 100%;
+            user-select: none;
+            overflow: hidden;
+            .digit {
+              height: 60px;
+              font-size: 60px;
+              line-height: 1;
+              transform: translateY(calc(var(--num) * -60px));
+              transition: transform 0.3s;
+            }
+          }
+          .numUnit {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            justify-content: space-between;
+            line-height: 1;
+            user-select: none;
+            font-size: 22px;
+            .unit {
+              font-size: 14px;
+            }
+          }
+        }
+        .numInfoName {
+          margin-top: 26px;
+          font-size: 22px;
+          font-weight: bold;
+        }
+        .numInfoMsg {
+          font-size: 18px;
+          font-style: italic;
+          line-height: 24px;
+          opacity: 0.5;
+          margin-bottom: 50px;
+        }
+      }
+    }
+  }
 }

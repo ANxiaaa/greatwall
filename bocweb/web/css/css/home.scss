@@ -337,7 +337,7 @@
         .swiper-slide-active {
           transition: box-shadow 0.5s;
           border: calc(1px * var(--ratio)) solid #e3e5e6;
-          box-shadow: 0 0 calc(21px * var(--ratio)) 0 rgba(0, 99, 190, 0.2);
+          box-shadow: 0 0 calc(21px * var(--ratio)) 0 hsla(209, 100%, 37%, 0.2);
           z-index: 1;
         }
       }
