@@ -842,7 +842,7 @@ footer .footerBtm .container a:last-child {
 .aboutUs .company .container {
   display: flex;
   justify-content: space-between;
-  padding-left: 150px;
+  padding: 0 150px;
 }
 .aboutUs .company .companyLeft {
   font-family: Alibaba PuHuiTi 2;
@@ -950,6 +950,21 @@ footer .footerBtm .container a:last-child {
   line-height: 24px;
   opacity: 0.5;
   margin-bottom: 50px;
+}
+.aboutUs #course {
+  height: 1300px;
+  overflow-y: auto;
+}
+.aboutUs #course .courseContent {
+  height: 100%;
+  background: url("../../web/img/courseBg.webp") no-repeat;
+  background-size: cover;
+  position: sticky;
+  top: 98px;
+}
+.aboutUs #course .courseContent .container {
+  padding: 0 150px;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

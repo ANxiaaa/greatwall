@@ -7,7 +7,7 @@
     .container {
       display: flex;
       justify-content: space-between;
-      padding-left: 150px;
+      padding: 0 150px;
     }
     .companyLeft {
       font-family: Alibaba PuHuiTi 2;
@@ -116,6 +116,31 @@
           opacity: 0.5;
           margin-bottom: 50px;
         }
+      }
+    }
+  }
+  #course {
+    // height: 100vh;
+    height: 1300px;
+    overflow-y: auto;
+    // &::after {
+    //   content: "";
+    //   display: block;
+    //   height: 1500px;
+    // }
+    // &::-webkit-scrollbar {
+    //   display: none;
+    // }
+    .courseContent {
+      // height: calc(100% - 98px);
+      height: 100%;
+      background: url("../../web/img/courseBg.webp") no-repeat;
+      background-size: cover;
+      position: sticky;
+      top: 98px;
+      .container {
+        padding: 0 150px;
+        height: 100%;
       }
     }
   }

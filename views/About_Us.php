@@ -93,7 +93,7 @@ document.oncontextmenu=stop;
               业务分布
             </div>
             <div class="numInfoMsg">
-            拥有现代化的工业厂房12万平方米,占地面积约310亩
+              拥有现代化的工业厂房12万平方米,占地面积约310亩
             </div>
           </div>
           <div class="numInfoItem">
@@ -133,7 +133,7 @@ document.oncontextmenu=stop;
               业务分布
             </div>
             <div class="numInfoMsg">
-            拥有现代化的工业厂房12万平方米,占地面积约310亩
+              拥有现代化的工业厂房12万平方米,占地面积约310亩
             </div>
           </div>
           <div class="numInfoItem">
@@ -173,7 +173,7 @@ document.oncontextmenu=stop;
               业务分布
             </div>
             <div class="numInfoMsg">
-            拥有现代化的工业厂房12万平方米,占地面积约310亩
+              拥有现代化的工业厂房12万平方米,占地面积约310亩
             </div>
           </div>
           <div class="numInfoItem">
@@ -213,10 +213,16 @@ document.oncontextmenu=stop;
               业务分布
             </div>
             <div class="numInfoMsg">
-            拥有现代化的工业厂房12万平方米,占地面积约310亩
+              拥有现代化的工业厂房12万平方米,占地面积约310亩
             </div>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div id="course">
+      <div class="courseContent">
+        <div class="container"></div>
       </div>
     </div>
   </div>
@@ -249,6 +255,16 @@ document.oncontextmenu=stop;
       }
     }
     $(function () {
+      // const courseDOM = $('#course');
+      // const observer = new IntersectionObserver(entries => {
+      //   entries.forEach(entry => {
+      //     if (entry.isIntersecting) {
+      //       window.scrollTo({ top: courseDOM[0].offsetTop, behavior: 'smooth' })
+      //     }
+      //   });
+      // }, { threshold: 0.5 });
+      // observer.observe(courseDOM[0]);
+
       fetchData().then(data => {
         const swiperWrapper = $("#banner-wrapper");
         const dom = data.map(item => {

@@ -73,3 +73,7 @@
     </div>
   </div>
 </footer>
+
+<script>
+  // window.scrollTo({ top: 0, behavior: 'smooth' })
+</script>
