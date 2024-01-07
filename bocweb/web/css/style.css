@@ -150,6 +150,44 @@ body .swiper-button-next {
 body .swiper-button-prev {
   left: 0;
 }
+body .popupWrap {
+  position: fixed;
+  display: none;
+  z-index: 99;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+body .popupWrap.show {
+  display: block;
+}
+body .popupWrap.show .popupContent {
+  animation: fadeInUp;
+  animation-duration: 0.3s;
+}
+body .popupWrap .popupContent {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #fff;
+}
+body .popupWrap .popupContent .popupClose {
+  width: 48px;
+  height: 48px;
+  background: #ffd100 url("../../web/img/pupopClose.webp") no-repeat center center/14px 16px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  z-index: 9;
+}
 
 img {
   user-select: none;
@@ -1180,6 +1218,29 @@ footer .footerBtm .container a:last-child {
 }
 .honorsCertificates .certificate .container .certificateWrap .certificateItem:hover .certificateNameBox .certificateName {
   background: rgba(255, 209, 0, 0.9);
+}
+.honorsCertificates .certificate .popupWrap .popupContent {
+  width: 760px;
+  height: 900px;
+}
+.honorsCertificates .certificate .popupWrap .popupContent .swiper-container {
+  height: 100%;
+}
+.honorsCertificates .certificate .popupWrap .popupContent .swiper-container .swiper-slide {
+  padding-top: 20px;
+}
+.honorsCertificates .certificate .popupWrap .popupContent .swiper-container .swiper-slide .pupopName {
+  font-size: 32px;
+  line-height: 60px;
+  color: #122852;
+  font-weight: bold;
+  text-align: center;
+}
+.honorsCertificates .certificate .popupWrap .popupContent .swiper-container .swiper-slide .bannerImg {
+  width: 557px;
+  height: 765px;
+  margin: auto;
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -76,4 +76,10 @@
 
 <script>
   // window.scrollTo({ top: 0, behavior: 'smooth' })
+  $(() => {
+    $(document.body).on('click', function (e) {
+      if ($(e.target).hasClass('popupClose'))
+        $(e.target).closest('.popupWrap').removeClass('show')
+    })
+  })
 </script>

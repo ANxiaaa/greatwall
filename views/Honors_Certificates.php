@@ -59,8 +59,33 @@ document.oncontextmenu=stop;
                 </div>
             </div>
 
-            <div class="certificatePopup">
-
+            <div class="popupWrap" onmousewheel="return false" id="certificatePopup1">
+                <div class="popupContent">
+                    <div class="popupClose"></div>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper"></div>
+                    </div>
+                    <div class="swiper-button-next">
+                        <img draggable="false" src="<?php echo static_file('web/img/homeBannerRight.webp') ?>" alt="">
+                    </div>
+                    <div class="swiper-button-prev">
+                        <img draggable="false" src="<?php echo static_file('web/img/homeBannerLeft.webp') ?>" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="popupWrap" onmousewheel="return false" id="certificatePopup2">
+                <div class="popupContent">
+                    <div class="popupClose"></div>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper"></div>
+                    </div>
+                    <div class="swiper-button-next">
+                        <img draggable="false" src="<?php echo static_file('web/img/homeBannerRight.webp') ?>" alt="">
+                    </div>
+                    <div class="swiper-button-prev">
+                        <img draggable="false" src="<?php echo static_file('web/img/homeBannerLeft.webp') ?>" alt="">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -94,9 +119,15 @@ document.oncontextmenu=stop;
             }
         }
 
+        const swiperSave = {}
+
         const openCertificatePopup = (index, id) => {
-            console.log(index, id);
+            const control = swiperSave['mySwiper' + index]
+            $('#certificatePopup' + index).addClass('show')
+            control.onResize()
+            control.slideTo(2, 0)
         }
+
         $(function () {
             // ----
             fetchData().then(data => {
@@ -129,7 +160,8 @@ document.oncontextmenu=stop;
                 swiperWrapper.html(dom)
                 const mySwiper = new Swiper('#boardUsBanner', {
                     loop: true,
-                    slidesPerView: 3, centeredSlides: true,
+                    slidesPerView: 3,
+                    centeredSlides: true,
                     prevButton: '.board .swiper-button-prev',
                     nextButton: '.board .swiper-button-next',
                     observer: true,
@@ -140,6 +172,8 @@ document.oncontextmenu=stop;
             // ----
             const certificateTabs = $('#certificateTab .certificateTabItem')
             const certificateContents = $('.certificateTabContent .certificateWrap')
+            const certificatePopup1 = $('#certificatePopup1 .swiper-wrapper')
+            const certificatePopup2 = $('#certificatePopup2 .swiper-wrapper')
             certificateTabs.on('click', function () {
                 certificateTabs.removeClass('active')
                 certificateContents.removeClass('show')
@@ -173,8 +207,32 @@ document.oncontextmenu=stop;
                         </div>
                     </div>`
                 })
+                const pupopDom1 = data.map(item => {
+                    // <p>质量管理体系认证证书</p>
+                    return `<div class='swiper-slide'>
+                        <div class="pupopName">
+                            <p>2019-2022年</p>
+                        </div>
+                        <img class="bannerImg" draggable="false" src="/greatwall/bocweb/web/img/banner${item.name}.png" alt="" />
+                    </div>`
+                })
                 wrap1.html(dom1)
                 wrap2.html(dom2)
+                certificatePopup1.html(pupopDom1)
+                certificatePopup2.html(pupopDom1)
+                
+                const mySwiper1 = new Swiper('#certificatePopup1 .swiper-container', {
+                    loop: true,
+                    prevButton: '#certificatePopup1 .swiper-button-prev',
+                    nextButton: '#certificatePopup1 .swiper-button-next',
+                });
+                const mySwiper2 = new Swiper('#certificatePopup2 .swiper-container', {
+                    loop: true,
+                    prevButton: '#certificatePopup2 .swiper-button-prev',
+                    nextButton: '#certificatePopup2 .swiper-button-next',
+                });
+                swiperSave.mySwiper1 = mySwiper1
+                swiperSave.mySwiper2 = mySwiper2
             });
         })
     </script>

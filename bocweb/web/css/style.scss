@@ -176,6 +176,46 @@ body {
   .swiper-button-prev {
     left: 0;
   }
+
+  .popupWrap {
+    position: fixed;
+    display: none;
+    z-index: 99;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(#000, 0.5);
+    &.show {
+      display: block;
+      .popupContent {
+        animation: fadeInUp;
+        animation-duration: 0.3s;
+      }
+    }
+    .popupContent {
+      width: 500px;
+      height: 500px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background: $mainBackground;
+      .popupClose {
+        width: 48px;
+        height: 48px;
+        background: $yellowBackground url("../../web/img/pupopClose.webp")
+          no-repeat center center / 14px 16px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        cursor: pointer;
+        z-index: 9;
+      }
+    }
+  }
 }
 
 img {

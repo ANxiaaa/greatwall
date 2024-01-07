@@ -191,5 +191,31 @@
         }
       }
     }
+
+    .popupWrap {
+      .popupContent {
+        width: 760px;
+        height: 900px;
+        .swiper-container {
+          height: 100%;
+          .swiper-slide {
+            padding-top: 20px;
+            .pupopName {
+              font-size: 32px;
+              line-height: 60px;
+              color: $textColor4;
+              font-weight: bold;
+              text-align: center;
+            }
+            .bannerImg {
+              width: 557px;
+              height: 765px;
+              margin: auto;
+              display: block;
+            }
+          }
+        }
+      }
+    }
   }
 }
