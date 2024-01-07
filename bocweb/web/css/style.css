@@ -1303,5 +1303,50 @@ footer .footerBtm .container a:last-child {
   position: absolute;
   margin: auto;
 }
+.branding .showCar {
+  min-height: 986px;
+  padding-top: 107px;
+  color: #071d49;
+  text-align: center;
+}
+.branding .showCar .showCarTitle {
+  font-size: 42px;
+  line-height: 36px;
+  font-weight: bold;
+}
+.branding .showCar .showCarBtnBox {
+  display: flex;
+  width: max-content;
+  margin: 0 auto;
+  margin-top: 36px;
+}
+.branding .showCar .showCarBtnBox .showCarBtnItem {
+  width: 63px;
+  height: 63px;
+  border-radius: 50%;
+  background: rgba(18, 40, 82, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 55px;
+  cursor: pointer;
+}
+.branding .showCar .showCarBtnBox .showCarBtnItem img {
+  max-height: 64px;
+  max-width: 90px;
+  opacity: 0.5;
+}
+.branding .showCar .showCarBtnBox .showCarBtnItem:last-child {
+  margin-right: 0;
+}
+.branding .showCar .showCarBtnBox .showCarBtnItem.active {
+  background: #ffd100;
+}
+.branding .showCar .showCarBtnBox .showCarBtnItem.active img {
+  opacity: 1;
+}
+.branding .showCar #showCarImg {
+  margin: 40px 0 130px;
+}
 
 /*# sourceMappingURL=style.css.map */

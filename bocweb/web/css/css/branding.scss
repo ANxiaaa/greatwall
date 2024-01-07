@@ -61,4 +61,50 @@
       margin: auto;
     }
   }
+
+  .showCar {
+    min-height: 986px;
+    padding-top: 107px;
+    color: $primaryColor;
+    text-align: center;
+    .showCarTitle {
+      font-size: 42px;
+      line-height: 36px;
+      font-weight: bold;
+    }
+    .showCarBtnBox {
+      display: flex;
+      width: max-content;
+      margin: 0 auto;
+      margin-top: 36px;
+      .showCarBtnItem {
+        width: 63px;
+        height: 63px;
+        border-radius: 50%;
+        background: rgba($markBackground, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 55px;
+        cursor: pointer;
+        img {
+          max-height: 64px;
+          max-width: 90px;
+          opacity: 0.5;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+        &.active {
+          background: $yellowBackground;
+          img {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    #showCarImg{
+      margin: 40px 0 130px;
+    }
+  }
 }

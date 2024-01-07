@@ -48,6 +48,12 @@ document.oncontextmenu=stop;
         </div>
       </div>
     </div>
+
+    <div class="showCar" id="showCar">
+      <div class="showCarTitle">长城展示车</div>
+      <div class="showCarBtnBox"></div>
+      <img id="showCarImg" draggable="false" alt="">
+    </div>
   </div>
 
   <?php include_once VIEWPATH . 'inc/footer.php'; ?>
@@ -112,13 +118,49 @@ document.oncontextmenu=stop;
           centeredSlides: true,
           prevButton: '.store .swiper-button-prev',
           nextButton: '.store .swiper-button-next',
-          // autoplay: 5000,
-          // observer: true,
-          // observeParents: true,
-          // onSlideChangeEnd: function (swiper) {
-          //   swiper.onResize()
-          // }
         });
+      });
+      // ---
+      fetchData().then(data => {
+        const showCar = $("#showCar .showCarBtnBox");
+        const showCarImg = $('#showCarImg')
+        const dom = data.map(item => {
+          return `<div class="showCarBtnItem">
+            <img draggable="false" src="/greatwall/bocweb/web/img/banner${item.name}.png" alt="" />
+          </div>`
+        })
+        showCar.html(dom)
+        showCarImg.attr({ src: '/greatwall/bocweb/web/img/banner1.png' })
+        if (showCarImg.width() > showCarImg.height()) {
+          showCarImg.css({
+            height: 'auto',
+            width: 1184
+          })
+        } else {
+          showCarImg.css({
+            height: 750,
+            width: 'auto'
+          })
+        }
+        const btns = showCar.find('.showCarBtnItem')
+        btns.eq(0).addClass('active')
+        btns.on('click', function () {
+          btns.removeClass('active')
+          $(this).addClass('active')
+          const img = $(this).find('img')[0];
+          if (img.width > img.height) {
+            showCarImg.css({
+              height: 'auto',
+              width: 1184
+            })
+          } else {
+            showCarImg.css({
+              height: 750,
+              width: 'auto'
+            })
+          }
+          showCarImg.attr({ src: img.src })
+        })
       });
     })
   </script>
