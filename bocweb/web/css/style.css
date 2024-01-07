@@ -998,4 +998,89 @@ footer .footerBtm .container a:last-child {
   height: 200px !important;
 }
 
+.honorsCertificates .board {
+  height: 906px;
+  background: url("../../web/img/boardBg.webp") repeat-x;
+  background-size: cover;
+  position: relative;
+}
+.honorsCertificates .board #boardUsBanner {
+  height: 100%;
+  width: 1700px;
+}
+.honorsCertificates .board #boardUsBanner .swiper-slide {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 60px;
+}
+.honorsCertificates .board #boardUsBanner .swiper-slide .bannerImg {
+  width: 80%;
+  height: 270px;
+  margin-bottom: 38px;
+  transition: all 0.3s;
+  display: block;
+}
+.honorsCertificates .board #boardUsBanner .swiper-slide .boardNameBox {
+  height: 165px;
+  text-align: center;
+}
+.honorsCertificates .board #boardUsBanner .swiper-slide .p1 {
+  font-size: 18px;
+  margin: auto;
+  font-weight: bold;
+  position: relative;
+  width: max-content;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.honorsCertificates .board #boardUsBanner .swiper-slide .p1 span {
+  position: relative;
+  z-index: 1;
+}
+.honorsCertificates .board #boardUsBanner .swiper-slide .p1::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: #ffd100;
+}
+.honorsCertificates .board #boardUsBanner .swiper-slide .boardName {
+  color: rgba(18, 40, 82, 0.5);
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: bold;
+  transform: translateY(-24px);
+  transition: all 0.3s;
+}
+.honorsCertificates .board #boardUsBanner .swiper-slide .p3 {
+  white-space: pre;
+  font-size: 18px;
+  color: rgba(7, 29, 73, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.honorsCertificates .board #boardUsBanner .swiper-slide.swiper-slide-active {
+  padding: 0;
+}
+.honorsCertificates .board #boardUsBanner .swiper-slide.swiper-slide-active .bannerImg {
+  width: 100%;
+  height: 400px;
+}
+.honorsCertificates .board #boardUsBanner .swiper-slide.swiper-slide-active .p1 {
+  opacity: 1;
+}
+.honorsCertificates .board #boardUsBanner .swiper-slide.swiper-slide-active .p3 {
+  opacity: 1;
+}
+.honorsCertificates .board #boardUsBanner .swiper-slide.swiper-slide-active .boardName {
+  color: #122852;
+  font-size: 42px;
+  line-height: 60px;
+  transform: translateY(0);
+}
+
 /*# sourceMappingURL=style.css.map */

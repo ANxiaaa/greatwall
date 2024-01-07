@@ -13,7 +13,7 @@ document.oncontextmenu=stop;
 <body>
     <?php include_once VIEWPATH . 'inc/header.php'; ?>
 
-    <div class="aboutUs">
+    <div class="honorsCertificates">
         <div class="swiper-container" id="aboutUsBanner">
             <div class="swiper-wrapper" id="aboutUsBanner-wrapper"></div>
         </div>
@@ -32,6 +32,18 @@ document.oncontextmenu=stop;
                 <div class="tabItem">
                     <a href="<?php echo site_url('Branding') ?>" class="navName">品牌形象</a>
                 </div>
+            </div>
+        </div>
+
+        <div class="board">
+            <div class="swiper-container" id="boardUsBanner">
+                <div class="swiper-wrapper" id="boardUsBanner-wrapper"></div>
+            </div>
+            <div class="swiper-button-next">
+                <img draggable="false" src="<?php echo static_file('web/img/homeBannerRight.webp') ?>" alt="">
+            </div>
+            <div class="swiper-button-prev">
+                <img draggable="false" src="<?php echo static_file('web/img/homeBannerLeft.webp') ?>" alt="">
             </div>
         </div>
     </div>
@@ -68,14 +80,37 @@ document.oncontextmenu=stop;
                 const swiperWrapper = $("#aboutUsBanner-wrapper");
                 const dom = data.map(item => {
                     return `<div class='swiper-slide'>
-            <img class="bannerImg" draggable="false" src="/greatwall/bocweb/web/img/banner${item.name}.png" alt="" />
-          </div>`
+                        <img class="bannerImg" draggable="false" src="/greatwall/bocweb/web/img/banner${item.name}.png" alt="" />
+                    </div>`
                 })
                 swiperWrapper.html(dom)
                 const mySwiper = new Swiper('#aboutUsBanner', {
                     loop: true,
                     effect: 'fade',
                     autoplay: 5000,
+                });
+            });
+            fetchData().then(data => {
+                const swiperWrapper = $("#boardUsBanner-wrapper");
+                const dom = data.map(item => {
+                    return `<div class='swiper-slide'>
+                        <div class="boardNameBox">
+                            <p class="p1"><span>公司荣誉</span></p>
+                            <p class="boardName">专精特新 小巨人 企业</p>
+                            <p class="p3">“长城精工”品牌荣获2015年度“天工奖·万贯杯”全工具五金品牌万里行</p>
+                        </div>
+                        <img class="bannerImg" draggable="false" src="/greatwall/bocweb/web/img/banner${item.name}.png" alt="" />
+                    </div>`
+                })
+                swiperWrapper.html(dom)
+                const mySwiper = new Swiper('#boardUsBanner', {
+                    loop: true,
+                    slidesPerView: 3, centeredSlides: true,
+                    prevButton: '.board .swiper-button-prev',
+                    nextButton: '.board .swiper-button-next',
+                    observer: true,
+                    observeParents: true,
+                    slideToClickedSlide: true,
                 });
             });
         })
