@@ -1458,6 +1458,8 @@ footer .footerBtm .container a:last-child {
 }
 .branding .showCar #showCarImg {
   margin: calc(40px * var(--ratio)) 0 calc(130px * var(--ratio));
+  width: calc(var(--width) * var(--ratio));
+  height: calc(var(--height) * var(--ratio));
 }
 .branding .vi {
   height: calc(852px * var(--ratio));

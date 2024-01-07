@@ -147,11 +147,11 @@ document.oncontextmenu=stop;
         if (showCarImg.width() > showCarImg.height()) {
           showCarImg.css({
             height: 'auto',
-            width: 1184
+            '--width': '1184px'
           })
         } else {
           showCarImg.css({
-            height: 750,
+            '--height': '750px',
             width: 'auto'
           })
         }
@@ -164,11 +164,11 @@ document.oncontextmenu=stop;
           if (img.width > img.height) {
             showCarImg.css({
               height: 'auto',
-              width: 1184
+              '--width': '1184px'
             })
           } else {
             showCarImg.css({
-              height: 750,
+              '--height': '750px',
               width: 'auto'
             })
           }
