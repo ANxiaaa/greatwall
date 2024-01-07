@@ -1,0 +1,64 @@
+.branding {
+  .store {
+    height: 1000px;
+    background: url("../../web/img/storeBg.webp");
+    background-size: cover;
+    position: relative;
+    .swiper-container {
+      height: 100%;
+      .swiper-slide {
+        width: 1440px !important;
+        margin: 0 -100px;
+        // height: 472px;
+        transform: scale(0.54);
+        transition: transform 0.3s;
+        text-align: center;
+        .storeItem {
+          width: 100%;
+          height: 100%;
+          padding-top: 100px;
+          color: $primaryColor;
+          .storeName {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 60px;
+          }
+          .storeImg {
+            height: 650px;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+          }
+          .shadowBtm {
+            position: absolute;
+            z-index: 0;
+            background: url("../../web/img/storeShadow.webp") center center /
+              100% 100% no-repeat;
+            width: 1348px;
+            height: 102px;
+            left: 0;
+            right: 0;
+            bottom: 70px;
+            margin: auto;
+            display: none;
+          }
+        }
+        &.swiper-slide-active {
+          transform: scale(1);
+          .shadowBtm {
+            display: block;
+          }
+        }
+      }
+    }
+    .container {
+      height: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+      margin: auto;
+    }
+  }
+}

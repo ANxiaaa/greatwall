@@ -13,7 +13,7 @@ document.oncontextmenu=stop;
 <body>
   <?php include_once VIEWPATH . 'inc/header.php'; ?>
 
-  <div class="aboutUs">
+  <div class="branding">
     <div class="swiper-container" id="aboutUsBanner">
       <div class="swiper-wrapper" id="aboutUsBanner-wrapper"></div>
     </div>
@@ -31,6 +31,20 @@ document.oncontextmenu=stop;
         </div>
         <div class="tabItem active">
           <a href="<?php echo site_url('Branding') ?>" class="navName">品牌形象</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="store">
+      <div class="swiper-container" id="storeBanner">
+        <div class="swiper-wrapper" id="storeBanner-wrapper"></div>
+      </div>
+      <div class="container">
+        <div class="swiper-button-next">
+          <img draggable="false" src="<?php echo static_file('web/img/homeBannerRight.webp') ?>" alt="">
+        </div>
+        <div class="swiper-button-prev">
+          <img draggable="false" src="<?php echo static_file('web/img/homeBannerLeft.webp') ?>" alt="">
         </div>
       </div>
     </div>
@@ -64,6 +78,7 @@ document.oncontextmenu=stop;
       }
     }
     $(function () {
+      // ---
       fetchData().then(data => {
         const swiperWrapper = $("#aboutUsBanner-wrapper");
         const dom = data.map(item => {
@@ -76,6 +91,33 @@ document.oncontextmenu=stop;
           loop: true,
           effect: 'fade',
           autoplay: 5000,
+        });
+      });
+      // ----
+      fetchData().then(data => {
+        const swiperWrapper = $("#storeBanner-wrapper");
+        const dom = data.map(item => {
+          return `<div class="swiper-slide">
+            <div class="storeItem">
+              <div class="storeName">长城精工形象店</div>
+              <img class="storeImg" draggable="false" src="/greatwall/bocweb/web/img/banner${item.name}.png" alt="" />
+              <div class="shadowBtm"></div>
+            </div>
+          </div>`
+        })
+        swiperWrapper.html(dom)
+        const mySwiper = new Swiper('#storeBanner', {
+          loop: true,
+          slidesPerView: 'auto',
+          centeredSlides: true,
+          prevButton: '.store .swiper-button-prev',
+          nextButton: '.store .swiper-button-next',
+          // autoplay: 5000,
+          // observer: true,
+          // observeParents: true,
+          // onSlideChangeEnd: function (swiper) {
+          //   swiper.onResize()
+          // }
         });
       });
     })
