@@ -1,51 +1,51 @@
 .aboutUs {
   .company {
-    padding-top: 98px;
-    height: 1220px;
+    padding-top: calc(98px * var(--ratio));
+    height: calc(1220px * var(--ratio));
     background: url("../../web/img/companyBg.webp") no-repeat, $mainBackground;
     background-size: contain;
     .container {
       display: flex;
       justify-content: space-between;
-      padding: 0 150px;
+      padding: 0 calc(150px * var(--ratio));
     }
     .companyLeft {
       font-family: Alibaba PuHuiTi 2;
-      width: 734px;
+      width: calc(734px * var(--ratio));
       color: $primaryColor;
       .companyName {
-        font-size: 42px;
-        line-height: 60px;
+        font-size: calc(42px * var(--ratio));
+        line-height: calc(60px * var(--ratio));
         font-weight: bold;
-        margin-bottom: 36px;
+        margin-bottom: calc(36px * var(--ratio));
       }
       .companyMsg {
-        margin-bottom: 100px;
+        margin-bottom: calc(100px * var(--ratio));
         p {
-          font-size: 22px;
-          line-height: 36px;
+          font-size: calc(22px * var(--ratio));
+          line-height: calc(36px * var(--ratio));
           + p {
-            margin-top: 36px;
+            margin-top: calc(36px * var(--ratio));
           }
         }
       }
       .companyLeftBtm {
         .companyInfoItem {
           position: relative;
-          border: 1px solid rgba($borderColor2, 0.1);
-          box-shadow: 0 5px 10px 0px rgba($boxShadowColor, 0.1);
-          padding: 38px 62px;
+          border: calc(1px * var(--ratio)) solid rgba($borderColor2, 0.1);
+          box-shadow: 0 calc(5px * var(--ratio)) calc(10px * var(--ratio)) 0 rgba($boxShadowColor, 0.1);
+          padding: calc(38px * var(--ratio)) calc(62px * var(--ratio));
           white-space: pre;
-          font-size: 18px;
+          font-size: calc(18px * var(--ratio));
           color: $textColor4;
-          line-height: 28px;
-          margin-bottom: 20px;
+          line-height: calc(28px * var(--ratio));
+          margin-bottom: calc(20px * var(--ratio));
           overflow: hidden;
           .infoInex {
             position: absolute;
             right: 0;
-            bottom: -20px;
-            font-size: 120px;
+            bottom: calc(-20px * var(--ratio));
+            font-size: calc(120px * var(--ratio));
             line-height: 1;
             font-style: italic;
             font-weight: bold;
@@ -56,10 +56,10 @@
             content: "";
             position: absolute;
             background: url("../../web/img/companyInfoBg.webp");
-            width: 10px;
-            height: 13px;
-            left: 37px;
-            top: 43px;
+            width: calc(10px * var(--ratio));
+            height: calc(13px * var(--ratio));
+            left: calc(37px * var(--ratio));
+            top: calc(43px * var(--ratio));
             background-size: cover;
           }
         }
@@ -67,15 +67,15 @@
     }
     .companyRight {
       flex: 1;
-      margin-left: 144px;
-      padding-top: 96px;
+      margin-left: calc(144px * var(--ratio));
+      padding-top: calc(96px * var(--ratio));
       .numInfoItem {
-        width: 560px;
+        width: calc(560px * var(--ratio));
         color: $primaryColor;
-        border-bottom: 1px solid rgba($primaryColor, 0.2);
-        margin-bottom: 50px;
+        border-bottom: calc(1px * var(--ratio)) solid rgba($primaryColor, 0.2);
+        margin-bottom: calc(50px * var(--ratio));
         .numBoxWrap {
-          height: 60px;
+          height: calc(60px * var(--ratio));
           display: flex;
           align-items: center;
           .numBox {
@@ -84,10 +84,10 @@
             user-select: none;
             overflow: hidden;
             .digit {
-              height: 60px;
-              font-size: 60px;
+              height: calc(60px * var(--ratio));
+              font-size: calc(60px * var(--ratio));
               line-height: 1;
-              transform: translateY(calc(var(--num) * -60px));
+              transform: translateY(calc(var(--num) * (-60px * var(--ratio))));
               transition: transform 0.3s;
             }
           }
@@ -98,23 +98,23 @@
             justify-content: space-between;
             line-height: 1;
             user-select: none;
-            font-size: 22px;
+            font-size: calc(22px * var(--ratio));
             .unit {
-              font-size: 14px;
+              font-size: calc(14px * var(--ratio));
             }
           }
         }
         .numInfoName {
-          margin-top: 26px;
-          font-size: 22px;
+          margin-top: calc(26px * var(--ratio));
+          font-size: calc(22px * var(--ratio));
           font-weight: bold;
         }
         .numInfoMsg {
-          font-size: 18px;
+          font-size: calc(18px * var(--ratio));
           font-style: italic;
-          line-height: 24px;
+          line-height: calc(24px * var(--ratio));
           opacity: 0.5;
-          margin-bottom: 50px;
+          margin-bottom: calc(50px * var(--ratio));
         }
       }
     }
@@ -122,7 +122,7 @@
 
   #course {
     // height: 100vh;
-    height: 1300px;
+    height: calc(1300px * var(--ratio));
     // overflow-y: auto;
     // &::after {
     //   content: "";
@@ -138,9 +138,9 @@
       background: url("../../web/img/courseBg.webp") no-repeat;
       background-size: cover;
       position: sticky;
-      top: 98px;
+      top: calc(98px * var(--ratio));
       .container {
-        padding: 200px 150px 0;
+        padding: calc(200px * var(--ratio)) calc(150px * var(--ratio)) 0;
         height: 100%;
         color: $primaryColor;
         display: flex;
@@ -148,21 +148,21 @@
         justify-content: space-between;
         position: relative;
         .courseName {
-          font-size: 42px;
+          font-size: calc(42px * var(--ratio));
           font-weight: bold;
-          margin-bottom: 22px;
+          margin-bottom: calc(22px * var(--ratio));
         }
         .courseName2 {
           font-weight: bold;
-          font-size: 22px;
+          font-size: calc(22px * var(--ratio));
         }
         .shuxian {
-          width: 2px;
-          height: 750px;
+          width: calc(2px * var(--ratio));
+          height: calc(750px * var(--ratio));
           position: absolute;
-          top: 436px;
+          top: calc(436px * var(--ratio));
           bottom: 0;
-          left: 376px;
+          left: calc(376px * var(--ratio));
           z-index: 0;
         }
         .swiperBox {
@@ -170,47 +170,47 @@
           position: relative;
           z-index: 1;
           justify-content: space-between;
-          height: 731px;
+          height: calc(731px * var(--ratio));
           overflow: hidden;
-          margin-top: 60px;
-          margin-bottom: 145px;
-          padding-left: 50px;
-          padding-right: 10px;
+          margin-top: calc(60px * var(--ratio));
+          margin-bottom: calc(145px * var(--ratio));
+          padding-left: calc(50px * var(--ratio));
+          padding-right: calc(10px * var(--ratio));
           user-select: none;
           .hengxian {
-            width: 460px;
-            height: 40px;
+            width: calc(460px * var(--ratio));
+            height: calc(40px * var(--ratio));
             position: absolute;
             top: 0;
             bottom: 0;
-            left: 180px;
+            left: calc(180px * var(--ratio));
             z-index: 2;
             margin: auto;
           }
           #yearBanner {
-            font-size: 18px;
+            font-size: calc(18px * var(--ratio));
             color: rgba($textColor4, 0.5);
             font-style: italic;
-            width: 210px;
+            width: calc(210px * var(--ratio));
             position: relative;
             overflow: initial;
             .swiper-slide {
               display: flex;
               align-items: center;
               justify-content: flex-end;
-              padding-right: 68px;
+              padding-right: calc(68px * var(--ratio));
               position: relative;
               &.swiper-slide-active {
                 color: $textColor4;
-                font-size: 22px;
+                font-size: calc(22px * var(--ratio));
                 font-weight: bold;
               }
               &::after {
                 content: "";
                 position: absolute;
-                width: 24px;
-                height: 24px;
-                right: -11px;
+                width: calc(24px * var(--ratio));
+                height: calc(24px * var(--ratio));
+                right: calc(-11px * var(--ratio));
                 top: 0;
                 bottom: 0;
                 margin: auto;
@@ -221,10 +221,10 @@
           }
           #courseBanner {
             width: 100%;
-            margin-top: -260px;
-            padding-left: 235px;
+            margin-top: calc(-260px * var(--ratio));
+            padding-left: calc(235px * var(--ratio));
             .swiper-slide {
-              font-size: 18px;
+              font-size: calc(18px * var(--ratio));
               .yearName {
                 position: absolute;
                 height: max-content;
@@ -232,9 +232,9 @@
                 bottom: 0;
                 margin: auto;
                 color: rgba($textColor4, 0.5);
-                transform: translate(0px, 0px);
+                transform: translate(0, 0);
                 transition: all 0.3s;
-                width: 40px;
+                width: calc(40px * var(--ratio));
               }
               .yearContent {
                 position: absolute;
@@ -243,20 +243,20 @@
                 bottom: 0;
                 margin: auto;
                 color: $textColor4;
-                transform: translate(50px, 0px);
+                transform: translate(calc(50px * var(--ratio)), 0);
                 transition: transform 0.3s, color 0.3s;
                 white-space: pre;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                width: calc(100% - 50px);
+                width: calc(100% - (50px * var(--ratio)));
               }
               &.swiper-slide-active {
-                height: 310px !important;
+                height: calc(310px * var(--ratio)) !important;
                 .yearName {
                   color: $primaryColor;
-                  transform: translate(0px, -55px);
-                  width: 200px;
-                  font-size: 82px;
+                  transform: translate(0, calc(-55px * var(--ratio)));
+                  width: calc(200px * var(--ratio));
+                  font-size: calc(82px * var(--ratio));
                   font-weight: bold;
                 }
                 .yearContent {
@@ -264,8 +264,8 @@
                   white-space: initial;
                   overflow: initial;
                   width: 100%;
-                  font-size: 22px;
-                  transform: translate(0px, 55px);
+                  font-size: calc(22px * var(--ratio));
+                  transform: translate(0, calc(55px * var(--ratio)));
                   font-weight: bold;
                 }
               }
@@ -274,14 +274,13 @@
         }
         .swiper-scrollbar {
           position: absolute;
-          width: 10px;
-          height: 805px;
-          right: 142px;
-          top: 436px;
+          width: calc(10px * var(--ratio));
+          height: calc(805px * var(--ratio));
+          right: 0;
+          top: calc(436px * var(--ratio));
           background: rgba($markBackground, 0.1);
           .swiper-scrollbar-drag {
             background: $primaryColor;
-            // height: 200px !important;
           }
         }
       }
