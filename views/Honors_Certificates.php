@@ -46,6 +46,23 @@ document.oncontextmenu=stop;
                 <img draggable="false" src="<?php echo static_file('web/img/homeBannerLeft.webp') ?>" alt="">
             </div>
         </div>
+
+        <div class="certificate">
+            <div class="container">
+                <div class="certificateTab" id="certificateTab">
+                    <div class="certificateTabItem active" data-index="0">公司荣誉</div>
+                    <div class="certificateTabItem" data-index="1">专业认证</div>
+                </div>
+                <div class="certificateTabContent">
+                    <div class="certificateWrap show" id="certificateWrap1"></div>
+                    <div class="certificateWrap" id="certificateWrap2"></div>
+                </div>
+            </div>
+
+            <div class="certificatePopup">
+
+            </div>
+        </div>
     </div>
 
     <?php include_once VIEWPATH . 'inc/footer.php'; ?>
@@ -70,12 +87,18 @@ document.oncontextmenu=stop;
                 }, 100);
             });
         }
+
         const searchFn = (e) => {
             if (e.code == 'Enter') {
                 console.log(e.target.value);
             }
         }
+
+        const openCertificatePopup = (index, id) => {
+            console.log(index, id);
+        }
         $(function () {
+            // ----
             fetchData().then(data => {
                 const swiperWrapper = $("#aboutUsBanner-wrapper");
                 const dom = data.map(item => {
@@ -90,6 +113,7 @@ document.oncontextmenu=stop;
                     autoplay: 5000,
                 });
             });
+            // ----
             fetchData().then(data => {
                 const swiperWrapper = $("#boardUsBanner-wrapper");
                 const dom = data.map(item => {
@@ -112,6 +136,45 @@ document.oncontextmenu=stop;
                     observeParents: true,
                     slideToClickedSlide: true,
                 });
+            });
+            // ----
+            const certificateTabs = $('#certificateTab .certificateTabItem')
+            const certificateContents = $('.certificateTabContent .certificateWrap')
+            certificateTabs.on('click', function () {
+                certificateTabs.removeClass('active')
+                certificateContents.removeClass('show')
+                $(this).addClass('active')
+                certificateContents.eq($(this).attr('data-index')).addClass('show')
+            })
+            fetchData().then(data => {
+                const wrap1 = $('#certificateWrap1')
+                const wrap2 = $('#certificateWrap2')
+                const dom1 = new Array(12).fill(1).map(item => {
+                    return `<div class="certificateItem" onclick="openCertificatePopup(1, 555)">
+                        <img class="bannerImg" draggable="false"
+                            src="/greatwall/bocweb/web/img/banner2.png" alt="" />
+                        <div class="certificateNameBox">
+                            <div class="certificateName">
+                                <p>2019-2022年</p>
+                                <p>质量管理体系认证证书</p>
+                            </div>
+                        </div>
+                    </div>`
+                })
+                const dom2 = new Array(12).fill(1).map(item => {
+                    return `<div class="certificateItem" onclick="openCertificatePopup(2, 666)">
+                        <img class="bannerImg" draggable="false"
+                            src="/greatwall/bocweb/web/img/banner3.png" alt="" />
+                        <div class="certificateNameBox">
+                            <div class="certificateName">
+                                <p>2019-2022年</p>
+                                <p>质量管理体系认证证书</p>
+                            </div>
+                        </div>
+                    </div>`
+                })
+                wrap1.html(dom1)
+                wrap2.html(dom2)
             });
         })
     </script>

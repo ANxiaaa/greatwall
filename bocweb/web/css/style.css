@@ -1082,5 +1082,104 @@ footer .footerBtm .container a:last-child {
   line-height: 60px;
   transform: translateY(0);
 }
+.honorsCertificates .certificate {
+  padding-top: 90px;
+}
+.honorsCertificates .certificate .container {
+  width: 1440px;
+}
+.honorsCertificates .certificate .container .certificateTab {
+  height: 72px;
+  line-height: 72px;
+  display: flex;
+  width: 100%;
+  margin-bottom: 40px;
+  border: 1px solid rgba(18, 40, 82, 0.1);
+}
+.honorsCertificates .certificate .container .certificateTab .certificateTabItem {
+  flex: 1;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #071d49;
+  cursor: pointer;
+}
+.honorsCertificates .certificate .container .certificateTab .certificateTabItem.active {
+  background: #122852;
+  color: #fff;
+}
+.honorsCertificates .certificate .container .certificateWrap {
+  flex-wrap: wrap;
+  display: none;
+}
+.honorsCertificates .certificate .container .certificateWrap.show {
+  display: flex;
+}
+.honorsCertificates .certificate .container .certificateWrap .certificateItem {
+  width: 25%;
+  height: 462px;
+  position: relative;
+  padding-top: 35px;
+  background: #fff;
+  border: 1px solid #dcdcdc;
+  margin: -1px;
+  cursor: pointer;
+}
+.honorsCertificates .certificate .container .certificateWrap .certificateItem img {
+  width: 244px;
+  height: 332px;
+  display: block;
+  margin: auto;
+}
+.honorsCertificates .certificate .container .certificateWrap .certificateItem .certificateNameBox {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.honorsCertificates .certificate .container .certificateWrap .certificateItem .certificateNameBox::before {
+  content: "";
+  flex: 1;
+  height: 0;
+  transition: background 0.3s;
+}
+.honorsCertificates .certificate .container .certificateWrap .certificateItem .certificateNameBox::after {
+  content: "";
+  position: absolute;
+  opacity: 0;
+  width: 58px;
+  height: 58px;
+  transform: translateY(10px);
+  transition: all 0.3s;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #c00;
+}
+.honorsCertificates .certificate .container .certificateWrap .certificateItem .certificateNameBox .certificateName {
+  height: 107px;
+  display: flex;
+  font-weight: bold;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #071d49;
+  transition: background 0.3s;
+}
+.honorsCertificates .certificate .container .certificateWrap .certificateItem:hover .certificateNameBox::before {
+  background: rgba(18, 40, 82, 0.1);
+}
+.honorsCertificates .certificate .container .certificateWrap .certificateItem:hover .certificateNameBox::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+.honorsCertificates .certificate .container .certificateWrap .certificateItem:hover .certificateNameBox .certificateName {
+  background: rgba(255, 209, 0, 0.9);
+}
 
 /*# sourceMappingURL=style.css.map */
