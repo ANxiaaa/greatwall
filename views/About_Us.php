@@ -37,7 +37,6 @@ document.oncontextmenu=stop;
 
     <div class="company">
       <div class="container">
-
         <div class="companyLeft">
           <div class="companyName">宁波长城精工实业有限公司</div>
           <div class="companyMsg">
@@ -229,22 +228,17 @@ document.oncontextmenu=stop;
           <div class="courseName2">
             <span class="yellotext">荣获</span> “国家级专精特新重点小巨人”、“国家知识产权优势企业”
           </div>
+          <img class="shuxian" draggable="false" src="<?php echo static_file('web/img/shuxian.webp') ?>" alt="">
           <div class="swiperBox">
+            <img class="hengxian" draggable="false" src="<?php echo static_file('web/img/hengxian.webp') ?>" alt="">
             <div class="swiper-container" id="yearBanner">
-              <div class="swiper-wrapper" id="yearBanner-wrapper">
-                <div class='swiper-slide'>
-
-                </div>
-              </div>
+              <div class="swiper-wrapper" id="yearBanner-wrapper"></div>
             </div>
             <div class="swiper-container" id="courseBanner">
-              <div class="swiper-wrapper" id="courseBanner-wrapper">
-                <div class='swiper-slide'>
-
-                </div>
-              </div>
+              <div class="swiper-wrapper" id="courseBanner-wrapper"></div>
             </div>
           </div>
+          <div class="swiper-scrollbar"></div>
         </div>
       </div>
     </div>
@@ -330,7 +324,7 @@ document.oncontextmenu=stop;
         const yearBanner = $("#yearBanner-wrapper");
         const dom = data.map((item, index) => {
           return `<div class='swiper-slide'>
-            slide${index}
+            ${item.year}
           </div>`
         })
         swiperWrapper.html(dom)
@@ -346,8 +340,11 @@ document.oncontextmenu=stop;
           slidesPerView: 10,
           centeredSlides: true,
           mousewheelControl: true,
-          freeMode: true,
+          // freeMode: true,
           slideToClickedSlide: true,
+          scrollbarHide: false,
+          scrollbarDraggable: true,
+          scrollbar: '#course .swiper-scrollbar'
         });
         mySwiper.params.control = yearSwiper;
         yearSwiper.params.control = mySwiper;

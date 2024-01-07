@@ -1009,6 +1009,7 @@ footer .footerBtm .container a:last-child {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 .aboutUs #course .courseContent .container .courseName {
   font-size: 42px;
@@ -1019,14 +1020,68 @@ footer .footerBtm .container a:last-child {
   font-weight: bold;
   font-size: 22px;
 }
+.aboutUs #course .courseContent .container .shuxian {
+  width: 2px;
+  height: 750px;
+  position: absolute;
+  top: 436px;
+  bottom: 0;
+  left: 376px;
+  z-index: 0;
+}
 .aboutUs #course .courseContent .container .swiperBox {
   display: flex;
+  position: relative;
+  z-index: 1;
   justify-content: space-between;
-  height: 0;
-  flex: 1;
+  height: 731px;
   overflow: hidden;
   margin-top: 60px;
-  padding-left: 96px;
+  margin-bottom: 145px;
+  padding-left: 50px;
+  padding-right: 10px;
+  user-select: none;
+}
+.aboutUs #course .courseContent .container .swiperBox .hengxian {
+  width: 460px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 180px;
+  z-index: 2;
+  margin: auto;
+}
+.aboutUs #course .courseContent .container .swiperBox #yearBanner {
+  font-size: 18px;
+  color: rgba(18, 40, 82, 0.5);
+  font-style: italic;
+  width: 210px;
+  position: relative;
+  overflow: initial;
+}
+.aboutUs #course .courseContent .container .swiperBox #yearBanner .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 68px;
+  position: relative;
+}
+.aboutUs #course .courseContent .container .swiperBox #yearBanner .swiper-slide.swiper-slide-active {
+  color: #122852;
+  font-size: 22px;
+  font-weight: bold;
+}
+.aboutUs #course .courseContent .container .swiperBox #yearBanner .swiper-slide::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  right: -11px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: url("../../web/img/heidian.webp") center center/100% 100%;
 }
 .aboutUs #course .courseContent .container .swiperBox #courseBanner {
   width: 100%;
@@ -1034,6 +1089,17 @@ footer .footerBtm .container a:last-child {
 }
 .aboutUs #course .courseContent .container .swiperBox #courseBanner .swiper-slide-active {
   height: 200px !important;
+}
+.aboutUs #course .courseContent .container .swiper-scrollbar {
+  position: absolute;
+  width: 10px;
+  height: 805px;
+  right: 142px;
+  top: 436px;
+  background: rgba(18, 40, 82, 0.1);
+}
+.aboutUs #course .courseContent .container .swiper-scrollbar .swiper-scrollbar-drag {
+  background: #071d49;
 }
 
 .honorsCertificates .board {
