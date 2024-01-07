@@ -54,6 +54,19 @@ document.oncontextmenu=stop;
       <div class="showCarBtnBox"></div>
       <img id="showCarImg" draggable="false" alt="">
     </div>
+
+    <div class="vi">
+      <div class="container">
+        <img class="viBook" draggable="false" src="<?php echo static_file('web/img/viBook.webp') ?>" alt="">
+        <div class="bookDown">
+          <p>VI手册下载</p>
+          <div class="yellowBtn">
+            <span>了解更多</span>
+            <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <?php include_once VIEWPATH . 'inc/footer.php'; ?>

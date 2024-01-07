@@ -1037,35 +1037,35 @@ footer .footerBtm .container a:last-child {
 }
 
 .honorsCertificates .board {
-  height: 906px;
+  height: calc(906px * var(--ratio));
   background: url("../../web/img/boardBg.webp") repeat-x;
   background-size: cover;
   position: relative;
 }
 .honorsCertificates .board #boardUsBanner {
   height: 100%;
-  width: 1700px;
+  width: calc(1700px * var(--ratio));
 }
 .honorsCertificates .board #boardUsBanner .swiper-slide {
   display: flex;
   flex-direction: column-reverse;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 60px;
+  padding: 0 calc(60px * var(--ratio));
 }
 .honorsCertificates .board #boardUsBanner .swiper-slide .bannerImg {
   width: 80%;
-  height: 270px;
-  margin-bottom: 38px;
+  height: calc(270px * var(--ratio));
+  margin-bottom: calc(38px * var(--ratio));
   transition: all 0.3s;
   display: block;
 }
 .honorsCertificates .board #boardUsBanner .swiper-slide .boardNameBox {
-  height: 165px;
+  height: calc(165px * var(--ratio));
   text-align: center;
 }
 .honorsCertificates .board #boardUsBanner .swiper-slide .p1 {
-  font-size: 18px;
+  font-size: calc(18px * var(--ratio));
   margin: auto;
   font-weight: bold;
   position: relative;
@@ -1080,23 +1080,23 @@ footer .footerBtm .container a:last-child {
 .honorsCertificates .board #boardUsBanner .swiper-slide .p1::after {
   content: "";
   position: absolute;
-  bottom: 2px;
+  bottom: calc(2px * var(--ratio));
   left: 0;
   width: 100%;
-  height: 8px;
+  height: calc(8px * var(--ratio));
   background: #ffd100;
 }
 .honorsCertificates .board #boardUsBanner .swiper-slide .boardName {
   color: rgba(18, 40, 82, 0.5);
-  font-size: 20px;
-  line-height: 36px;
+  font-size: calc(20px * var(--ratio));
+  line-height: calc(36px * var(--ratio));
   font-weight: bold;
-  transform: translateY(-24px);
+  transform: translateY(calc(-24px * var(--ratio)));
   transition: all 0.3s;
 }
 .honorsCertificates .board #boardUsBanner .swiper-slide .p3 {
   white-space: pre;
-  font-size: 18px;
+  font-size: calc(18px * var(--ratio));
   color: rgba(7, 29, 73, 0.5);
   opacity: 0;
   transition: opacity 0.3s;
@@ -1106,7 +1106,7 @@ footer .footerBtm .container a:last-child {
 }
 .honorsCertificates .board #boardUsBanner .swiper-slide.swiper-slide-active .bannerImg {
   width: 100%;
-  height: 400px;
+  height: calc(400px * var(--ratio));
 }
 .honorsCertificates .board #boardUsBanner .swiper-slide.swiper-slide-active .p1 {
   opacity: 1;
@@ -1116,28 +1116,28 @@ footer .footerBtm .container a:last-child {
 }
 .honorsCertificates .board #boardUsBanner .swiper-slide.swiper-slide-active .boardName {
   color: #122852;
-  font-size: 42px;
-  line-height: 60px;
+  font-size: calc(42px * var(--ratio));
+  line-height: calc(60px * var(--ratio));
   transform: translateY(0);
 }
 .honorsCertificates .certificate {
-  padding-top: 90px;
+  padding-top: calc(90px * var(--ratio));
 }
 .honorsCertificates .certificate .container {
-  width: 1440px;
+  width: calc(1440px * var(--ratio));
 }
 .honorsCertificates .certificate .container .certificateTab {
-  height: 72px;
-  line-height: 72px;
+  height: calc(72px * var(--ratio));
+  line-height: calc(72px * var(--ratio));
   display: flex;
   width: 100%;
-  margin-bottom: 40px;
-  border: 1px solid rgba(18, 40, 82, 0.1);
+  margin-bottom: calc(40px * var(--ratio));
+  border: calc(1px * var(--ratio)) solid rgba(18, 40, 82, 0.1);
 }
 .honorsCertificates .certificate .container .certificateTab .certificateTabItem {
   flex: 1;
   text-align: center;
-  font-size: 22px;
+  font-size: calc(22px * var(--ratio));
   font-weight: bold;
   color: #071d49;
   cursor: pointer;
@@ -1155,17 +1155,17 @@ footer .footerBtm .container a:last-child {
 }
 .honorsCertificates .certificate .container .certificateWrap .certificateItem {
   width: 25%;
-  height: 462px;
+  height: calc(462px * var(--ratio));
   position: relative;
-  padding-top: 35px;
+  padding-top: calc(35px * var(--ratio));
   background: #fff;
-  border: 1px solid #dcdcdc;
-  margin: -1px;
+  border: calc(1px * var(--ratio)) solid #dcdcdc;
+  margin: calc(-1px * var(--ratio));
   cursor: pointer;
 }
 .honorsCertificates .certificate .container .certificateWrap .certificateItem img {
-  width: 244px;
-  height: 332px;
+  width: calc(244px * var(--ratio));
+  height: calc(332px * var(--ratio));
   display: block;
   margin: auto;
 }
@@ -1188,9 +1188,9 @@ footer .footerBtm .container a:last-child {
   content: "";
   position: absolute;
   opacity: 0;
-  width: 58px;
-  height: 58px;
-  transform: translateY(10px);
+  width: calc(58px * var(--ratio));
+  height: calc(58px * var(--ratio));
+  transform: translateY(calc(10px * var(--ratio)));
   transition: all 0.3s;
   top: 0;
   bottom: 0;
@@ -1200,7 +1200,7 @@ footer .footerBtm .container a:last-child {
   background: #c00;
 }
 .honorsCertificates .certificate .container .certificateWrap .certificateItem .certificateNameBox .certificateName {
-  height: 107px;
+  height: calc(107px * var(--ratio));
   display: flex;
   font-weight: bold;
   flex-direction: column;
@@ -1220,31 +1220,31 @@ footer .footerBtm .container a:last-child {
   background: rgba(255, 209, 0, 0.9);
 }
 .honorsCertificates .certificate .popupWrap .popupContent {
-  width: 760px;
-  height: 900px;
+  width: calc(760px * var(--ratio));
+  height: calc(900px * var(--ratio));
 }
 .honorsCertificates .certificate .popupWrap .popupContent .swiper-container {
   height: 100%;
 }
 .honorsCertificates .certificate .popupWrap .popupContent .swiper-container .swiper-slide {
-  padding-top: 20px;
+  padding-top: calc(20px * var(--ratio));
 }
 .honorsCertificates .certificate .popupWrap .popupContent .swiper-container .swiper-slide .pupopName {
-  font-size: 32px;
-  line-height: 60px;
+  font-size: calc(32px * var(--ratio));
+  line-height: calc(60px * var(--ratio));
   color: #122852;
   font-weight: bold;
   text-align: center;
 }
 .honorsCertificates .certificate .popupWrap .popupContent .swiper-container .swiper-slide .bannerImg {
-  width: 557px;
-  height: 765px;
+  width: calc(557px * var(--ratio));
+  height: calc(765px * var(--ratio));
   margin: auto;
   display: block;
 }
 
 .branding .store {
-  height: 1000px;
+  height: calc(1000px * var(--ratio));
   background: url("../../web/img/storeBg.webp");
   background-size: cover;
   position: relative;
@@ -1253,8 +1253,8 @@ footer .footerBtm .container a:last-child {
   height: 100%;
 }
 .branding .store .swiper-container .swiper-slide {
-  width: 1440px !important;
-  margin: 0 -100px;
+  width: calc(1440px * var(--ratio)) !important;
+  margin: 0 calc(-100px * var(--ratio));
   transform: scale(0.54);
   transition: transform 0.3s;
   text-align: center;
@@ -1262,16 +1262,16 @@ footer .footerBtm .container a:last-child {
 .branding .store .swiper-container .swiper-slide .storeItem {
   width: 100%;
   height: 100%;
-  padding-top: 100px;
+  padding-top: calc(100px * var(--ratio));
   color: #071d49;
 }
 .branding .store .swiper-container .swiper-slide .storeItem .storeName {
-  font-size: 42px;
+  font-size: calc(42px * var(--ratio));
   font-weight: bold;
-  margin-bottom: 60px;
+  margin-bottom: calc(60px * var(--ratio));
 }
 .branding .store .swiper-container .swiper-slide .storeItem .storeImg {
-  height: 650px;
+  height: calc(650px * var(--ratio));
   width: 100%;
   position: relative;
   z-index: 1;
@@ -1280,11 +1280,11 @@ footer .footerBtm .container a:last-child {
   position: absolute;
   z-index: 0;
   background: url("../../web/img/storeShadow.webp") center center/100% 100% no-repeat;
-  width: 1348px;
-  height: 102px;
+  width: calc(1348px * var(--ratio));
+  height: calc(102px * var(--ratio));
   left: 0;
   right: 0;
-  bottom: 70px;
+  bottom: calc(70px * var(--ratio));
   margin: auto;
   display: none;
 }
@@ -1304,36 +1304,36 @@ footer .footerBtm .container a:last-child {
   margin: auto;
 }
 .branding .showCar {
-  min-height: 986px;
-  padding-top: 107px;
+  min-height: calc(986px * var(--ratio));
+  padding-top: calc(107px * var(--ratio));
   color: #071d49;
   text-align: center;
 }
 .branding .showCar .showCarTitle {
-  font-size: 42px;
-  line-height: 36px;
+  font-size: calc(42px * var(--ratio));
+  line-height: calc(36px * var(--ratio));
   font-weight: bold;
 }
 .branding .showCar .showCarBtnBox {
   display: flex;
   width: max-content;
   margin: 0 auto;
-  margin-top: 36px;
+  margin-top: calc(36px * var(--ratio));
 }
 .branding .showCar .showCarBtnBox .showCarBtnItem {
-  width: 63px;
-  height: 63px;
+  width: calc(63px * var(--ratio));
+  height: calc(63px * var(--ratio));
   border-radius: 50%;
   background: rgba(18, 40, 82, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 55px;
+  margin-right: calc(55px * var(--ratio));
   cursor: pointer;
 }
 .branding .showCar .showCarBtnBox .showCarBtnItem img {
-  max-height: 64px;
-  max-width: 90px;
+  max-height: calc(64px * var(--ratio));
+  max-width: calc(90px * var(--ratio));
   opacity: 0.5;
 }
 .branding .showCar .showCarBtnBox .showCarBtnItem:last-child {
@@ -1346,7 +1346,33 @@ footer .footerBtm .container a:last-child {
   opacity: 1;
 }
 .branding .showCar #showCarImg {
-  margin: 40px 0 130px;
+  margin: calc(40px * var(--ratio)) 0 calc(130px * var(--ratio));
+}
+.branding .vi {
+  height: calc(852px * var(--ratio));
+  background: url("../../web/img/viBg.webp");
+  background-size: cover;
+  color: #071d49;
+}
+.branding .vi .container {
+  padding: calc(150px * var(--ratio)) calc(140px * var(--ratio)) 0;
+  display: flex;
+}
+.branding .vi .container .viBook {
+  width: calc(607px * var(--ratio));
+  margin-right: calc(154px * var(--ratio));
+}
+.branding .vi .container .bookDown {
+  margin-top: calc(122px * var(--ratio));
+}
+.branding .vi .container .bookDown p {
+  font-size: calc(42px * var(--ratio));
+  font-weight: bold;
+  margin-bottom: calc(48px * var(--ratio));
+}
+.branding .vi .container .bookDown .yellowBtn {
+  width: calc(145px * var(--ratio));
+  height: calc(54px * var(--ratio));
 }
 
 /*# sourceMappingURL=style.css.map */

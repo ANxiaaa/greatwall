@@ -1,12 +1,12 @@
 .honorsCertificates {
   .board {
-    height: 906px;
+    height: calc(906px * var(--ratio));
     background: url("../../web/img/boardBg.webp") repeat-x;
     background-size: cover;
     position: relative;
     #boardUsBanner {
       height: 100%;
-      width: 1700px;
+      width: calc(1700px * var(--ratio));
       #boardUsBanner-wrapper {
         // align-items: flex-end;
       }
@@ -15,22 +15,22 @@
         flex-direction: column-reverse;
         justify-content: flex-start;
         align-items: center;
-        padding: 0 60px;
+        padding: 0 calc(60px * var(--ratio));
 
         .bannerImg {
           width: 80%;
-          height: 270px;
-          margin-bottom: 38px;
+          height: calc(270px * var(--ratio));
+          margin-bottom: calc(38px * var(--ratio));
           transition: all 0.3s;
           display: block;
           //   margin: auto;
         }
         .boardNameBox {
-          height: 165px;
+          height: calc(165px * var(--ratio));
           text-align: center;
         }
         .p1 {
-          font-size: 18px;
+          font-size: calc(18px * var(--ratio));
           margin: auto;
           font-weight: bold;
           position: relative;
@@ -44,24 +44,24 @@
           &::after {
             content: "";
             position: absolute;
-            bottom: 2px;
+            bottom: calc(2px * var(--ratio));
             left: 0;
             width: 100%;
-            height: 8px;
+            height: calc(8px * var(--ratio));
             background: $yellowBackground;
           }
         }
         .boardName {
           color: rgba($textColor4, 0.5);
-          font-size: 20px;
-          line-height: 36px;
+          font-size: calc(20px * var(--ratio));
+          line-height: calc(36px * var(--ratio));
           font-weight: bold;
-          transform: translateY(-24px);
+          transform: translateY(calc(-24px * var(--ratio)));
           transition: all 0.3s;
         }
         .p3 {
           white-space: pre;
-          font-size: 18px;
+          font-size: calc(18px * var(--ratio));
           color: rgba($primaryColor, 0.5);
           opacity: 0;
           transition: opacity 0.3s;
@@ -71,7 +71,7 @@
           //   transform: scale(1.3);
           .bannerImg {
             width: 100%;
-            height: 400px;
+            height: calc(400px * var(--ratio));
           }
           .p1 {
             opacity: 1;
@@ -81,8 +81,8 @@
           }
           .boardName {
             color: $textColor4;
-            font-size: 42px;
-            line-height: 60px;
+            font-size: calc(42px * var(--ratio));
+            line-height: calc(60px * var(--ratio));
             transform: translateY(0);
           }
         }
@@ -90,20 +90,20 @@
     }
   }
   .certificate {
-    padding-top: 90px;
+    padding-top: calc(90px * var(--ratio));
     .container {
-      width: 1440px;
+      width: calc(1440px * var(--ratio));
       .certificateTab {
-        height: 72px;
-        line-height: 72px;
+        height: calc(72px * var(--ratio));
+        line-height: calc(72px * var(--ratio));
         display: flex;
         width: 100%;
-        margin-bottom: 40px;
-        border: 1px solid rgba($borderColor2, 0.1);
+        margin-bottom: calc(40px * var(--ratio));
+        border: calc(1px * var(--ratio)) solid rgba($borderColor2, 0.1);
         .certificateTabItem {
           flex: 1;
           text-align: center;
-          font-size: 22px;
+          font-size: calc(22px * var(--ratio));
           font-weight: bold;
           color: $primaryColor;
           cursor: pointer;
@@ -121,16 +121,16 @@
         }
         .certificateItem {
           width: 25%;
-          height: 462px;
+          height: calc(462px * var(--ratio));
           position: relative;
-          padding-top: 35px;
+          padding-top: calc(35px * var(--ratio));
           background: #fff;
-          border: 1px solid $borderColor3;
-          margin: -1px;
+          border: calc(1px * var(--ratio)) solid $borderColor3;
+          margin: calc(-1px * var(--ratio));
           cursor: pointer;
           img {
-            width: 244px;
-            height: 332px;
+            width: calc(244px * var(--ratio));
+            height: calc(332px * var(--ratio));
             display: block;
             margin: auto;
           }
@@ -152,9 +152,9 @@
               content: "";
               position: absolute;
               opacity: 0;
-              width: 58px;
-              height: 58px;
-              transform: translateY(10px);
+              width: calc(58px * var(--ratio));
+              height: calc(58px * var(--ratio));
+              transform: translateY(calc(10px * var(--ratio)));
               transition: all 0.3s;
               top: 0;
               bottom: 0;
@@ -164,7 +164,7 @@
               background: #c00;
             }
             .certificateName {
-              height: 107px;
+              height: calc(107px * var(--ratio));
               display: flex;
               font-weight: bold;
               flex-direction: column;
@@ -194,22 +194,22 @@
 
     .popupWrap {
       .popupContent {
-        width: 760px;
-        height: 900px;
+        width: calc(760px * var(--ratio));
+        height: calc(900px * var(--ratio));
         .swiper-container {
           height: 100%;
           .swiper-slide {
-            padding-top: 20px;
+            padding-top: calc(20px * var(--ratio));
             .pupopName {
-              font-size: 32px;
-              line-height: 60px;
+              font-size: calc(32px * var(--ratio));
+              line-height: calc(60px * var(--ratio));
               color: $textColor4;
               font-weight: bold;
               text-align: center;
             }
             .bannerImg {
-              width: 557px;
-              height: 765px;
+              width: calc(557px * var(--ratio));
+              height: calc(765px * var(--ratio));
               margin: auto;
               display: block;
             }

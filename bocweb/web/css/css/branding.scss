@@ -1,30 +1,30 @@
 .branding {
   .store {
-    height: 1000px;
+    height: calc(1000px * var(--ratio));
     background: url("../../web/img/storeBg.webp");
     background-size: cover;
     position: relative;
     .swiper-container {
       height: 100%;
       .swiper-slide {
-        width: 1440px !important;
-        margin: 0 -100px;
-        // height: 472px;
+        width: calc(1440px * var(--ratio)) !important;
+        margin: 0 calc(-100px * var(--ratio));
+        // height: calc(472px * var(--ratio));
         transform: scale(0.54);
         transition: transform 0.3s;
         text-align: center;
         .storeItem {
           width: 100%;
           height: 100%;
-          padding-top: 100px;
+          padding-top: calc(100px * var(--ratio));
           color: $primaryColor;
           .storeName {
-            font-size: 42px;
+            font-size: calc(42px * var(--ratio));
             font-weight: bold;
-            margin-bottom: 60px;
+            margin-bottom: calc(60px * var(--ratio));
           }
           .storeImg {
-            height: 650px;
+            height: calc(650px * var(--ratio));
             width: 100%;
             position: relative;
             z-index: 1;
@@ -34,11 +34,11 @@
             z-index: 0;
             background: url("../../web/img/storeShadow.webp") center center /
               100% 100% no-repeat;
-            width: 1348px;
-            height: 102px;
+            width: calc(1348px * var(--ratio));
+            height: calc(102px * var(--ratio));
             left: 0;
             right: 0;
-            bottom: 70px;
+            bottom: calc(70px * var(--ratio));
             margin: auto;
             display: none;
           }
@@ -63,33 +63,33 @@
   }
 
   .showCar {
-    min-height: 986px;
-    padding-top: 107px;
+    min-height: calc(986px * var(--ratio));
+    padding-top: calc(107px * var(--ratio));
     color: $primaryColor;
     text-align: center;
     .showCarTitle {
-      font-size: 42px;
-      line-height: 36px;
+      font-size: calc(42px * var(--ratio));
+      line-height: calc(36px * var(--ratio));
       font-weight: bold;
     }
     .showCarBtnBox {
       display: flex;
       width: max-content;
       margin: 0 auto;
-      margin-top: 36px;
+      margin-top: calc(36px * var(--ratio));
       .showCarBtnItem {
-        width: 63px;
-        height: 63px;
+        width: calc(63px * var(--ratio));
+        height: calc(63px * var(--ratio));
         border-radius: 50%;
         background: rgba($markBackground, 0.25);
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-right: 55px;
+        margin-right: calc(55px * var(--ratio));
         cursor: pointer;
         img {
-          max-height: 64px;
-          max-width: 90px;
+          max-height: calc(64px * var(--ratio));
+          max-width: calc(90px * var(--ratio));
           opacity: 0.5;
         }
         &:last-child {
@@ -103,8 +103,35 @@
         }
       }
     }
-    #showCarImg{
-      margin: 40px 0 130px;
+    #showCarImg {
+      margin: calc(40px * var(--ratio)) 0 calc(130px * var(--ratio));
+    }
+  }
+
+  .vi {
+    height: calc(852px * var(--ratio));
+    background: url("../../web/img/viBg.webp");
+    background-size: cover;
+    color: $primaryColor;
+    .container {
+      padding: calc(150px * var(--ratio)) calc(140px * var(--ratio)) 0;
+      display: flex;
+      .viBook {
+        width: calc(607px * var(--ratio));
+        margin-right: calc(154px * var(--ratio));
+      }
+      .bookDown {
+        margin-top: calc(122px * var(--ratio));
+        p {
+          font-size: calc(42px * var(--ratio));
+          font-weight: bold;
+          margin-bottom: calc(48px * var(--ratio));
+        }
+        .yellowBtn {
+          width: calc(145px * var(--ratio));
+          height: calc(54px * var(--ratio));
+        }
+      }
     }
   }
 }
