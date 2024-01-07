@@ -1085,10 +1085,55 @@ footer .footerBtm .container a:last-child {
 }
 .aboutUs #course .courseContent .container .swiperBox #courseBanner {
   width: 100%;
-  margin-top: -100px;
+  margin-top: -260px;
+  padding-left: 235px;
 }
-.aboutUs #course .courseContent .container .swiperBox #courseBanner .swiper-slide-active {
-  height: 200px !important;
+.aboutUs #course .courseContent .container .swiperBox #courseBanner .swiper-slide {
+  font-size: 18px;
+}
+.aboutUs #course .courseContent .container .swiperBox #courseBanner .swiper-slide .yearName {
+  position: absolute;
+  height: max-content;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  color: rgba(18, 40, 82, 0.5);
+  transform: translate(0px, 0px);
+  transition: all 0.3s;
+  width: 40px;
+}
+.aboutUs #course .courseContent .container .swiperBox #courseBanner .swiper-slide .yearContent {
+  position: absolute;
+  height: max-content;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  color: #122852;
+  transform: translate(50px, 0px);
+  transition: transform 0.3s, color 0.3s;
+  white-space: pre;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: calc(100% - 50px);
+}
+.aboutUs #course .courseContent .container .swiperBox #courseBanner .swiper-slide.swiper-slide-active {
+  height: 310px !important;
+}
+.aboutUs #course .courseContent .container .swiperBox #courseBanner .swiper-slide.swiper-slide-active .yearName {
+  color: #071d49;
+  transform: translate(0px, -55px);
+  width: 200px;
+  font-size: 82px;
+  font-weight: bold;
+}
+.aboutUs #course .courseContent .container .swiperBox #courseBanner .swiper-slide.swiper-slide-active .yearContent {
+  color: #071d49;
+  white-space: initial;
+  overflow: initial;
+  width: 100%;
+  font-size: 22px;
+  transform: translate(0px, 55px);
+  font-weight: bold;
 }
 .aboutUs #course .courseContent .container .swiper-scrollbar {
   position: absolute;

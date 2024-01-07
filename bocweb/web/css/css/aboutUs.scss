@@ -119,6 +119,7 @@
       }
     }
   }
+
   #course {
     // height: 100vh;
     height: 1300px;
@@ -220,9 +221,54 @@
           }
           #courseBanner {
             width: 100%;
-            margin-top: -100px;
-            .swiper-slide-active {
-              height: 200px !important;
+            margin-top: -260px;
+            padding-left: 235px;
+            .swiper-slide {
+              font-size: 18px;
+              .yearName {
+                position: absolute;
+                height: max-content;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                color: rgba($textColor4, 0.5);
+                transform: translate(0px, 0px);
+                transition: all 0.3s;
+                width: 40px;
+              }
+              .yearContent {
+                position: absolute;
+                height: max-content;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                color: $textColor4;
+                transform: translate(50px, 0px);
+                transition: transform 0.3s, color 0.3s;
+                white-space: pre;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: calc(100% - 50px);
+              }
+              &.swiper-slide-active {
+                height: 310px !important;
+                .yearName {
+                  color: $primaryColor;
+                  transform: translate(0px, -55px);
+                  width: 200px;
+                  font-size: 82px;
+                  font-weight: bold;
+                }
+                .yearContent {
+                  color: $primaryColor;
+                  white-space: initial;
+                  overflow: initial;
+                  width: 100%;
+                  font-size: 22px;
+                  transform: translate(0px, 55px);
+                  font-weight: bold;
+                }
+              }
             }
           }
         }

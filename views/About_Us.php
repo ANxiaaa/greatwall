@@ -319,32 +319,41 @@ document.oncontextmenu=stop;
           autoplay: 5000,
         });
       });
+      // ---
       yearData().then(data => {
         const swiperWrapper = $("#courseBanner-wrapper");
         const yearBanner = $("#yearBanner-wrapper");
-        const dom = data.map((item, index) => {
+        const dom1 = data.map((item, index) => {
           return `<div class='swiper-slide'>
             ${item.year}
           </div>`
         })
-        swiperWrapper.html(dom)
-        yearBanner.html(dom)
+        const dom2 = data.map(item => {
+          return `<div class='swiper-slide'>
+            <p class="yearName">${item.year}</p>
+            <p class="yearContent">董事长朱文江先生发出“爱我中华，买我国货”倡议并成功举办高峰论坛2017（行业）领军品牌</p>
+          </div>`
+        })
+        yearBanner.html(dom1)
+        swiperWrapper.html(dom2)
         const yearSwiper = new Swiper('#yearBanner', {
           direction: 'vertical',
           slidesPerView: 10,
           centeredSlides: true,
           slideToClickedSlide: true,
+          scrollbar: '#course .swiper-scrollbar',
+          scrollbarHide: false,
+          scrollbarDraggable: true,
         });
         const mySwiper = new Swiper('#courseBanner', {
           direction: 'vertical',
-          slidesPerView: 10,
+          slidesPerView: 18,
           centeredSlides: true,
           mousewheelControl: true,
           // freeMode: true,
           slideToClickedSlide: true,
-          scrollbarHide: false,
-          scrollbarDraggable: true,
-          scrollbar: '#course .swiper-scrollbar'
+          watchSlidesProgress: true,
+          watchSlidesVisibility: true,
         });
         mySwiper.params.control = yearSwiper;
         yearSwiper.params.control = mySwiper;
