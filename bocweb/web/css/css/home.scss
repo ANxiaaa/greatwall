@@ -111,6 +111,86 @@
       }
     }
   }
+  .earth {
+    height: calc(1190px * var(--ratio));
+    .container {
+      padding-left: calc(70px * var(--ratio));
+      padding-top: calc(128px * var(--ratio));
+      position: relative;
+      .topName {
+        color: $primaryColor;
+      }
+      .topTitle {
+        width: calc(1000px * var(--ratio));
+        color: $primaryColor;
+        white-space: pre;
+        padding-bottom: calc(50px * var(--ratio));
+      }
+      .numText {
+        margin-top: calc(120px * var(--ratio));
+        --borderWidth: calc(2px * var(--ratio));
+        --minusBorderWidth: calc(-2px * var(--ratio));
+        font-size: calc(122px * var(--ratio));
+        font-family: Arial;
+        text-shadow: var(--borderWidth) 0 0 $borderColor2,
+          var(--minusBorderWidth) 0 0 $borderColor2,
+          0 var(--borderWidth) 0 $borderColor2,
+          0 var(--minusBorderWidth) 0 $borderColor2,
+          var(--borderWidth) var(--borderWidth) 0 $borderColor2,
+          var(--minusBorderWidth) var(--minusBorderWidth) 0 $borderColor2,
+          var(--minusBorderWidth) var(--borderWidth) 0 $borderColor2,
+          var(--borderWidth) var(--minusBorderWidth) 0 $borderColor2;
+        color: $textColor3;
+        letter-spacing: calc(12px * var(--ratio));
+      }
+      .numMsg {
+        width: calc(218px * var(--ratio));
+        font-size: calc(22px * var(--ratio));
+        color: $primaryColor;
+      }
+      .earthImgBox {
+        width: calc(785px * var(--ratio));
+        height: calc(791px * var(--ratio));
+        position: absolute;
+        z-index: 1;
+        top: calc(328px * var(--ratio));
+        left: calc(285px * var(--ratio));
+        .earthImg {
+          width: 100%;
+          height: 100%;
+        }
+        .xuxianImg {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+      .earthContent {
+        width: calc(584px * var(--ratio));
+        height: calc(400px * var(--ratio));
+        padding-top: calc(66px * var(--ratio));
+        padding-left: calc(68px * var(--ratio));
+        color: $primaryColor;
+        font-size: calc(18px * var(--ratio));
+        line-height: calc(28px * var(--ratio));
+        background: $grayBackground;
+        position: absolute;
+        top: calc(634px * var(--ratio));
+        left: calc(885px * var(--ratio));
+        z-index: 2;
+        p {
+          margin-bottom: calc(36px * var(--ratio));
+          margin-right: calc(56px * var(--ratio));
+        }
+        .earthBtn {
+          width: calc(145px * var(--ratio));
+          height: calc(54px * var(--ratio));
+        }
+      }
+    }
+  }
   .recommendation {
     height: calc(960px * var(--ratio));
     position: relative;

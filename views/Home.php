@@ -39,6 +39,34 @@ document.oncontextmenu=stop;
       </div>
     </div>
     <!-- 地球 -->
+    <div class="earth">
+      <div class="container">
+        <div class="partTitle">
+          <div class="topName">
+            <img class="topImg" draggable="false" src="<?php echo static_file('web/img/gongsi.webp') ?>" alt="">
+            <span>公司介绍</span>
+          </div>
+          <div class="topTitle">一家集研发、制造、销售、
+            服务于一体的国际化五金工具企业</div>
+          <p class="numText">1984</p>
+          <p class="numMsg">始于1984年</p>
+          <p class="numText">80</p>
+          <p class="numMsg">业务已遍布全球80多个国家和地区</p>
+        </div>
+        <div class="earthImgBox">
+          <img class="earthImg" draggable="false" src="<?php echo static_file('web/img/earth.png') ?>" alt="">
+          <img class="xuxianImg" draggable="false" src="<?php echo static_file('web/img/xuxian.png') ?>" alt="">
+        </div>
+        <div class="earthContent">
+          <p>宁波长城精工实业有限公司，始创于1984年，是一家集研发、制造、销售、服务于一体的国际化五金工具企业,业务已遍布全球80多个国家和地区，为国内外众多大型工业用户提供完善的工具需求解决方案。</p>
+          <p>历经数十年风雨，长城精工坚持为国内外工具使用者带来有价值的中高档工具。</p>
+          <div class="earthBtn yellowBtn">
+            <span>探索更多</span>
+            <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- 产品推荐 -->
     <div class="recommendation">
       <div class="container">
