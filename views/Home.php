@@ -53,9 +53,10 @@ document.oncontextmenu=stop;
           <p class="numText">80</p>
           <p class="numMsg">业务已遍布全球80多个国家和地区</p>
         </div>
-        <div class="earthImgBox">
+        <div class="earthImgBox" id="earthImgBox">
           <img class="earthImg" draggable="false" src="<?php echo static_file('web/img/earth.png') ?>" alt="">
-          <img class="xuxianImg" draggable="false" src="<?php echo static_file('web/img/xuxian.png') ?>" alt="">
+          <img class="xuxianImg" draggable="false"
+            src="<?php echo static_file('web/img/xuxian.png') ?>" alt="">
         </div>
         <div class="earthContent">
           <p>宁波长城精工实业有限公司，始创于1984年，是一家集研发、制造、销售、服务于一体的国际化五金工具企业,业务已遍布全球80多个国家和地区，为国内外众多大型工业用户提供完善的工具需求解决方案。</p>
@@ -283,6 +284,20 @@ document.oncontextmenu=stop;
           },
         });
       })
+      // ---
+      const earthImgBox = $('#earthImgBox')
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            console.log('目标元素进入可视范围');
+            earthImgBox.addClass('animated fadeInUp')
+            earthImgBox.find('.xuxianImg').addClass('animated fadeInUp')
+          } else {
+            console.log('目标元素离开可视范围');
+          }
+        });
+      });
+      observer.observe(earthImgBox[0]);
     })
   </script>
 </body>

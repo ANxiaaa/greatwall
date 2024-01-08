@@ -696,6 +696,7 @@ footer .footerBtm .container a:last-child {
   position: absolute;
   top: 0;
   left: 0;
+  animation-delay: 0.5s;
 }
 .home .earth .container .earthContent {
   width: calc(584px * var(--ratio));
