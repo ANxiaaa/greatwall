@@ -372,7 +372,8 @@
           }
           .p2 {
             font-size: 18px;
-            color: $textColor6;margin-left: 16px;
+            color: $textColor6;
+            margin-left: 16px;
           }
         }
       }
@@ -382,6 +383,58 @@
         z-index: 1;
         width: 0;
         flex: 1;
+        color: $textColor3;
+        .originatorSub {
+          display: flex;
+          font-size: 32px;
+          margin-top: 30px;
+          margin-bottom: 35px;
+          font-weight: bold;
+          align-items: center;
+          img {
+            width: 29px;
+            height: 29px;
+            margin-right: 10px;
+          }
+        }
+        .achievement {
+          border-top: 2px solid rgba($borderColor4, 0.2);
+          margin-top: 143px;
+          .achievementList {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-size: 18px;
+            line-height: 42px;
+            .achievementItem {
+              padding-left: 12px;
+              position: relative;
+              white-space: pre;
+              width: 50%;
+              &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                width: 5px;
+                height: 5px;
+                transform: rotate(45deg);
+                background: $yellotextColor;
+              }
+            }
+          }
+        }
+        .introduce {
+          margin-top: 105px;
+          border-top: 2px solid rgba($borderColor4, 0.2);
+          .introduceContent {
+            word-break: break-word;
+            font-size: 18px;
+            line-height: 28px;
+          }
+        }
       }
     }
   }

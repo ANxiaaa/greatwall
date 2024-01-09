@@ -256,7 +256,38 @@ document.oncontextmenu=stop;
             <p class="p2">经济和商业管理学博士</p>
           </div>
         </div>
-        <div class="originatorRight"></div>
+        <div class="originatorRight">
+          <div class="achievement">
+            <div class="originatorSub">
+              <img draggable="false" src="<?php echo static_file('web/img/rybz.webp') ?>" alt="">
+              <p>成就</p>
+            </div>
+            <div class="achievementList">
+              <p class="achievementItem">全国工商联五金机电商会名誉会长</p>
+              <p class="achievementItem">全国工商联五金机电商会名誉会长</p>
+              <p class="achievementItem">全国工商联五金机电商会名誉会长</p>
+              <p class="achievementItem">全国工商联五金机电商会名誉会长</p>
+              <p class="achievementItem">全国工商联五金机电商会名誉会长</p>
+              <p class="achievementItem">全国工商联五金机电商会名誉会长</p>
+              <p class="achievementItem">全国工商联五金机电商会名誉会长</p>
+              <p class="achievementItem">全国工商联五金机电商会名誉会长</p>
+              <p class="achievementItem">全国工商联五金机电商会名誉会长</p>
+              <p class="achievementItem">全国工商联五金机电商会名誉会长</p>
+              <p class="achievementItem">全国工商联五金机电商会名誉会长</p>
+              <p class="achievementItem">全国工商联五金机电商会名誉会长</p>
+            </div>
+          </div>
+          <div class="introduce">
+            <div class="originatorSub">
+              <img draggable="false" src="<?php echo static_file('web/img/rw.webp') ?>" alt="">
+              <p>介绍</p>
+            </div>
+            <div class="introduceContent">1984年，创立了浙江省第一家中日合资企业—长城精工。
+              长城精工自创办以来，就以飞快的速度持续发展，朱文江先生也早在1986年就被评为浙江省优秀企业家。他是改革开放以来唯一一位中国五金工业名族品牌创立功勋人物，也在2014年荣获中国五金制品协会终身成就奖。
+              “中国现代卷尺之父”、“中国五金工具民族品牌创始人”、亚洲品牌领军人物”…，尽管朱文江先生这辈子有过许多的头衔，他还是秉持着坚持、认真的态度，一丝不苟地经营着企业。作为一名企业家、一名行业开拓者、一名匠人，他的梦想是将长城精工铸就成中国民族品牌，就像他在自传中写到的，
+              “因为坚持，所以追梦；人类因梦想而伟大”。</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

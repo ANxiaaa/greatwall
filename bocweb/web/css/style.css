@@ -1317,6 +1317,58 @@ footer .footerBtm .container a:last-child {
   z-index: 1;
   width: 0;
   flex: 1;
+  color: #fff;
+}
+.aboutUs .originator .container .originatorRight .originatorSub {
+  display: flex;
+  font-size: 32px;
+  margin-top: 30px;
+  margin-bottom: 35px;
+  font-weight: bold;
+  align-items: center;
+}
+.aboutUs .originator .container .originatorRight .originatorSub img {
+  width: 29px;
+  height: 29px;
+  margin-right: 10px;
+}
+.aboutUs .originator .container .originatorRight .achievement {
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  margin-top: 143px;
+}
+.aboutUs .originator .container .originatorRight .achievement .achievementList {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 18px;
+  line-height: 42px;
+}
+.aboutUs .originator .container .originatorRight .achievement .achievementList .achievementItem {
+  padding-left: 12px;
+  position: relative;
+  white-space: pre;
+  width: 50%;
+}
+.aboutUs .originator .container .originatorRight .achievement .achievementList .achievementItem::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  width: 5px;
+  height: 5px;
+  transform: rotate(45deg);
+  background: #ffd100;
+}
+.aboutUs .originator .container .originatorRight .introduce {
+  margin-top: 105px;
+  border-top: 2px solid rgba(255, 255, 255, 0.2);
+}
+.aboutUs .originator .container .originatorRight .introduce .introduceContent {
+  word-break: break-word;
+  font-size: 18px;
+  line-height: 28px;
 }
 
 .honorsCertificates .board {
