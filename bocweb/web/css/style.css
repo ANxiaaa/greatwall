@@ -1100,7 +1100,7 @@ footer .footerBtm .container a:last-child {
   position: absolute;
   top: calc(436px * var(--ratio));
   bottom: 0;
-  left: calc(408px * var(--ratio));
+  left: calc(378px * var(--ratio));
   z-index: 0;
 }
 .aboutUs #course .courseContent .container .swiperBox {
@@ -1223,7 +1223,7 @@ footer .footerBtm .container a:last-child {
 }
 .aboutUs .originator {
   position: relative;
-  height: 1040px;
+  height: calc(1040px * var(--ratio));
 }
 .aboutUs .originator::after {
   content: "";
@@ -1245,7 +1245,7 @@ footer .footerBtm .container a:last-child {
 }
 .aboutUs .originator .container::after {
   content: "";
-  width: 870px;
+  width: calc(870px * var(--ratio));
   right: 0;
   top: 0;
   bottom: 0;
@@ -1257,19 +1257,19 @@ footer .footerBtm .container a:last-child {
   position: relative;
   z-index: 1;
   color: #071d49;
-  padding-left: 120px;
-  padding-top: 100px;
+  padding-left: calc(120px * var(--ratio));
+  padding-top: calc(100px * var(--ratio));
 }
 .aboutUs .originator .container .originatorLeft .topTitle {
-  font-size: 42px;
+  font-size: calc(42px * var(--ratio));
   font-weight: bold;
-  margin-bottom: 56px;
+  margin-bottom: calc(56px * var(--ratio));
 }
 .aboutUs .originator .container .originatorLeft .imgBox {
-  width: 610px;
-  height: 427px;
+  width: calc(610px * var(--ratio));
+  height: calc(427px * var(--ratio));
   position: relative;
-  margin-bottom: 60px;
+  margin-bottom: calc(60px * var(--ratio));
 }
 .aboutUs .originator .container .originatorLeft .imgBox .originatorImg {
   width: 100%;
@@ -1282,11 +1282,11 @@ footer .footerBtm .container a:last-child {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 8px;
+  height: calc(8px * var(--ratio));
 }
 .aboutUs .originator .container .originatorLeft .imgBox .imgBtmLine::before {
   content: "";
-  width: 180px;
+  width: calc(180px * var(--ratio));
   background: rgba(7, 29, 73, 0.9);
 }
 .aboutUs .originator .container .originatorLeft .imgBox .imgBtmLine::after {
@@ -1298,21 +1298,21 @@ footer .footerBtm .container a:last-child {
   width: 390;
   display: flex;
   align-items: flex-end;
-  padding-bottom: 20px;
-  margin-left: 165px;
-  border-bottom: 1px solid rgba(18, 40, 82, 0.25);
+  padding-bottom: calc(20px * var(--ratio));
+  margin-left: calc(165px * var(--ratio));
+  border-bottom: calc(1px * var(--ratio)) solid rgba(18, 40, 82, 0.25);
 }
 .aboutUs .originator .container .originatorLeft .originatorName .p1 {
-  font-size: 28px;
+  font-size: calc(28px * var(--ratio));
   font-weight: bold;
 }
 .aboutUs .originator .container .originatorLeft .originatorName .p2 {
-  font-size: 18px;
+  font-size: calc(18px * var(--ratio));
   color: #13225c;
-  margin-left: 16px;
+  margin-left: calc(16px * var(--ratio));
 }
 .aboutUs .originator .container .originatorRight {
-  margin-left: 110px;
+  margin-left: calc(110px * var(--ratio));
   position: relative;
   z-index: 1;
   width: 0;
@@ -1321,30 +1321,30 @@ footer .footerBtm .container a:last-child {
 }
 .aboutUs .originator .container .originatorRight .originatorSub {
   display: flex;
-  font-size: 32px;
-  margin-top: 30px;
-  margin-bottom: 35px;
+  font-size: calc(32px * var(--ratio));
+  margin-top: calc(30px * var(--ratio));
+  margin-bottom: calc(35px * var(--ratio));
   font-weight: bold;
   align-items: center;
 }
 .aboutUs .originator .container .originatorRight .originatorSub img {
-  width: 29px;
-  height: 29px;
-  margin-right: 10px;
+  width: calc(29px * var(--ratio));
+  height: calc(29px * var(--ratio));
+  margin-right: calc(10px * var(--ratio));
 }
 .aboutUs .originator .container .originatorRight .achievement {
-  border-top: 2px solid rgba(255, 255, 255, 0.2);
-  margin-top: 143px;
+  border-top: calc(2px * var(--ratio)) solid rgba(255, 255, 255, 0.2);
+  margin-top: calc(143px * var(--ratio));
 }
 .aboutUs .originator .container .originatorRight .achievement .achievementList {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  font-size: 18px;
-  line-height: 42px;
+  font-size: calc(18px * var(--ratio));
+  line-height: calc(42px * var(--ratio));
 }
 .aboutUs .originator .container .originatorRight .achievement .achievementList .achievementItem {
-  padding-left: 12px;
+  padding-left: calc(12px * var(--ratio));
   position: relative;
   white-space: pre;
   width: 50%;
@@ -1356,19 +1356,80 @@ footer .footerBtm .container a:last-child {
   top: 0;
   bottom: 0;
   margin: auto;
-  width: 5px;
-  height: 5px;
+  width: calc(5px * var(--ratio));
+  height: calc(5px * var(--ratio));
   transform: rotate(45deg);
   background: #ffd100;
 }
 .aboutUs .originator .container .originatorRight .introduce {
-  margin-top: 105px;
-  border-top: 2px solid rgba(255, 255, 255, 0.2);
+  margin-top: calc(105px * var(--ratio));
+  border-top: calc(2px * var(--ratio)) solid rgba(255, 255, 255, 0.2);
 }
 .aboutUs .originator .container .originatorRight .introduce .introduceContent {
   word-break: break-word;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: calc(18px * var(--ratio));
+  line-height: calc(28px * var(--ratio));
+}
+.aboutUs .culture {
+  color: #071d49;
+  height: calc(820px * var(--ratio));
+  background: #f5f5f5;
+  padding-top: calc(130px * var(--ratio));
+}
+.aboutUs .culture .container {
+  padding-left: calc(120px * var(--ratio));
+}
+.aboutUs .culture .topTitle {
+  font-size: calc(42px * var(--ratio));
+  font-weight: bold;
+  margin-bottom: calc(56px * var(--ratio));
+}
+.aboutUs .culture .cultureBox {
+  display: flex;
+  justify-content: space-between;
+}
+.aboutUs .culture .cultureBox .cultureItem {
+  position: relative;
+  overflow: hidden;
+  padding: calc(55px * var(--ratio));
+  padding-right: calc(100px * var(--ratio));
+  width: calc(460px * var(--ratio));
+  height: calc(420px * var(--ratio));
+  background: #fff;
+  cursor: default;
+  transition: box-shadow 0.3s;
+}
+.aboutUs .culture .cultureBox .cultureItem:hover {
+  box-shadow: calc(5px * var(--ratio)) calc(8px * var(--ratio)) calc(20px * var(--ratio)) 0 rgba(18, 40, 82, 0.2);
+}
+.aboutUs .culture .cultureBox .cultureItem .cultureName {
+  font-size: calc(32px * var(--ratio));
+  font-weight: bold;
+  position: relative;
+  width: max-content;
+  margin-bottom: calc(32px * var(--ratio));
+}
+.aboutUs .culture .cultureBox .cultureItem .cultureName::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: calc(8px * var(--ratio));
+  background: #ffd100;
+}
+.aboutUs .culture .cultureBox .cultureItem .cultureName span {
+  position: relative;
+  z-index: 1;
+}
+.aboutUs .culture .cultureBox .cultureItem p {
+  font-size: calc(22px * var(--ratio));
+}
+.aboutUs .culture .cultureBox .cultureItem .msgBg {
+  position: absolute;
+  width: calc(190px * var(--ratio));
+  right: calc(24px * var(--ratio));
+  bottom: calc(-56px * var(--ratio));
 }
 
 .honorsCertificates .board {

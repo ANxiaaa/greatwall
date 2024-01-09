@@ -290,6 +290,37 @@ document.oncontextmenu=stop;
         </div>
       </div>
     </div>
+
+    <div class="culture">
+      <div class="container">
+        <div class="topTitle">企业文化</div>
+        <div class="cultureBox">
+          <div class="cultureItem">
+            <div class="cultureName">
+              <span>价值观</span>
+            </div>
+            <p>利他——成就他人，成就自己</p>
+            <img class="msgBg" draggable="false" src="<?php echo static_file('web/img/msgBg.webp') ?>" alt="">
+          </div>
+          <div class="cultureItem">
+            <div class="cultureName">
+              <span>价值观</span>
+            </div>
+            <p>成为全球优秀的工业级全场景
+              工具需求解决者与运营服务领
+              军企业</p>
+            <img class="msgBg" draggable="false" src="<?php echo static_file('web/img/msgBg.webp') ?>" alt="">
+          </div>
+          <div class="cultureItem">
+            <div class="cultureName">
+              <span>价值观</span>
+            </div>
+            <p>利他——成就他人，成就自己</p>
+            <img class="msgBg" draggable="false" src="<?php echo static_file('web/img/msgBg.webp') ?>" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <?php include_once VIEWPATH . 'inc/footer.php'; ?>
