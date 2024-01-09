@@ -1077,7 +1077,7 @@ footer .footerBtm .container a:last-child {
   top: calc(98px * var(--ratio));
 }
 .aboutUs #course .courseContent .container {
-  padding: calc(200px * var(--ratio)) calc(150px * var(--ratio)) 0;
+  padding: calc(200px * var(--ratio)) calc(120px * var(--ratio)) 0;
   height: 100%;
   color: #071d49;
   display: flex;
@@ -1100,7 +1100,7 @@ footer .footerBtm .container a:last-child {
   position: absolute;
   top: calc(436px * var(--ratio));
   bottom: 0;
-  left: calc(376px * var(--ratio));
+  left: calc(408px * var(--ratio));
   z-index: 0;
 }
 .aboutUs #course .courseContent .container .swiperBox {
@@ -1122,7 +1122,7 @@ footer .footerBtm .container a:last-child {
   position: absolute;
   top: 0;
   bottom: 0;
-  left: calc(180px * var(--ratio));
+  left: calc(212px * var(--ratio));
   z-index: 2;
   margin: auto;
 }
@@ -1158,7 +1158,8 @@ footer .footerBtm .container a:last-child {
   background: url("../../web/img/heidian.webp") center center/100% 100%;
 }
 .aboutUs #course .courseContent .container .swiperBox #courseBanner {
-  width: 100%;
+  width: 0;
+  flex: 1;
   margin-top: calc(-260px * var(--ratio));
   padding-left: calc(235px * var(--ratio));
 }
@@ -1219,6 +1220,103 @@ footer .footerBtm .container a:last-child {
 }
 .aboutUs #course .courseContent .container .swiper-scrollbar .swiper-scrollbar-drag {
   background: #071d49;
+}
+.aboutUs .originator {
+  position: relative;
+  height: 1040px;
+}
+.aboutUs .originator::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  background: #071d49;
+  z-index: 0;
+}
+.aboutUs .originator .container {
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+.aboutUs .originator .container::after {
+  content: "";
+  width: 870px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  background: #071d49;
+  position: absolute;
+}
+.aboutUs .originator .container .originatorLeft {
+  position: relative;
+  z-index: 1;
+  color: #071d49;
+  padding-left: 120px;
+  padding-top: 100px;
+}
+.aboutUs .originator .container .originatorLeft .topTitle {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 56px;
+}
+.aboutUs .originator .container .originatorLeft .imgBox {
+  width: 610px;
+  height: 427px;
+  position: relative;
+  margin-bottom: 60px;
+}
+.aboutUs .originator .container .originatorLeft .imgBox .originatorImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.aboutUs .originator .container .originatorLeft .imgBox .imgBtmLine {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 8px;
+}
+.aboutUs .originator .container .originatorLeft .imgBox .imgBtmLine::before {
+  content: "";
+  width: 180px;
+  background: rgba(7, 29, 73, 0.9);
+}
+.aboutUs .originator .container .originatorLeft .imgBox .imgBtmLine::after {
+  content: "";
+  flex: 1;
+  background: rgba(255, 209, 0, 0.8);
+}
+.aboutUs .originator .container .originatorLeft .originatorName {
+  width: 390;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 20px;
+  margin-left: 165px;
+  border-bottom: 1px solid rgba(18, 40, 82, 0.25);
+}
+.aboutUs .originator .container .originatorLeft .originatorName .p1 {
+  font-size: 28px;
+  font-weight: bold;
+}
+.aboutUs .originator .container .originatorLeft .originatorName .p2 {
+  font-size: 18px;
+  color: #13225c;
+  margin-left: 16px;
+}
+.aboutUs .originator .container .originatorRight {
+  margin-left: 110px;
+  position: relative;
+  z-index: 1;
+  width: 0;
+  flex: 1;
 }
 
 .honorsCertificates .board {

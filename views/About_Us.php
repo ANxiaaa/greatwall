@@ -242,6 +242,23 @@ document.oncontextmenu=stop;
         </div>
       </div>
     </div>
+
+    <div class="originator">
+      <div class="container">
+        <div class="originatorLeft">
+          <div class="topTitle">创始人</div>
+          <div class="imgBox">
+            <img class="originatorImg" draggable="false" src="<?php echo static_file('web/img/banner1.png') ?>" alt="">
+            <div class="imgBtmLine"></div>
+          </div>
+          <div class="originatorName">
+            <p class="p1">朱文江</p>
+            <p class="p2">经济和商业管理学博士</p>
+          </div>
+        </div>
+        <div class="originatorRight"></div>
+      </div>
+    </div>
   </div>
 
   <?php include_once VIEWPATH . 'inc/footer.php'; ?>

@@ -33,7 +33,8 @@
         .companyInfoItem {
           position: relative;
           border: calc(1px * var(--ratio)) solid rgba($borderColor2, 0.1);
-          box-shadow: 0 calc(5px * var(--ratio)) calc(10px * var(--ratio)) 0 rgba($boxShadowColor, 0.1);
+          box-shadow: 0 calc(5px * var(--ratio)) calc(10px * var(--ratio)) 0
+            rgba($boxShadowColor, 0.1);
           padding: calc(38px * var(--ratio)) calc(62px * var(--ratio));
           white-space: pre;
           font-size: calc(18px * var(--ratio));
@@ -140,7 +141,7 @@
       position: sticky;
       top: calc(98px * var(--ratio));
       .container {
-        padding: calc(200px * var(--ratio)) calc(150px * var(--ratio)) 0;
+        padding: calc(200px * var(--ratio)) calc(120px * var(--ratio)) 0;
         height: 100%;
         color: $primaryColor;
         display: flex;
@@ -162,7 +163,7 @@
           position: absolute;
           top: calc(436px * var(--ratio));
           bottom: 0;
-          left: calc(376px * var(--ratio));
+          left: calc(408px * var(--ratio));
           z-index: 0;
         }
         .swiperBox {
@@ -183,7 +184,7 @@
             position: absolute;
             top: 0;
             bottom: 0;
-            left: calc(180px * var(--ratio));
+            left: calc(212px * var(--ratio));
             z-index: 2;
             margin: auto;
           }
@@ -220,7 +221,8 @@
             }
           }
           #courseBanner {
-            width: 100%;
+            width: 0;
+            flex: 1;
             margin-top: calc(-260px * var(--ratio));
             padding-left: calc(235px * var(--ratio));
             .swiper-slide {
@@ -283,6 +285,103 @@
             background: $primaryColor;
           }
         }
+      }
+    }
+  }
+
+  .originator {
+    position: relative;
+    height: 1040px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      right: 0;
+      background: $primaryColor;
+      z-index: 0;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      justify-content: space-between;
+      height: 100%;
+      position: relative;
+      z-index: 1;
+      &::after {
+        content: "";
+        width: 870px;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 0;
+        background: $primaryColor;
+        position: absolute;
+      }
+      .originatorLeft {
+        position: relative;
+        z-index: 1;
+        color: $primaryColor;
+        padding-left: 120px;
+        padding-top: 100px;
+        .topTitle {
+          font-size: 42px;
+          font-weight: bold;
+          margin-bottom: 56px;
+        }
+        .imgBox {
+          width: 610px;
+          height: 427px;
+          position: relative;
+          margin-bottom: 60px;
+          .originatorImg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+          .imgBtmLine {
+            position: absolute;
+            display: flex;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            &::before {
+              content: "";
+              width: 180px;
+              background: rgba($primaryColor, 0.9);
+            }
+            &::after {
+              content: "";
+              flex: 1;
+              background: rgba($yellowBackground, 0.8);
+            }
+          }
+        }
+        .originatorName {
+          width: 390;
+          display: flex;
+          align-items: flex-end;
+          padding-bottom: 20px;
+          margin-left: 165px;
+          border-bottom: 1px solid rgba($borderColor2, 0.25);
+          .p1 {
+            font-size: 28px;
+            font-weight: bold;
+          }
+          .p2 {
+            font-size: 18px;
+            color: $textColor6;margin-left: 16px;
+          }
+        }
+      }
+      .originatorRight {
+        margin-left: 110px;
+        position: relative;
+        z-index: 1;
+        width: 0;
+        flex: 1;
       }
     }
   }

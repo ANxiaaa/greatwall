@@ -292,8 +292,6 @@ document.oncontextmenu=stop;
             console.log('目标元素进入可视范围');
             earthImgBox.addClass('animated fadeInUp')
             earthImgBox.find('.xuxianImg').addClass('animated fadeInUp')
-          } else {
-            console.log('目标元素离开可视范围');
           }
         });
       });
