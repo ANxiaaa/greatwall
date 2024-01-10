@@ -12,6 +12,9 @@ body {
 body .yellotext {
   color: #ffd100;
 }
+body .redText {
+  color: #f00;
+}
 body .myTab {
   height: calc(72px * var(--ratio));
   line-height: calc(72px * var(--ratio));
@@ -1918,20 +1921,64 @@ footer .footerBtm .container a:last-child {
   margin-bottom: calc(85px * var(--ratio));
 }
 
+.newsSearch .topSearch {
+  background: #f5f5f5;
+}
 .newsSearch .topSearch .container {
-  padding: 47px 0 40px;
-  width: 1440px;
+  padding: calc(47px * var(--ratio)) 0 calc(40px * var(--ratio));
+  width: calc(1440px * var(--ratio));
 }
 .newsSearch .topSearch .container .mySearchInput {
-  height: 54px;
+  height: calc(54px * var(--ratio));
+  margin-bottom: 0;
 }
 .newsSearch .topSearch .container .mySearchInput .mySearchBtn {
-  width: 145px;
+  width: calc(145px * var(--ratio));
   text-align: center;
-  font-size: 18px;
+  font-size: calc(18px * var(--ratio));
   background: #071d49;
   color: #fff;
-  line-height: 54px;
+  line-height: calc(54px * var(--ratio));
+}
+.newsSearch .resultContent {
+  padding-top: 45px;
+}
+.newsSearch .resultContent .container {
+  width: 1440px;
+}
+.newsSearch .resultContent .resultTitle {
+  border-bottom: 2px solid #f3f2f0;
+  padding-bottom: 28px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #122852;
+}
+.newsSearch .resultContent .resultTab {
+  color: #122852;
+  font-size: 18px;
+  display: flex;
+  line-height: 65px;
+  position: relative;
+}
+.newsSearch .resultContent .resultTab::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  bottom: 0;
+  left: 60px;
+  background: #122852;
+  transition: left 0.3s;
+}
+.newsSearch .resultContent .resultTab .resultTabItem {
+  transform: opacity 0.3s;
+  opacity: 0.5;
+  padding: 0 10px;
+  margin: 0 26px;
+  cursor: pointer;
+}
+.newsSearch .resultContent .resultTab .active {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=style.css.map */
