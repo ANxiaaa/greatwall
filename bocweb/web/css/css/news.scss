@@ -5,6 +5,9 @@
     .container {
       padding-top: 92px;
       width: 1440px;
+      .myTabContent {
+        margin-bottom: 88px;
+      }
       .newsItem {
         padding: 36px 42px;
         width: 100%;
@@ -12,8 +15,8 @@
         display: flex;
         justify-content: space-between;
         transition: all 0.3s;
-
         border: 1px solid transparent;
+        border-bottom-color: rgba($borderColor2, 0.1);
         &:hover {
           background: rgba($mainBackground, 1);
           border-color: #e3e5e6;
@@ -83,6 +86,9 @@
             }
           }
         }
+      }
+      .myPagination{
+        margin-bottom: 85px;
       }
     }
   }

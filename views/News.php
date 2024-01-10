@@ -68,9 +68,53 @@ document.oncontextmenu=stop;
                 </div>
               </div>
             </div>
+            <div class="newsItem">
+              <div class="imgBox">
+                <img draggable="false" src="<?php echo static_file('web/img/banner5.png') ?>" alt="">
+              </div>
+              <div class="newsRight">
+                <p class="newsTitle">喜讯！长城精工在余姚市制造业高质量发展大会上荣获双项殊荣喜讯！长城精工在余姚市制造业高质量发展大会上荣获双项殊荣</p>
+                <p class="newsContent">
+                  6月23日，以“厚积薄发，乘势而上”为主题的长城精工2021年度全国经销商大会暨答谢晚宴在上海北虹桥暨答谢晚宴在上海北虹桥暨答谢晚宴在上海北虹桥暨答谢晚宴在上海北虹桥……，这是长城精工继2019年入选工信部第一批专精特新小巨人企业之后，再获殊荣。
+                </p>
+                <div class="newsDate">
+                  <img class="rili" draggable="false" src="<?php echo static_file('web/img/rili.webp') ?>" alt="">
+                  <span class="date">2023-10-12</span>
+                  <span class="line">｜</span>
+                  <span class="more">
+                    <span>了解更多</span>
+                    <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
+                      alt="">
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="newsItem">
+              <div class="imgBox">
+                <img draggable="false" src="<?php echo static_file('web/img/banner5.png') ?>" alt="">
+              </div>
+              <div class="newsRight">
+                <p class="newsTitle">喜讯！长城精工在余姚市制造业高质量发展大会上荣获双项殊荣喜讯！长城精工在余姚市制造业高质量发展大会上荣获双项殊荣</p>
+                <p class="newsContent">
+                  6月23日，以“厚积薄发，乘势而上”为主题的长城精工2021年度全国经销商大会暨答谢晚宴在上海北虹桥暨答谢晚宴在上海北虹桥暨答谢晚宴在上海北虹桥暨答谢晚宴在上海北虹桥……，这是长城精工继2019年入选工信部第一批专精特新小巨人企业之后，再获殊荣。
+                </p>
+                <div class="newsDate">
+                  <img class="rili" draggable="false" src="<?php echo static_file('web/img/rili.webp') ?>" alt="">
+                  <span class="date">2023-10-12</span>
+                  <span class="line">｜</span>
+                  <span class="more">
+                    <span>了解更多</span>
+                    <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
+                      alt="">
+                  </span>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="myTabWrap" id="newsWrap2">222</div>
         </div>
+
+        <div class="myPagination" id="pagination"></div>
       </div>
     </div>
   </div>
@@ -126,6 +170,47 @@ document.oncontextmenu=stop;
         $(this).addClass('active')
         newsContents.eq($(this).attr('data-index')).addClass('show')
       })
+      // ---
+      const totalPages = 6;
+      const visiblePages = 7;
+      const bugou = totalPages > visiblePages
+      const generatePagination = (currentPage) => {
+        const startPage = Math.max(1, currentPage - Math.floor(visiblePages / 2));
+        const endPage = Math.min(totalPages, startPage + visiblePages - 1);
+
+        const html = `
+          ${currentPage > 1 && bugou ? `<div class="myPaginationBtn">
+            <a data-page="${currentPage - 1}">&laquo;</a>
+          </div>` : ''}
+          ${startPage > 1 && bugou ? `<div class="ellipsis myPaginationBtn" >
+            <a data-page="${startPage - 5}">...</a>
+          </div>` : ''}
+          ${Array.from({ length: endPage - startPage + 1 }, (_, index) => startPage + index)
+            .map(page => `<div class="myPaginationBtn ${page === currentPage ? 'active' : ''}">
+            <a data-page="${page}">${page}</a>
+          </div>`).join('')}
+          ${endPage < totalPages && bugou ? `<div class="ellipsis myPaginationBtn">
+            <a data-page="${endPage + 1}">...</a>
+          </div>` : ''}
+          ${currentPage < totalPages && bugou ? `<div class="myPaginationBtn">
+            <a data-page="${currentPage + 1}">&raquo;</a>
+          </div>` : ''}`;
+
+        $("#pagination").html(html);
+      };
+
+      generatePagination(1);
+
+      $("#pagination").on("click", "a", function (e) {
+        e.preventDefault();
+        const clickedPage = $(this).data("page");
+        generatePagination(clickedPage);
+      });
+
+      // $("#pagination").on("click", ".ellipsis", function () {
+      //   const nextPageGroup = $(this).data("page");
+      //   generatePagination(nextPageGroup);
+      // });
     })
   </script>
 </body>

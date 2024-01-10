@@ -93,6 +93,25 @@ body {
     }
   }
 
+  .myPagination {
+    width: max-content;
+    display: flex;
+    margin: auto;
+    color: $textColor2;
+    .myPaginationBtn {
+      width: 41px;
+      height: 41px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.active {
+        background: $primaryColor;
+        color: $textColor3;
+      }
+    }
+  }
+
   .partTitle {
     .topName {
       display: flex;
