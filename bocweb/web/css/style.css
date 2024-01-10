@@ -69,9 +69,9 @@ body .myPagination {
   width: max-content;
   display: flex;
   margin: auto;
-  color: #666;
 }
 body .myPagination .myPaginationBtn a {
+  color: #666;
   width: calc(41px * var(--ratio));
   height: calc(41px * var(--ratio));
   border-radius: calc(4px * var(--ratio));
@@ -80,6 +80,7 @@ body .myPagination .myPaginationBtn a {
   justify-content: center;
   user-select: none;
   cursor: pointer;
+  text-decoration: none;
 }
 body .myPagination .myPaginationBtn a.active {
   background: #071d49;

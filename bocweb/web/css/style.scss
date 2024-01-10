@@ -97,8 +97,8 @@ body {
     width: max-content;
     display: flex;
     margin: auto;
-    color: $textColor2;
     .myPaginationBtn a {
+      color: $textColor2;
       width: calc(41px * var(--ratio));
       height: calc(41px * var(--ratio));
       border-radius: calc(4px * var(--ratio));
@@ -107,6 +107,7 @@ body {
       justify-content: center;
       user-select: none;
       cursor: pointer;
+      text-decoration: none;
       &.active {
         background: $primaryColor;
         color: $textColor3;

@@ -173,44 +173,32 @@ document.oncontextmenu=stop;
       // ---
       const totalPages = 20;
       const visiblePages = 7;
+      const urlParams = new URLSearchParams(window.location.search);
+      const currentPage = urlParams.get('page') || 1
       const bugou = totalPages <= visiblePages
-      const generatePagination = (currentPage) => {
-        const startPage = bugou ? 1 : Math.max(1, currentPage - Math.floor(visiblePages / 2));
-        const endPage = bugou ? totalPages : Math.min(totalPages, startPage + visiblePages - 1);
+      const startPage = bugou ? 1 : Math.max(1, currentPage - Math.floor(visiblePages / 2));
+      const endPage = bugou ? totalPages : Math.min(totalPages, startPage + visiblePages - 1);
 
-        const html = `
-          ${currentPage > 1 && startPage > 1 ? `<div class="myPaginationBtn">
-              <a data-page="${currentPage - 1}">&laquo;</a>
-          </div>` : ''}
-          ${startPage > 1 && startPage > 2 ? `<div class="ellipsis myPaginationBtn">
-              <a data-page="${startPage - 5}">...</a>
-          </div>` : ''}
-          ${Array.from({ length: bugou ? totalPages : endPage - startPage + 1 }, (_, index) => startPage + index)
-            .map(page => `<div class="myPaginationBtn">
-              <a class="${page === currentPage ? 'active' : ''}" data-page="${page}">${page}</a>
-          </div>`).join('')}
-          ${endPage < totalPages && endPage < totalPages - 1 ? `<div class="ellipsis myPaginationBtn">
-              <a data-page="${endPage + 1}">...</a>
-          </div>` : ''}
-          ${currentPage < totalPages && endPage < totalPages ? `<div class="myPaginationBtn">
-              <a data-page="${currentPage + 1}">&raquo;</a>
-          </div>` : ''}`;
+      const html = `
+        ${currentPage > 1 && startPage > 1 ? `<div class="myPaginationBtn">
+            <a href="?page=${currentPage - 1}">&laquo;</a>
+        </div>` : ''}
+        ${startPage > 1 && startPage > 2 ? `<div class="ellipsis myPaginationBtn">
+            <a href="?page=${startPage - 5}">...</a>
+        </div>` : ''}
+        ${Array.from({ length: bugou ? totalPages : endPage - startPage + 1 }, (_, index) => startPage + index)
+        .map(page => `<div class="myPaginationBtn">
+            <a class="${page == currentPage ? 'active' : ''}" href="?page=${page}">${page}</a>
+        </div>`).join('')}
+        ${endPage < totalPages && endPage < totalPages - 1 ? `<div class="ellipsis myPaginationBtn">
+            <a href="?page=${endPage + 1}">...</a>
+        </div>` : ''}
+        ${currentPage < totalPages && endPage < totalPages ? `<div class="myPaginationBtn">
+            <a href="?page=${currentPage + 1}">&raquo;</a>
+        </div>` : ''}`;
 
-        $("#pagination").html(html);
-      };
+      $("#pagination").html(html);
 
-      generatePagination(1);
-
-      $("#pagination").on("click", "a", function (e) {
-        e.preventDefault();
-        const clickedPage = $(this).data("page");
-        generatePagination(clickedPage);
-      });
-
-      // $("#pagination").on("click", ".ellipsis", function () {
-      //   const nextPageGroup = $(this).data("page");
-      //   generatePagination(nextPageGroup);
-      // });
     })
   </script>
 </body>
