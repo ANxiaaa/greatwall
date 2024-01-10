@@ -171,29 +171,29 @@ document.oncontextmenu=stop;
         newsContents.eq($(this).attr('data-index')).addClass('show')
       })
       // ---
-      const totalPages = 6;
+      const totalPages = 20;
       const visiblePages = 7;
-      const bugou = totalPages > visiblePages
+      const bugou = totalPages <= visiblePages
       const generatePagination = (currentPage) => {
-        const startPage = Math.max(1, currentPage - Math.floor(visiblePages / 2));
-        const endPage = Math.min(totalPages, startPage + visiblePages - 1);
+        const startPage = bugou ? 1 : Math.max(1, currentPage - Math.floor(visiblePages / 2));
+        const endPage = bugou ? totalPages : Math.min(totalPages, startPage + visiblePages - 1);
 
         const html = `
-          ${currentPage > 1 && bugou ? `<div class="myPaginationBtn">
-            <a data-page="${currentPage - 1}">&laquo;</a>
+          ${currentPage > 1 && startPage > 1 ? `<div class="myPaginationBtn">
+              <a data-page="${currentPage - 1}">&laquo;</a>
           </div>` : ''}
-          ${startPage > 1 && bugou ? `<div class="ellipsis myPaginationBtn" >
-            <a data-page="${startPage - 5}">...</a>
+          ${startPage > 1 && startPage > 2 ? `<div class="ellipsis myPaginationBtn">
+              <a data-page="${startPage - 5}">...</a>
           </div>` : ''}
-          ${Array.from({ length: endPage - startPage + 1 }, (_, index) => startPage + index)
+          ${Array.from({ length: bugou ? totalPages : endPage - startPage + 1 }, (_, index) => startPage + index)
             .map(page => `<div class="myPaginationBtn ${page === currentPage ? 'active' : ''}">
-            <a data-page="${page}">${page}</a>
+              <a data-page="${page}">${page}</a>
           </div>`).join('')}
-          ${endPage < totalPages && bugou ? `<div class="ellipsis myPaginationBtn">
-            <a data-page="${endPage + 1}">...</a>
+          ${endPage < totalPages && endPage < totalPages - 1 ? `<div class="ellipsis myPaginationBtn">
+              <a data-page="${endPage + 1}">...</a>
           </div>` : ''}
-          ${currentPage < totalPages && bugou ? `<div class="myPaginationBtn">
-            <a data-page="${currentPage + 1}">&raquo;</a>
+          ${currentPage < totalPages && endPage < totalPages ? `<div class="myPaginationBtn">
+              <a data-page="${currentPage + 1}">&raquo;</a>
           </div>` : ''}`;
 
         $("#pagination").html(html);
