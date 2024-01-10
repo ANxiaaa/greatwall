@@ -14,6 +14,16 @@ document.oncontextmenu=stop;
   <?php include_once VIEWPATH . 'inc/header.php'; ?>
 
   <div class="newsSearch">
+    <div class="topSearch">
+      <div class="container">
+        <div class="mySearchInput">
+          <input id="searchInput" type="text" placeholder="请输入搜索内容">
+          <div class="mySearchBtn">
+            <span>搜索</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <?php include_once VIEWPATH . 'inc/footer.php'; ?>
@@ -45,7 +55,7 @@ document.oncontextmenu=stop;
     }
     $(function () {
       // ---
-      
+
     })
   </script>
 </body>

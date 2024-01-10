@@ -1,0 +1,19 @@
+.newsSearch {
+  .topSearch {
+    .container {
+      padding: 47px 0 40px;
+      width: 1440px;
+      .mySearchInput {
+        height: 54px;
+        .mySearchBtn {
+          width: 145px;
+          text-align: center;
+          font-size: 18px;
+          background: $primaryColor;
+          color: $textColor3;
+          line-height: 54px;
+        }
+      }
+    }
+  }
+}
