@@ -5,8 +5,84 @@
     .container {
       padding-top: 92px;
       width: 1440px;
-      #newsTab {
-        
+      .newsItem {
+        padding: 36px 42px;
+        width: 100%;
+        background: rgba($mainBackground, 0);
+        display: flex;
+        justify-content: space-between;
+        transition: all 0.3s;
+
+        border: 1px solid transparent;
+        &:hover {
+          background: rgba($mainBackground, 1);
+          border-color: #e3e5e6;
+          box-shadow: 0 0 20px 0 rgba($boxShadowColor, 0.2);
+        }
+        .imgBox {
+          margin-right: 58px;
+          width: 334px;
+          height: 227px;
+          overflow: hidden;
+          img {
+            transition: transform 0.3s;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            &:hover {
+              transform: scale(1.2);
+            }
+          }
+        }
+        .newsRight {
+          width: 0;
+          flex: 1;
+          .newsTitle {
+            font-size: 26px;
+            font-weight: bold;
+            color: $primaryColor;
+            margin: 24px 0;
+            width: 100%;
+            white-space: pre;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          .newsContent {
+            font-size: 18px;
+            color: rgba($primaryColor, 0.5);
+            line-height: 28px;
+          }
+          .newsDate {
+            display: flex;
+            align-items: center;
+            margin-top: 27px;
+            cursor: default;
+            user-select: none;
+            .rili {
+              width: 22px;
+              margin-right: 15px;
+            }
+            .date {
+              color: $textColor5;
+              font-size: 18px;
+            }
+            .line {
+              opacity: 0.2;
+              margin: 0 24px;
+            }
+            .more {
+              color: $primaryColor;
+              font-size: 18px;
+              cursor: pointer;
+            }
+            .rightIcon {
+              width: 7px;
+              margin-left: 13px;
+              margin-top: 2px;
+              cursor: pointer;
+            }
+          }
+        }
       }
     }
   }

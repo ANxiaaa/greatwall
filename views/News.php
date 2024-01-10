@@ -46,7 +46,29 @@ document.oncontextmenu=stop;
           <div class="mySearchBtn"></div>
         </div>
         <div class="myTabContent">
-          <div class="myTabWrap show" id="newsWrap1">111</div>
+          <div class="myTabWrap show" id="newsWrap1">
+            <div class="newsItem">
+              <div class="imgBox">
+                <img draggable="false" src="<?php echo static_file('web/img/banner5.png') ?>" alt="">
+              </div>
+              <div class="newsRight">
+                <p class="newsTitle">喜讯！长城精工在余姚市制造业高质量发展大会上荣获双项殊荣喜讯！长城精工在余姚市制造业高质量发展大会上荣获双项殊荣</p>
+                <p class="newsContent">
+                  6月23日，以“厚积薄发，乘势而上”为主题的长城精工2021年度全国经销商大会暨答谢晚宴在上海北虹桥暨答谢晚宴在上海北虹桥暨答谢晚宴在上海北虹桥暨答谢晚宴在上海北虹桥……，这是长城精工继2019年入选工信部第一批专精特新小巨人企业之后，再获殊荣。
+                </p>
+                <div class="newsDate">
+                  <img class="rili" draggable="false" src="<?php echo static_file('web/img/rili.webp') ?>" alt="">
+                  <span class="date">2023-10-12</span>
+                  <span class="line">｜</span>
+                  <span class="more">
+                    <span>了解更多</span>
+                    <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
+                      alt="">
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
           <div class="myTabWrap" id="newsWrap2">222</div>
         </div>
       </div>

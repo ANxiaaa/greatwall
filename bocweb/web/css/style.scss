@@ -69,15 +69,16 @@ body {
     display: flex;
     width: 100%;
     justify-content: space-between;
-    height: 72px;
-    border: 1px solid rgba($borderColor2, 0.1);
+    height: calc(72px * var(--ratio));
+    border: calc(1px * var(--ratio)) solid rgba($borderColor2, 0.1);
+    margin-bottom: calc(24px * var(--ratio));
     input {
-      padding-left: 37px;
+      padding-left: calc(37px * var(--ratio));
       flex: 1;
       width: 0;
       background: none;
       outline: none;
-      font-size: 18px;
+      font-size: calc(18px * var(--ratio));
       color: $primaryColor;
       border: none;
       &::placeholder {
@@ -85,11 +86,10 @@ body {
       }
     }
     .mySearchBtn {
-      width: 80px;
+      width: calc(80px * var(--ratio));
       cursor: pointer;
-      margin-bottom: 24px;
       background: $yellowBackground url("../../web/img/search.webp") no-repeat
-        center center / 20px 21px;
+        center center / calc(20px * var(--ratio)) calc(21px * var(--ratio));
     }
   }
 
