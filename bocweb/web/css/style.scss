@@ -33,6 +33,66 @@ body {
   .yellotext {
     color: $yellotextColor;
   }
+
+  .myTab {
+    height: calc(72px * var(--ratio));
+    line-height: calc(72px * var(--ratio));
+    display: flex;
+    width: 100%;
+    margin-bottom: calc(40px * var(--ratio));
+    border: calc(1px * var(--ratio)) solid rgba($borderColor2, 0.1);
+    .myTabItem {
+      flex: 1;
+      text-align: center;
+      font-size: calc(22px * var(--ratio));
+      font-weight: bold;
+      color: $primaryColor;
+      cursor: pointer;
+      &.active {
+        background: $activeBackground;
+        color: $textColor3;
+      }
+    }
+  }
+
+  .myTabContent {
+    .myTabWrap {
+      flex-wrap: wrap;
+      display: none;
+      &.show {
+        display: flex;
+      }
+    }
+  }
+
+  .mySearchInput {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 72px;
+    border: 1px solid rgba($borderColor2, 0.1);
+    input {
+      padding-left: 37px;
+      flex: 1;
+      width: 0;
+      background: none;
+      outline: none;
+      font-size: 18px;
+      color: $primaryColor;
+      border: none;
+      &::placeholder {
+        color: rgba($textColor4, 0.5);
+      }
+    }
+    .mySearchBtn {
+      width: 80px;
+      cursor: pointer;
+      margin-bottom: 24px;
+      background: $yellowBackground url("../../web/img/search.webp") no-repeat
+        center center / 20px 21px;
+    }
+  }
+
   .partTitle {
     .topName {
       display: flex;
@@ -57,6 +117,7 @@ body {
       margin-bottom: calc(46px * var(--ratio));
     }
   }
+
   .yellowBtn {
     background: $yellowBackground;
     display: flex;
@@ -78,19 +139,7 @@ body {
       }
     }
   }
-  .swiper-button-next,
-  .swiper-button-prev {
-    background: rgba($primaryColor, 0.1);
-    width: calc(80px * var(--ratio));
-    height: calc(80px * var(--ratio));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    img {
-      width: calc(22px * var(--ratio));
-      height: calc(14px * var(--ratio));
-    }
-  }
+
   #aboutUsBanner {
     width: 100%;
     height: calc(580px * var(--ratio));
@@ -108,6 +157,7 @@ body {
       }
     }
   }
+
   .aboutUsTab {
     height: calc(72px * var(--ratio));
     background: $mainBackground;
@@ -169,6 +219,20 @@ body {
           }
         }
       }
+    }
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    background: rgba($primaryColor, 0.1);
+    width: calc(80px * var(--ratio));
+    height: calc(80px * var(--ratio));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: calc(22px * var(--ratio));
+      height: calc(14px * var(--ratio));
     }
   }
 
@@ -268,3 +332,4 @@ img {
 @import "css/aboutUs.scss";
 @import "css/honorsCertificates.scss";
 @import "css/branding.scss";
+@import "css/news.scss";

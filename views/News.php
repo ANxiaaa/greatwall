@@ -13,7 +13,7 @@ document.oncontextmenu=stop;
 <body>
   <?php include_once VIEWPATH . 'inc/header.php'; ?>
 
-  <div class="aboutUs">
+  <div class="news">
     <div class="swiper-container" id="aboutUsBanner">
       <div class="swiper-wrapper" id="aboutUsBanner-wrapper"></div>
     </div>
@@ -31,6 +31,23 @@ document.oncontextmenu=stop;
         </div>
         <div class="tabItem">
           <a href="<?php echo site_url('Branding') ?>" class="navName">品牌形象</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="container">
+        <div class="myTab" id="newsTab">
+          <div class="myTabItem active" data-index="0">重点信息</div>
+          <div class="myTabItem" data-index="1">媒体报道</div>
+        </div>
+        <div class="mySearchInput">
+          <input id="searchInput" type="text" placeholder="请输入您感兴趣的内容！">
+          <div class="mySearchBtn"></div>
+        </div>
+        <div class="myTabContent">
+          <div class="myTabWrap show" id="newsWrap1">111</div>
+          <div class="myTabWrap" id="newsWrap2">222</div>
         </div>
       </div>
     </div>
@@ -76,6 +93,17 @@ document.oncontextmenu=stop;
           autoplay: 5000,
         });
       });
+      // ---
+      const newsTabs = $('#newsTab .myTabItem')
+      const newsContents = $('.myTabContent .myTabWrap')
+      const newsPopup1 = $('#newsPopup1 .swiper-wrapper')
+      const newsPopup2 = $('#newsPopup2 .swiper-wrapper')
+      newsTabs.on('click', function () {
+        newsTabs.removeClass('active')
+        newsContents.removeClass('show')
+        $(this).addClass('active')
+        newsContents.eq($(this).attr('data-index')).addClass('show')
+      })
     })
   </script>
 </body>

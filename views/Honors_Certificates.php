@@ -49,13 +49,13 @@ document.oncontextmenu=stop;
 
         <div class="certificate">
             <div class="container">
-                <div class="certificateTab" id="certificateTab">
-                    <div class="certificateTabItem active" data-index="0">公司荣誉</div>
-                    <div class="certificateTabItem" data-index="1">专业认证</div>
+                <div class="myTab" id="certificateTab">
+                    <div class="myTabItem active" data-index="0">公司荣誉</div>
+                    <div class="myTabItem" data-index="1">专业认证</div>
                 </div>
-                <div class="certificateTabContent">
-                    <div class="certificateWrap show" id="certificateWrap1"></div>
-                    <div class="certificateWrap" id="certificateWrap2"></div>
+                <div class="myTabContent">
+                    <div class="myTabWrap show" id="certificateWrap1"></div>
+                    <div class="myTabWrap" id="certificateWrap2"></div>
                 </div>
             </div>
 
@@ -170,8 +170,8 @@ document.oncontextmenu=stop;
                 });
             });
             // ----
-            const certificateTabs = $('#certificateTab .certificateTabItem')
-            const certificateContents = $('.certificateTabContent .certificateWrap')
+            const certificateTabs = $('#certificateTab .myTabItem')
+            const certificateContents = $('.myTabContent .myTabWrap')
             const certificatePopup1 = $('#certificatePopup1 .swiper-wrapper')
             const certificatePopup2 = $('#certificatePopup2 .swiper-wrapper')
             certificateTabs.on('click', function () {

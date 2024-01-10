@@ -93,98 +93,95 @@
     padding-top: calc(90px * var(--ratio));
     .container {
       width: calc(1440px * var(--ratio));
-      .certificateTab {
-        height: calc(72px * var(--ratio));
-        line-height: calc(72px * var(--ratio));
-        display: flex;
-        width: 100%;
-        margin-bottom: calc(40px * var(--ratio));
-        border: calc(1px * var(--ratio)) solid rgba($borderColor2, 0.1);
-        .certificateTabItem {
-          flex: 1;
-          text-align: center;
-          font-size: calc(22px * var(--ratio));
-          font-weight: bold;
-          color: $primaryColor;
-          cursor: pointer;
-          &.active {
-            background: $activeBackground;
-            color: $textColor3;
-          }
-        }
-      }
-      .certificateWrap {
-        flex-wrap: wrap;
-        display: none;
-        &.show {
-          display: flex;
-        }
-        .certificateItem {
-          width: 25%;
-          height: calc(462px * var(--ratio));
-          position: relative;
-          padding-top: calc(35px * var(--ratio));
-          background: #fff;
-          border: calc(1px * var(--ratio)) solid $borderColor3;
-          margin: calc(-1px * var(--ratio));
-          cursor: pointer;
-          img {
-            width: calc(244px * var(--ratio));
-            height: calc(332px * var(--ratio));
-            display: block;
-            margin: auto;
-          }
-          .certificateNameBox {
-            position: absolute;
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            &::before {
-              content: "";
-              flex: 1;
-              height: 0;
-              transition: background 0.3s;
-            }
-            &::after {
-              content: "";
-              position: absolute;
-              opacity: 0;
-              width: calc(58px * var(--ratio));
-              height: calc(58px * var(--ratio));
-              transform: translateY(calc(10px * var(--ratio)));
-              transition: all 0.3s;
-              top: 0;
-              bottom: 0;
-              left: 0;
-              right: 0;
+      // .certificateTab {
+      //   height: calc(72px * var(--ratio));
+      //   line-height: calc(72px * var(--ratio));
+      //   display: flex;
+      //   width: 100%;
+      //   margin-bottom: calc(40px * var(--ratio));
+      //   border: calc(1px * var(--ratio)) solid rgba($borderColor2, 0.1);
+      //   .certificateTabItem {
+      //     flex: 1;
+      //     text-align: center;
+      //     font-size: calc(22px * var(--ratio));
+      //     font-weight: bold;
+      //     color: $primaryColor;
+      //     cursor: pointer;
+      //     &.active {
+      //       background: $activeBackground;
+      //       color: $textColor3;
+      //     }
+      //   }
+      // }
+      .myTabContent {
+        .myTabWrap {
+          .certificateItem {
+            width: 25%;
+            height: calc(462px * var(--ratio));
+            position: relative;
+            padding-top: calc(35px * var(--ratio));
+            background: #fff;
+            border: calc(1px * var(--ratio)) solid $borderColor3;
+            margin: calc(-1px * var(--ratio));
+            cursor: pointer;
+            img {
+              width: calc(244px * var(--ratio));
+              height: calc(332px * var(--ratio));
+              display: block;
               margin: auto;
-              background: #c00;
             }
-            .certificateName {
-              height: calc(107px * var(--ratio));
-              display: flex;
-              font-weight: bold;
-              flex-direction: column;
-              justify-content: center;
-              text-align: center;
-              color: $primaryColor;
-              transition: background 0.3s;
-            }
-          }
-          &:hover {
             .certificateNameBox {
+              position: absolute;
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
               &::before {
-                background: rgba($markBackground, 0.1);
+                content: "";
+                flex: 1;
+                height: 0;
+                transition: background 0.3s;
               }
               &::after {
-                opacity: 1;
-                transform: translateY(0);
+                content: "";
+                position: absolute;
+                opacity: 0;
+                width: calc(58px * var(--ratio));
+                height: calc(58px * var(--ratio));
+                transform: translateY(calc(10px * var(--ratio)));
+                transition: all 0.3s;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: auto;
+                background: #c00;
               }
               .certificateName {
-                background: rgba($yellowBackground, 0.9);
+                height: calc(107px * var(--ratio));
+                display: flex;
+                font-weight: bold;
+                flex-direction: column;
+                justify-content: center;
+                text-align: center;
+                color: $primaryColor;
+                transition: background 0.3s;
+              }
+            }
+            &:hover {
+              .certificateNameBox {
+                &::before {
+                  background: rgba($markBackground, 0.1);
+                }
+                &::after {
+                  opacity: 1;
+                  transform: translateY(0);
+                }
+                .certificateName {
+                  background: rgba($yellowBackground, 0.9);
+                }
               }
             }
           }

@@ -12,6 +12,59 @@ body {
 body .yellotext {
   color: #ffd100;
 }
+body .myTab {
+  height: calc(72px * var(--ratio));
+  line-height: calc(72px * var(--ratio));
+  display: flex;
+  width: 100%;
+  margin-bottom: calc(40px * var(--ratio));
+  border: calc(1px * var(--ratio)) solid rgba(18, 40, 82, 0.1);
+}
+body .myTab .myTabItem {
+  flex: 1;
+  text-align: center;
+  font-size: calc(22px * var(--ratio));
+  font-weight: bold;
+  color: #071d49;
+  cursor: pointer;
+}
+body .myTab .myTabItem.active {
+  background: #122852;
+  color: #fff;
+}
+body .myTabContent .myTabWrap {
+  flex-wrap: wrap;
+  display: none;
+}
+body .myTabContent .myTabWrap.show {
+  display: flex;
+}
+body .mySearchInput {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 72px;
+  border: 1px solid rgba(18, 40, 82, 0.1);
+}
+body .mySearchInput input {
+  padding-left: 37px;
+  flex: 1;
+  width: 0;
+  background: none;
+  outline: none;
+  font-size: 18px;
+  color: #071d49;
+  border: none;
+}
+body .mySearchInput input::placeholder {
+  color: rgba(18, 40, 82, 0.5);
+}
+body .mySearchInput .mySearchBtn {
+  width: 80px;
+  cursor: pointer;
+  margin-bottom: 24px;
+  background: #ffd100 url("../../web/img/search.webp") no-repeat center center/20px 21px;
+}
 body .partTitle .topName {
   display: flex;
   align-items: center;
@@ -52,20 +105,6 @@ body .yellowBtn .rightIcon {
 }
 body .yellowBtn:hover .rightIcon {
   transform: translateX(calc(5px * var(--ratio)));
-}
-body .swiper-button-next,
-body .swiper-button-prev {
-  background: rgba(7, 29, 73, 0.1);
-  width: calc(80px * var(--ratio));
-  height: calc(80px * var(--ratio));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-body .swiper-button-next img,
-body .swiper-button-prev img {
-  width: calc(22px * var(--ratio));
-  height: calc(14px * var(--ratio));
 }
 body #aboutUsBanner {
   width: 100%;
@@ -143,6 +182,20 @@ body .aboutUsTab .container .tabItem.active {
 body .aboutUsTab .container .tabItem.active::after {
   height: calc(41px * var(--ratio));
   background: #071d49;
+}
+body .swiper-button-next,
+body .swiper-button-prev {
+  background: rgba(7, 29, 73, 0.1);
+  width: calc(80px * var(--ratio));
+  height: calc(80px * var(--ratio));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .swiper-button-next img,
+body .swiper-button-prev img {
+  width: calc(22px * var(--ratio));
+  height: calc(14px * var(--ratio));
 }
 body .swiper-button-next {
   right: 0;
@@ -1522,34 +1575,7 @@ footer .footerBtm .container a:last-child {
 .honorsCertificates .certificate .container {
   width: calc(1440px * var(--ratio));
 }
-.honorsCertificates .certificate .container .certificateTab {
-  height: calc(72px * var(--ratio));
-  line-height: calc(72px * var(--ratio));
-  display: flex;
-  width: 100%;
-  margin-bottom: calc(40px * var(--ratio));
-  border: calc(1px * var(--ratio)) solid rgba(18, 40, 82, 0.1);
-}
-.honorsCertificates .certificate .container .certificateTab .certificateTabItem {
-  flex: 1;
-  text-align: center;
-  font-size: calc(22px * var(--ratio));
-  font-weight: bold;
-  color: #071d49;
-  cursor: pointer;
-}
-.honorsCertificates .certificate .container .certificateTab .certificateTabItem.active {
-  background: #122852;
-  color: #fff;
-}
-.honorsCertificates .certificate .container .certificateWrap {
-  flex-wrap: wrap;
-  display: none;
-}
-.honorsCertificates .certificate .container .certificateWrap.show {
-  display: flex;
-}
-.honorsCertificates .certificate .container .certificateWrap .certificateItem {
+.honorsCertificates .certificate .container .myTabContent .myTabWrap .certificateItem {
   width: 25%;
   height: calc(462px * var(--ratio));
   position: relative;
@@ -1559,13 +1585,13 @@ footer .footerBtm .container a:last-child {
   margin: calc(-1px * var(--ratio));
   cursor: pointer;
 }
-.honorsCertificates .certificate .container .certificateWrap .certificateItem img {
+.honorsCertificates .certificate .container .myTabContent .myTabWrap .certificateItem img {
   width: calc(244px * var(--ratio));
   height: calc(332px * var(--ratio));
   display: block;
   margin: auto;
 }
-.honorsCertificates .certificate .container .certificateWrap .certificateItem .certificateNameBox {
+.honorsCertificates .certificate .container .myTabContent .myTabWrap .certificateItem .certificateNameBox {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -1574,13 +1600,13 @@ footer .footerBtm .container a:last-child {
   top: 0;
   left: 0;
 }
-.honorsCertificates .certificate .container .certificateWrap .certificateItem .certificateNameBox::before {
+.honorsCertificates .certificate .container .myTabContent .myTabWrap .certificateItem .certificateNameBox::before {
   content: "";
   flex: 1;
   height: 0;
   transition: background 0.3s;
 }
-.honorsCertificates .certificate .container .certificateWrap .certificateItem .certificateNameBox::after {
+.honorsCertificates .certificate .container .myTabContent .myTabWrap .certificateItem .certificateNameBox::after {
   content: "";
   position: absolute;
   opacity: 0;
@@ -1595,7 +1621,7 @@ footer .footerBtm .container a:last-child {
   margin: auto;
   background: #c00;
 }
-.honorsCertificates .certificate .container .certificateWrap .certificateItem .certificateNameBox .certificateName {
+.honorsCertificates .certificate .container .myTabContent .myTabWrap .certificateItem .certificateNameBox .certificateName {
   height: calc(107px * var(--ratio));
   display: flex;
   font-weight: bold;
@@ -1605,14 +1631,14 @@ footer .footerBtm .container a:last-child {
   color: #071d49;
   transition: background 0.3s;
 }
-.honorsCertificates .certificate .container .certificateWrap .certificateItem:hover .certificateNameBox::before {
+.honorsCertificates .certificate .container .myTabContent .myTabWrap .certificateItem:hover .certificateNameBox::before {
   background: rgba(18, 40, 82, 0.1);
 }
-.honorsCertificates .certificate .container .certificateWrap .certificateItem:hover .certificateNameBox::after {
+.honorsCertificates .certificate .container .myTabContent .myTabWrap .certificateItem:hover .certificateNameBox::after {
   opacity: 1;
   transform: translateY(0);
 }
-.honorsCertificates .certificate .container .certificateWrap .certificateItem:hover .certificateNameBox .certificateName {
+.honorsCertificates .certificate .container .myTabContent .myTabWrap .certificateItem:hover .certificateNameBox .certificateName {
   background: rgba(255, 209, 0, 0.9);
 }
 .honorsCertificates .certificate .popupWrap .popupContent {
@@ -1771,6 +1797,15 @@ footer .footerBtm .container a:last-child {
 .branding .vi .container .bookDown .yellowBtn {
   width: calc(145px * var(--ratio));
   height: calc(54px * var(--ratio));
+}
+
+.news .main-content {
+  background: #ffd100 url("../../web/img/newsPageBg.webp");
+  background-size: cover;
+}
+.news .main-content .container {
+  padding-top: 92px;
+  width: 1440px;
 }
 
 /*# sourceMappingURL=style.css.map */
