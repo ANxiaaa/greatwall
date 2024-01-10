@@ -3,29 +3,29 @@
     background: $yellowBackground url("../../web/img/newsPageBg.webp");
     background-size: cover;
     .container {
-      padding-top: 92px;
-      width: 1440px;
+      padding-top: calc(92px * var(--ratio));
+      width: calc(1440px * var(--ratio));
       .myTabContent {
-        margin-bottom: 88px;
+        margin-bottom: calc(88px * var(--ratio));
       }
       .newsItem {
-        padding: 36px 42px;
+        padding: calc(36px * var(--ratio)) calc(42px * var(--ratio));
         width: 100%;
         background: rgba($mainBackground, 0);
         display: flex;
         justify-content: space-between;
         transition: all 0.3s;
-        border: 1px solid transparent;
+        border: calc(1px * var(--ratio)) solid transparent;
         border-bottom-color: rgba($borderColor2, 0.1);
         &:hover {
           background: rgba($mainBackground, 1);
           border-color: #e3e5e6;
-          box-shadow: 0 0 20px 0 rgba($boxShadowColor, 0.2);
+          box-shadow: 0 0 calc(20px * var(--ratio)) 0 rgba($boxShadowColor, 0.2);
         }
         .imgBox {
-          margin-right: 58px;
-          width: 334px;
-          height: 227px;
+          margin-right: calc(58px * var(--ratio));
+          width: calc(334px * var(--ratio));
+          height: calc(227px * var(--ratio));
           overflow: hidden;
           img {
             transition: transform 0.3s;
@@ -41,54 +41,54 @@
           width: 0;
           flex: 1;
           .newsTitle {
-            font-size: 26px;
+            font-size: calc(26px * var(--ratio));
             font-weight: bold;
             color: $primaryColor;
-            margin: 24px 0;
+            margin: calc(24px * var(--ratio)) 0;
             width: 100%;
             white-space: pre;
             overflow: hidden;
             text-overflow: ellipsis;
           }
           .newsContent {
-            font-size: 18px;
+            font-size: calc(18px * var(--ratio));
             color: rgba($primaryColor, 0.5);
-            line-height: 28px;
+            line-height: calc(28px * var(--ratio));
           }
           .newsDate {
             display: flex;
             align-items: center;
-            margin-top: 27px;
+            margin-top: calc(27px * var(--ratio));
             cursor: default;
             user-select: none;
             .rili {
-              width: 22px;
-              margin-right: 15px;
+              width: calc(22px * var(--ratio));
+              margin-right: calc(15px * var(--ratio));
             }
             .date {
               color: $textColor5;
-              font-size: 18px;
+              font-size: calc(18px * var(--ratio));
             }
             .line {
               opacity: 0.2;
-              margin: 0 24px;
+              margin: 0 calc(24px * var(--ratio));
             }
             .more {
               color: $primaryColor;
-              font-size: 18px;
+              font-size: calc(18px * var(--ratio));
               cursor: pointer;
             }
             .rightIcon {
-              width: 7px;
-              margin-left: 13px;
-              margin-top: 2px;
+              width: calc(7px * var(--ratio));
+              margin-left: calc(13px * var(--ratio));
+              margin-top: calc(2px * var(--ratio));
               cursor: pointer;
             }
           }
         }
       }
-      .myPagination{
-        margin-bottom: 85px;
+      .myPagination {
+        margin-bottom: calc(85px * var(--ratio));
       }
     }
   }

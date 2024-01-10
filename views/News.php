@@ -186,8 +186,8 @@ document.oncontextmenu=stop;
               <a data-page="${startPage - 5}">...</a>
           </div>` : ''}
           ${Array.from({ length: bugou ? totalPages : endPage - startPage + 1 }, (_, index) => startPage + index)
-            .map(page => `<div class="myPaginationBtn ${page === currentPage ? 'active' : ''}">
-              <a data-page="${page}">${page}</a>
+            .map(page => `<div class="myPaginationBtn">
+              <a class="${page === currentPage ? 'active' : ''}" data-page="${page}">${page}</a>
           </div>`).join('')}
           ${endPage < totalPages && endPage < totalPages - 1 ? `<div class="ellipsis myPaginationBtn">
               <a data-page="${endPage + 1}">...</a>

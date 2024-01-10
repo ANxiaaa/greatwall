@@ -71,15 +71,17 @@ body .myPagination {
   margin: auto;
   color: #666;
 }
-body .myPagination .myPaginationBtn {
-  width: 41px;
-  height: 41px;
-  border-radius: 4px;
+body .myPagination .myPaginationBtn a {
+  width: calc(41px * var(--ratio));
+  height: calc(41px * var(--ratio));
+  border-radius: calc(4px * var(--ratio));
   display: flex;
   align-items: center;
   justify-content: center;
+  user-select: none;
+  cursor: pointer;
 }
-body .myPagination .myPaginationBtn.active {
+body .myPagination .myPaginationBtn a.active {
   background: #071d49;
   color: #fff;
 }
@@ -1822,31 +1824,31 @@ footer .footerBtm .container a:last-child {
   background-size: cover;
 }
 .news .main-content .container {
-  padding-top: 92px;
-  width: 1440px;
+  padding-top: calc(92px * var(--ratio));
+  width: calc(1440px * var(--ratio));
 }
 .news .main-content .container .myTabContent {
-  margin-bottom: 88px;
+  margin-bottom: calc(88px * var(--ratio));
 }
 .news .main-content .container .newsItem {
-  padding: 36px 42px;
+  padding: calc(36px * var(--ratio)) calc(42px * var(--ratio));
   width: 100%;
   background: rgba(255, 255, 255, 0);
   display: flex;
   justify-content: space-between;
   transition: all 0.3s;
-  border: 1px solid transparent;
+  border: calc(1px * var(--ratio)) solid transparent;
   border-bottom-color: rgba(18, 40, 82, 0.1);
 }
 .news .main-content .container .newsItem:hover {
   background: white;
   border-color: #e3e5e6;
-  box-shadow: 0 0 20px 0 rgba(18, 40, 82, 0.2);
+  box-shadow: 0 0 calc(20px * var(--ratio)) 0 rgba(18, 40, 82, 0.2);
 }
 .news .main-content .container .newsItem .imgBox {
-  margin-right: 58px;
-  width: 334px;
-  height: 227px;
+  margin-right: calc(58px * var(--ratio));
+  width: calc(334px * var(--ratio));
+  height: calc(227px * var(--ratio));
   overflow: hidden;
 }
 .news .main-content .container .newsItem .imgBox img {
@@ -1863,52 +1865,52 @@ footer .footerBtm .container a:last-child {
   flex: 1;
 }
 .news .main-content .container .newsItem .newsRight .newsTitle {
-  font-size: 26px;
+  font-size: calc(26px * var(--ratio));
   font-weight: bold;
   color: #071d49;
-  margin: 24px 0;
+  margin: calc(24px * var(--ratio)) 0;
   width: 100%;
   white-space: pre;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .news .main-content .container .newsItem .newsRight .newsContent {
-  font-size: 18px;
+  font-size: calc(18px * var(--ratio));
   color: rgba(7, 29, 73, 0.5);
-  line-height: 28px;
+  line-height: calc(28px * var(--ratio));
 }
 .news .main-content .container .newsItem .newsRight .newsDate {
   display: flex;
   align-items: center;
-  margin-top: 27px;
+  margin-top: calc(27px * var(--ratio));
   cursor: default;
   user-select: none;
 }
 .news .main-content .container .newsItem .newsRight .newsDate .rili {
-  width: 22px;
-  margin-right: 15px;
+  width: calc(22px * var(--ratio));
+  margin-right: calc(15px * var(--ratio));
 }
 .news .main-content .container .newsItem .newsRight .newsDate .date {
   color: #c7c7c7;
-  font-size: 18px;
+  font-size: calc(18px * var(--ratio));
 }
 .news .main-content .container .newsItem .newsRight .newsDate .line {
   opacity: 0.2;
-  margin: 0 24px;
+  margin: 0 calc(24px * var(--ratio));
 }
 .news .main-content .container .newsItem .newsRight .newsDate .more {
   color: #071d49;
-  font-size: 18px;
+  font-size: calc(18px * var(--ratio));
   cursor: pointer;
 }
 .news .main-content .container .newsItem .newsRight .newsDate .rightIcon {
-  width: 7px;
-  margin-left: 13px;
-  margin-top: 2px;
+  width: calc(7px * var(--ratio));
+  margin-left: calc(13px * var(--ratio));
+  margin-top: calc(2px * var(--ratio));
   cursor: pointer;
 }
 .news .main-content .container .myPagination {
-  margin-bottom: 85px;
+  margin-bottom: calc(85px * var(--ratio));
 }
 
 /*# sourceMappingURL=style.css.map */
