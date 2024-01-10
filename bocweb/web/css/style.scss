@@ -108,6 +108,10 @@ body {
       user-select: none;
       cursor: pointer;
       text-decoration: none;
+      transition: all 0.3s;
+      &:hover{
+        background: $grayBackground;
+      }
       &.active {
         background: $primaryColor;
         color: $textColor3;
