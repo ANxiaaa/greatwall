@@ -19,38 +19,39 @@
     }
   }
   .resultContent {
-    padding-top: 45px;
+    padding-top: calc(45px * var(--ratio));
     .container {
-      width: 1440px;
+      width: calc(1440px * var(--ratio));
+      margin-bottom: calc(196px * var(--ratio));
     }
     .resultTitle {
-      border-bottom: 2px solid $borderColor5;
-      padding-bottom: 28px;
-      font-size: 22px;
+      border-bottom: calc(2px * var(--ratio)) solid $borderColor5;
+      padding-bottom: calc(28px * var(--ratio));
+      font-size: calc(22px * var(--ratio));
       font-weight: bold;
       color: $textColor4;
     }
     .resultTab {
       color: $textColor4;
-      font-size: 18px;
+      font-size: calc(18px * var(--ratio));
       display: flex;
-      line-height: 65px;
+      line-height: calc(65px * var(--ratio));
       position: relative;
       &::after {
         content: "";
         position: absolute;
-        width: 40px;
-        height: 4px;
+        width: calc(40px * var(--ratio));
+        height: calc(4px * var(--ratio));
         bottom: 0;
-        left: 60px;
+        left: calc(60px * var(--ratio));
         background: $markBackground;
         transition: left 0.3s;
       }
       .resultTabItem {
         transform: opacity 0.3s;
         opacity: 0.5;
-        padding: 0 10px;
-        margin: 0 26px;
+        padding: 0 calc(10px * var(--ratio));
+        margin: 0 calc(26px * var(--ratio));
         cursor: pointer;
       }
       .active {
@@ -61,26 +62,27 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      font-size: 18px;
+      font-size: calc(18px * var(--ratio));
       color: $textColor4;
-      margin-top: 10px;
-      margin-bottom: 74px;
+      margin-top: calc(10px * var(--ratio));
+      margin-bottom: calc(74px * var(--ratio));
       .resultListItem {
         position: relative;
-        padding: 35px 56px 16px 34px;
-        width: 710px;
+        padding: calc(35px * var(--ratio)) calc(56px * var(--ratio))
+          calc(16px * var(--ratio)) calc(34px * var(--ratio));
+        width: calc(710px * var(--ratio));
         cursor: pointer;
         text-wrap: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        border-bottom: 1px solid rgba($borderColor3, 0.8);
+        border-bottom: calc(1px * var(--ratio)) solid rgba($borderColor3, 0.8);
         &::after {
           content: "";
           position: absolute;
-          width: 8px;
-          height: 8px;
-          top: 40px;
-          left: 10px;
+          width: calc(8px * var(--ratio));
+          height: calc(8px * var(--ratio));
+          top: calc(40px * var(--ratio));
+          left: calc(10px * var(--ratio));
           border-radius: 50%;
           background: $markBackground2;
         }
