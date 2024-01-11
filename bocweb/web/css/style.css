@@ -1980,5 +1980,34 @@ footer .footerBtm .container a:last-child {
 .newsSearch .resultContent .resultTab .active {
   opacity: 1;
 }
+.newsSearch .resultContent .resultList {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 18px;
+  color: #122852;
+  margin-top: 10px;
+  margin-bottom: 74px;
+}
+.newsSearch .resultContent .resultList .resultListItem {
+  position: relative;
+  padding: 35px 56px 16px 34px;
+  width: 710px;
+  cursor: pointer;
+  text-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-bottom: 1px solid rgba(220, 220, 220, 0.8);
+}
+.newsSearch .resultContent .resultList .resultListItem::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: 40px;
+  left: 10px;
+  border-radius: 50%;
+  background: #ccc;
+}
 
 /*# sourceMappingURL=style.css.map */

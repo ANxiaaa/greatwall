@@ -57,5 +57,34 @@
         opacity: 1;
       }
     }
+    .resultList {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      font-size: 18px;
+      color: $textColor4;
+      margin-top: 10px;
+      margin-bottom: 74px;
+      .resultListItem {
+        position: relative;
+        padding: 35px 56px 16px 34px;
+        width: 710px;
+        cursor: pointer;
+        text-wrap: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        border-bottom: 1px solid rgba($borderColor3, 0.8);
+        &::after {
+          content: "";
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          top: 40px;
+          left: 10px;
+          border-radius: 50%;
+          background: $markBackground2;
+        }
+      }
+    }
   }
 }

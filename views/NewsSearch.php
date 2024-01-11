@@ -17,8 +17,8 @@ document.oncontextmenu=stop;
     <div class="topSearch">
       <div class="container">
         <div class="mySearchInput">
-          <input id="searchInput" type="text" placeholder="请输入搜索内容">
-          <div class="mySearchBtn">
+          <input id="searchInput" onkeypress="searchFn(event)" type="text" placeholder="请输入搜索内容">
+          <div class="mySearchBtn" onclick="search()">
             <span>搜索</span>
           </div>
         </div>
@@ -37,6 +37,41 @@ document.oncontextmenu=stop;
             <span>媒体报道(5)</span>
           </div>
         </div>
+        <div class="resultList">
+          <div class="resultListItem">
+            <span class="redText">长城精工</span>
+            实业有限公司是一家集研发、制造、销售、服务于一体的国际化五金实业有限公司是一家集研发、制造、销售、服务于一体的国际化五金
+          </div>
+          <div class="resultListItem">
+            <span class="redText">长城精工</span>
+            实业有限公司是一家集研发、制造、销售、服务于一体的国际化五金实业有限公司是一家集研发、制造、销售、服务于一体的国际化五金
+          </div>
+          <div class="resultListItem">
+            <span class="redText">长城精工</span>
+            实业有限公司是一家集研发、制造、销售、服务于一体的国际化五金实业有限公司是一家集研发、制造、销售、服务于一体的国际化五金
+          </div>
+          <div class="resultListItem">
+            <span class="redText">长城精工</span>
+            实业有限公司是一家集研发、制造、销售、服务于一体的国际化五金实业有限公司是一家集研发、制造、销售、服务于一体的国际化五金
+          </div>
+          <div class="resultListItem">
+            <span class="redText">长城精工</span>
+            实业有限公司是一家集研发、制造、销售、服务于一体的国际化五金实业有限公司是一家集研发、制造、销售、服务于一体的国际化五金
+          </div>
+          <div class="resultListItem">
+            <span class="redText">长城精工</span>
+            实业有限公司是一家集研发、制造、销售、服务于一体的国际化五金实业有限公司是一家集研发、制造、销售、服务于一体的国际化五金
+          </div>
+          <div class="resultListItem">
+            <span class="redText">长城精工</span>
+            实业有限公司是一家集研发、制造、销售、服务于一体的国际化五金实业有限公司是一家集研发、制造、销售、服务于一体的国际化五金
+          </div>
+          <div class="resultListItem">
+            <span class="redText">长城精工</span>
+            实业有限公司是一家集研发、制造、销售、服务于一体的国际化五金实业有限公司是一家集研发、制造、销售、服务于一体的国际化五金
+          </div>
+        </div>
+        <div class="myPagination" id="pagination" data-total-page="20"></div>
       </div>
     </div>
   </div>
@@ -65,8 +100,11 @@ document.oncontextmenu=stop;
     }
     const searchFn = (e) => {
       if (e.code == 'Enter') {
-        console.log(e.target.value);
+        search()
       }
+    }
+    const search = () => {
+      console.log($('#searchInput').val());
     }
     $(function () {
       // ---

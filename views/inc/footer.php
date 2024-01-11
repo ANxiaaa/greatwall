@@ -81,5 +81,38 @@
       if ($(e.target).hasClass('popupClose'))
         $(e.target).closest('.popupWrap').removeClass('show')
     })
+
+    const paginationBox = $("#pagination")
+    if (paginationBox[0]) {
+      const totalPages = paginationBox.data("totalPages") || 20;
+      const visiblePages = 7;
+      const currentSearchParams = new URLSearchParams(window.location.search);
+      currentSearchParams.delete('page');
+      const urlParams = new URLSearchParams(window.location.search);
+      const currentPage = urlParams.get('page') || 1
+      const bugou = totalPages <= visiblePages
+      const startPage = bugou ? 1 : Math.max(1, currentPage - Math.floor(visiblePages / 2));
+      const endPage = bugou ? totalPages : Math.min(totalPages, startPage + visiblePages - 1);
+
+      const html = `
+          ${currentPage > 1 && startPage > 1 ? `<div class="myPaginationBtn">
+              <a href="?page=${currentPage - 1}&${currentSearchParams.toString()}">&laquo;</a>
+          </div>` : ''}
+          ${startPage > 1 && startPage > 2 ? `<div class="ellipsis myPaginationBtn">
+              <a href="?page=${startPage - 5}&${currentSearchParams.toString()}">...</a>
+          </div>` : ''}
+          ${Array.from({ length: bugou ? totalPages : endPage - startPage + 1 }, (_, index) => startPage + index)
+          .map(page => `<div class="myPaginationBtn">
+              <a class="${page == currentPage ? 'active' : ''}" href="?page=${page}&${currentSearchParams.toString()}">${page}</a>
+          </div>`).join('')}
+          ${endPage < totalPages && endPage < totalPages - 1 ? `<div class="ellipsis myPaginationBtn">
+              <a href="?page=${endPage + 1}&${currentSearchParams.toString()}">...</a>
+          </div>` : ''}
+          ${currentPage < totalPages && endPage < totalPages ? `<div class="myPaginationBtn">
+              <a href="?page=${currentPage + 1}&${currentSearchParams.toString()}">&raquo;</a>
+          </div>` : ''}`;
+
+      paginationBox.html(html);
+    }
   })
 </script>

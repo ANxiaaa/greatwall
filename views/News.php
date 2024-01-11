@@ -42,8 +42,8 @@ document.oncontextmenu=stop;
           <div class="myTabItem" data-index="1">媒体报道</div>
         </div>
         <div class="mySearchInput">
-          <input id="searchInput" type="text" placeholder="请输入您感兴趣的内容！">
-          <div class="mySearchBtn"></div>
+          <input id="searchInput" onkeypress="searchFn(event)" type="text" placeholder="请输入您感兴趣的内容！">
+          <div class="mySearchBtn" onclick="search()"></div>
         </div>
         <div class="myTabContent">
           <div class="myTabWrap show" id="newsWrap1">
@@ -141,8 +141,11 @@ document.oncontextmenu=stop;
     }
     const searchFn = (e) => {
       if (e.code == 'Enter') {
-        console.log(e.target.value);
+        search()
       }
+    }
+    const search = () => {
+      console.log($('#searchInput').val());
     }
     $(function () {
       fetchData().then(data => {
@@ -170,35 +173,6 @@ document.oncontextmenu=stop;
         $(this).addClass('active')
         newsContents.eq($(this).attr('data-index')).addClass('show')
       })
-      // ---
-      const totalPages = 20;
-      const visiblePages = 7;
-      const urlParams = new URLSearchParams(window.location.search);
-      const currentPage = urlParams.get('page') || 1
-      const bugou = totalPages <= visiblePages
-      const startPage = bugou ? 1 : Math.max(1, currentPage - Math.floor(visiblePages / 2));
-      const endPage = bugou ? totalPages : Math.min(totalPages, startPage + visiblePages - 1);
-
-      const html = `
-        ${currentPage > 1 && startPage > 1 ? `<div class="myPaginationBtn">
-            <a href="?page=${currentPage - 1}">&laquo;</a>
-        </div>` : ''}
-        ${startPage > 1 && startPage > 2 ? `<div class="ellipsis myPaginationBtn">
-            <a href="?page=${startPage - 5}">...</a>
-        </div>` : ''}
-        ${Array.from({ length: bugou ? totalPages : endPage - startPage + 1 }, (_, index) => startPage + index)
-        .map(page => `<div class="myPaginationBtn">
-            <a class="${page == currentPage ? 'active' : ''}" href="?page=${page}">${page}</a>
-        </div>`).join('')}
-        ${endPage < totalPages && endPage < totalPages - 1 ? `<div class="ellipsis myPaginationBtn">
-            <a href="?page=${endPage + 1}">...</a>
-        </div>` : ''}
-        ${currentPage < totalPages && endPage < totalPages ? `<div class="myPaginationBtn">
-            <a href="?page=${currentPage + 1}">&raquo;</a>
-        </div>` : ''}`;
-
-      $("#pagination").html(html);
-
     })
   </script>
 </body>
