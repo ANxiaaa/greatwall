@@ -187,7 +187,8 @@ body .aboutUsTab .container .tabItem a {
   display: block;
   color: rgba(7, 29, 73, 0.5);
   text-decoration: none;
-  padding: 0 calc(60px * var(--ratio));
+  text-align: center;
+  width: calc(200px * var(--ratio));
 }
 body .aboutUsTab .container .tabItem::after {
   content: "";
@@ -2012,30 +2013,30 @@ footer .footerBtm .container a:last-child {
 }
 
 .newsDetail .container {
-  width: 1440px;
-  padding-top: 30px;
+  width: calc(1440px * var(--ratio));
+  padding-top: calc(30px * var(--ratio));
   color: #071d49;
 }
 .newsDetail .container .bread {
-  margin-bottom: 84px;
+  margin-bottom: calc(84px * var(--ratio));
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: calc(18px * var(--ratio));
   width: max-content;
 }
 .newsDetail .container .bread .current {
   font-weight: bold;
-  margin-left: 6px;
+  margin-left: calc(6px * var(--ratio));
 }
 .newsDetail .container .bread .homeIcon {
-  width: 11px;
-  height: 11px;
-  margin-right: 8px;
+  width: calc(11px * var(--ratio));
+  height: calc(11px * var(--ratio));
+  margin-right: calc(8px * var(--ratio));
 }
 .newsDetail .container .newsTitle {
   text-align: center;
-  font-size: 42px;
+  font-size: calc(42px * var(--ratio));
   font-weight: bold;
 }
 .newsDetail .container .newsDate {
@@ -2043,32 +2044,32 @@ footer .footerBtm .container a:last-child {
   align-items: center;
   justify-content: center;
   color: #c7c7c7;
-  margin-top: 36px;
-  margin-bottom: 26px;
+  margin-top: calc(36px * var(--ratio));
+  margin-bottom: calc(26px * var(--ratio));
 }
 .newsDetail .container .newsDate .rili {
-  width: 22px;
-  height: 21px;
-  margin-right: 12px;
+  width: calc(22px * var(--ratio));
+  height: calc(21px * var(--ratio));
+  margin-right: calc(12px * var(--ratio));
 }
 .newsDetail .container .detailContent {
-  padding-top: 56px;
-  padding-bottom: 94px;
-  margin-bottom: 86px;
+  padding-top: calc(56px * var(--ratio));
+  padding-bottom: calc(94px * var(--ratio));
+  margin-bottom: calc(86px * var(--ratio));
   color: #001f3d;
-  border-top: 1px solid rgba(38, 47, 63, 0.1);
-  border-bottom: 1px solid rgba(38, 47, 63, 0.1);
+  border-top: calc(1px * var(--ratio)) solid rgba(38, 47, 63, 0.1);
+  border-bottom: calc(1px * var(--ratio)) solid rgba(38, 47, 63, 0.1);
 }
 .newsDetail .container .detailContent p {
-  margin-bottom: 58px;
+  margin-bottom: calc(58px * var(--ratio));
 }
 .newsDetail .container .changeDetail {
   display: block;
   width: max-content;
-  font-size: 18px;
+  font-size: calc(18px * var(--ratio));
   color: #071d49;
   text-decoration: none;
-  margin-bottom: 22px;
+  margin-bottom: calc(22px * var(--ratio));
 }
 .newsDetail .container .changeDetail:hover {
   color: #666;

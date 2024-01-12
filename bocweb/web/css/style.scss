@@ -21,7 +21,7 @@ $borderColor2: #122852;
 $borderColor3: #dcdcdc;
 $borderColor4: #fff;
 $borderColor5: #f3f2f0;
-$borderColor6: #262F3F;
+$borderColor6: #262f3f;
 $boxShadowColor: #122852;
 
 * {
@@ -224,7 +224,9 @@ body {
           display: block;
           color: rgba($primaryColor, 0.5);
           text-decoration: none;
-          padding: 0 calc(60px * var(--ratio));
+          text-align: center;
+          // padding: 0 calc(60px * var(--ratio));
+          width: calc(200px * var(--ratio));
         }
         &::after {
           content: "";

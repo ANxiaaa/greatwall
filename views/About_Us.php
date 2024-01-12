@@ -374,16 +374,6 @@ document.oncontextmenu=stop;
       }
     }
     $(function () {
-      // const courseDOM = $('#course');
-      // const observer = new IntersectionObserver(entries => {
-      //   entries.forEach(entry => {
-      //     if (entry.isIntersecting) {
-      //       window.scrollTo({ top: courseDOM[0].offsetTop, behavior: 'smooth' })
-      //     }
-      //   });
-      // }, { threshold: 0.5 });
-      // observer.observe(courseDOM[0]);
-
       fetchData().then(data => {
         const swiperWrapper = $("#aboutUsBanner-wrapper");
         const dom = data.map(item => {
