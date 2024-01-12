@@ -13,7 +13,40 @@ document.oncontextmenu=stop;
 <body>
   <?php include_once VIEWPATH . 'inc/header.php'; ?>
 
-  <div class="aboutUs">
+  <div class="productDetail">
+    <div class="breadWrap">
+      <div class="container">
+        <div class="bread">
+          <img class="homeIcon" draggable="false" src="<?php echo static_file('web/img/homeIcon.webp') ?>" alt="">
+          <span>首页 - 关羽我们 -</span>
+          <span class="current">新闻动态</span>
+        </div>
+      </div>
+    </div>
+    <div class="productDetaiWrap">
+      <div class="container">
+        <div class="detailLeft">
+          <div class="productName">
+            A65 系列钢卷尺
+          </div>
+          <div class="productSize">
+            2mx16mm-3mx20mm
+          </div>
+          <div class="introduction">
+            <span>产品介绍</span>
+          </div>
+          <div class="introductionList">
+            <p>采用双面印刷尺带 , 符合双面 JIS 一级精度 , 正面大字体 , 反面横排字体 , 方便测量。</p>
+            <p>采用双面印刷尺带 , 符合双面 JIS 一级精度 , 正面大字体 , 反面横排字体 , 方便测量。</p>
+            <p>采用双面印刷尺带 , 符合双面 JIS 一级精度 , 正面大字体 , 反面横排字体 , 方便测量。</p>
+            <p>采用双面印刷尺带 , 符合双面 JIS 一级精度 , 正面大字体 , 反面横排字体 , 方便测量。</p>
+          </div>
+        </div>
+        <div class="detailRight">
+          <img class="detailImg" draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
+        </div>
+      </div>
+    </div>
   </div>
 
   <?php include_once VIEWPATH . 'inc/footer.php'; ?>

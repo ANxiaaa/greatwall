@@ -1,0 +1,94 @@
+.productDetail {
+  color: $primaryColor;
+  .container {
+    width: 1440px;
+  }
+  .breadWrap {
+    height: 56px;
+    background: $grayBackground;
+    .container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .productDetaiWrap {
+    padding-top: 84px;
+    .container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .detailLeft {
+        width: 580px;
+        margin-right: 40px;
+        .productName {
+          font-size: 42px;
+          font-weight: bold;
+        }
+        .productSize {
+          font-size: 28px;
+          margin-top: 10px;
+          padding-bottom: 20px;
+          border-bottom: 1px solid rgba($primaryColor, 0.1);
+        }
+        .introduction {
+          margin-top: calc(48px * var(--ratio));
+          font-size: calc(32px * var(--ratio));
+          font-weight: bold;
+          position: relative;
+          width: max-content;
+          margin-bottom: calc(44px * var(--ratio));
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: calc(8px * var(--ratio));
+            background: $yellowBackground;
+          }
+          span {
+            position: relative;
+            z-index: 1;
+          }
+        }
+        .introductionList {
+          padding-left: 30px;
+          font-size: 18px;
+          height: 380px;
+          margin-bottom: 34px;
+          border-bottom: 1px solid rgba($primaryColor, 0.1);
+          p {
+            margin-bottom: 10px;
+            position: relative;
+            &::after {
+              content: "";
+              position: absolute;
+              width: 5px;
+              height: 5px;
+              border-radius: 2px;
+              background: currentColor;
+              left: -10px;
+              top: 10px;
+            }
+          }
+        }
+      }
+      .detailRight {
+        flex: 1;
+        width: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .detailImg {
+          max-height: 430px;
+          max-width: 680px;
+          width: 100%;
+          height: 100%;
+          display: block;
+        }
+      }
+    }
+  }
+}

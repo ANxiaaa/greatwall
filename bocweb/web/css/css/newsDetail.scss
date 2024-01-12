@@ -5,20 +5,6 @@
     color: $primaryColor;
     .bread {
       margin-bottom: calc(84px * var(--ratio));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: calc(18px * var(--ratio));
-      width: max-content;
-      .current {
-        font-weight: bold;
-        margin-left: calc(6px * var(--ratio));
-      }
-      .homeIcon {
-        width: calc(11px * var(--ratio));
-        height: calc(11px * var(--ratio));
-        margin-right: calc(8px * var(--ratio));
-      }
     }
     .newsTitle {
       text-align: center;
