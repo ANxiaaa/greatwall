@@ -13,13 +13,13 @@ document.oncontextmenu=stop;
 <body>
   <?php include_once VIEWPATH . 'inc/header.php'; ?>
 
-  <div class="aboutUs">
+  <div class="catalogDownload">
     <div class="swiper-container" id="aboutUsBanner">
       <div class="swiper-wrapper" id="aboutUsBanner-wrapper"></div>
     </div>
 
     <div class="aboutUsTab">
-    <div class="container">
+      <div class="container">
         <div class="tabItem bd">
           <a href="<?php echo site_url('New_Products') ?>" class="navName">新品推荐</a>
         </div>

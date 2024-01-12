@@ -13,7 +13,7 @@ document.oncontextmenu=stop;
 <body>
   <?php include_once VIEWPATH . 'inc/header.php'; ?>
 
-  <div class="aboutUs">
+  <div class="newProducts">
     <div class="swiper-container" id="aboutUsBanner">
       <div class="swiper-wrapper" id="aboutUsBanner-wrapper"></div>
     </div>
