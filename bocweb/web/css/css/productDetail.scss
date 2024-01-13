@@ -165,36 +165,36 @@
     }
   }
   .recommend {
-    height: 600px;
-    padding-top: 75px;
+    height: calc(600px * var(--ratio));
+    padding-top: calc(75px * var(--ratio));
     color: $primaryColor;
     .recommendTitle {
-      font-size: 28px;
-      margin-bottom: 34px;
+      font-size: calc(28px * var(--ratio));
+      margin-bottom: calc(34px * var(--ratio));
       font-weight: bold;
     }
     .recommendList {
       display: flex;
       // justify-content: space-between;
       .recommendItem {
-        margin-right: 20px;
-        width: 268px;
-        height: 360px;
-        border: 1px solid $borderColor;
+        margin-right: calc(20px * var(--ratio));
+        width: calc(268px * var(--ratio));
+        height: calc(360px * var(--ratio));
+        border: calc(1px * var(--ratio)) solid $borderColor;
         display: flex;
         flex-direction: column;
         .recommendName {
-          height: 70px;
-          line-height: 70px;
+          height: calc(70px * var(--ratio));
+          line-height: calc(70px * var(--ratio));
           text-align: center;
-          font-size: 20px;
+          font-size: calc(20px * var(--ratio));
           font-weight: bold;
           border-bottom: calc(2px * var(--ratio)) solid rgba($borderColor2, 0.1);
         }
         .recommendImgBox {
           height: 0;
           flex: 1;
-          padding: 20px;
+          padding: calc(20px * var(--ratio));
           display: flex;
           align-items: center;
           justify-content: center;
@@ -204,10 +204,10 @@
           }
         }
         .recommendSize {
-          height: 84px;
-          padding: 22px 26px;
-          font-size: 18px;
-          line-height: 22px;
+          height: calc(84px * var(--ratio));
+          padding: calc(22px * var(--ratio)) calc(26px * var(--ratio));
+          font-size: calc(18px * var(--ratio));
+          line-height: calc(22px * var(--ratio));
         }
       }
     }

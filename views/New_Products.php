@@ -34,6 +34,20 @@ document.oncontextmenu=stop;
         </div>
       </div>
     </div>
+
+    <div class="pageContent">
+      <div class="container">
+        <div class="containerLeft">
+          <div class="myClassify">
+            <div class="classifyTitle">
+              新品推荐
+            </div>
+            <div class="classifyItem active">2023年</div>
+            <div class="classifyItem">早期产品</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <?php include_once VIEWPATH . 'inc/footer.php'; ?>

@@ -1,0 +1,12 @@
+.newProducts {
+  .pageContent {
+    background: $grayBackground;
+    padding: 45px 0 118px;
+    .container {
+      display: flex;
+      .containerLeft{
+        width: 280px;margin-right: 35px;
+      }
+    }
+  }
+}
