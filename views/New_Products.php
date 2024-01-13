@@ -46,6 +46,78 @@ document.oncontextmenu=stop;
             <div class="classifyItem">早期产品</div>
           </div>
         </div>
+        <div class="containerRight">
+          <div class="rightTitle">
+            <div class="classifyName">
+              <span>2023年</span>
+            </div>
+            <span>(22)</span>
+          </div>
+          <div class="dataItem">
+            <div class="itemLeft">
+              <p class="dataName">工业级日式省力钳</p>
+              <p class="dataSize">2mx16mm-3mx20mm</p>
+              <p class="dataMsg">• 钳体采用60CR-V制造，实验室条件下，刃口剪切寿命显著提升</p>
+              <p class="dataMsg">• 特殊热处理技术，使刃口硬度最高可达HRC64，最高可剪切 HRC47的钢丝。</p>
+              <div class="dataBtn yellowBtn">
+                <span>了解更多</span>
+                <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
+                  alt="">
+              </div>
+            </div>
+            <div class="itemRight">
+              <img class="itemImg" draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
+            </div>
+          </div>
+          <div class="dataItem">
+            <div class="itemLeft">
+              <p class="dataName">工业级日式省力钳</p>
+              <p class="dataSize">2mx16mm-3mx20mm</p>
+              <p class="dataMsg">• 钳体采用60CR-V制造，实验室条件下，刃口剪切寿命显著提升</p>
+              <p class="dataMsg">• 特殊热处理技术，使刃口硬度最高可达HRC64，最高可剪切 HRC47的钢丝。</p>
+              <div class="dataBtn yellowBtn">
+                <span>了解更多</span>
+                <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
+                  alt="">
+              </div>
+            </div>
+            <div class="itemRight">
+              <img class="itemImg" draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
+            </div>
+          </div>
+          <div class="dataItem">
+            <div class="itemLeft">
+              <p class="dataName">工业级日式省力钳</p>
+              <p class="dataSize">2mx16mm-3mx20mm</p>
+              <p class="dataMsg">• 钳体采用60CR-V制造，实验室条件下，刃口剪切寿命显著提升</p>
+              <p class="dataMsg">• 特殊热处理技术，使刃口硬度最高可达HRC64，最高可剪切 HRC47的钢丝。</p>
+              <div class="dataBtn yellowBtn">
+                <span>了解更多</span>
+                <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
+                  alt="">
+              </div>
+            </div>
+            <div class="itemRight">
+              <img class="itemImg" draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
+            </div>
+          </div>
+          <div class="dataItem">
+            <div class="itemLeft">
+              <p class="dataName">工业级日式省力钳</p>
+              <p class="dataSize">2mx16mm-3mx20mm</p>
+              <p class="dataMsg">• 钳体采用60CR-V制造，实验室条件下，刃口剪切寿命显著提升</p>
+              <p class="dataMsg">• 特殊热处理技术，使刃口硬度最高可达HRC64，最高可剪切 HRC47的钢丝。</p>
+              <div class="dataBtn yellowBtn">
+                <span>了解更多</span>
+                <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
+                  alt="">
+              </div>
+            </div>
+            <div class="itemRight">
+              <img class="itemImg" draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -76,8 +148,23 @@ document.oncontextmenu=stop;
       if (e.code == 'Enter') {
         console.log(e.target.value);
       }
-    }
+    } 
     $(function () {
+      $('.itemImg').each((index, item) => {
+        const itemImg = $(item)
+        console.log(item, '222');
+        if (itemImg.width() > itemImg.height()) {
+          itemImg.css({
+            '--height': 'auto',
+            '--width': '414px'
+          })
+        } else {
+          itemImg.css({
+            '--height': '100%',
+            '--width': 'auto'
+          })
+        }
+      })
       fetchData().then(data => {
         const swiperWrapper = $("#aboutUsBanner-wrapper");
         const dom = data.map(item => {

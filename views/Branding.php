@@ -163,17 +163,6 @@ document.oncontextmenu=stop;
           btns.removeClass('active')
           $(this).addClass('active')
           const img = $(this).find('img')[0];
-          if (img.width > img.height) {
-            showCarImg.css({
-              '--height': 'auto',
-              '--width': '1184px'
-            })
-          } else {
-            showCarImg.css({
-              '--height': '750px',
-              '--width': 'auto'
-            })
-          }
           showCarImg.attr({ src: img.src })
         })
       });

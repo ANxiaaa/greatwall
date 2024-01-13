@@ -2322,14 +2322,93 @@ footer .footerBtm .container a:last-child {
 
 .newProducts .pageContent {
   background: #f5f5f5;
-  padding: 45px 0 118px;
+  padding: calc(45px * var(--ratio)) 0 calc(118px * var(--ratio));
+  color: #071d49;
 }
 .newProducts .pageContent .container {
   display: flex;
 }
 .newProducts .pageContent .container .containerLeft {
-  width: 280px;
-  margin-right: 35px;
+  width: calc(280px * var(--ratio));
+  margin-right: calc(35px * var(--ratio));
+}
+.newProducts .pageContent .container .containerRight {
+  width: 0;
+  flex: 1;
+}
+.newProducts .pageContent .container .containerRight .rightTitle {
+  display: flex;
+  align-items: flex-end;
+  margin-top: calc(20px * var(--ratio));
+  margin-bottom: calc(26px * var(--ratio));
+}
+.newProducts .pageContent .container .containerRight .classifyName {
+  font-size: calc(32px * var(--ratio));
+  font-weight: bold;
+  position: relative;
+  width: max-content;
+  margin-right: 12px;
+}
+.newProducts .pageContent .container .containerRight .classifyName::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: calc(8px * var(--ratio));
+  background: #ffd100;
+}
+.newProducts .pageContent .container .containerRight .classifyName span {
+  position: relative;
+  z-index: 1;
+}
+.newProducts .pageContent .container .containerRight .dataItem {
+  padding: calc(40px * var(--ratio)) calc(46px * var(--ratio));
+  height: calc(360px * var(--ratio));
+  margin-bottom: calc(20px * var(--ratio));
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  cursor: default;
+  transition: all 0.3s;
+}
+.newProducts .pageContent .container .containerRight .dataItem:hover {
+  box-shadow: 0 calc(10px * var(--ratio)) calc(20px * var(--ratio)) 0 rgba(18, 40, 82, 0.1);
+}
+.newProducts .pageContent .container .containerRight .dataItem .itemLeft {
+  width: calc(512px * var(--ratio));
+}
+.newProducts .pageContent .container .containerRight .dataItem .itemLeft .dataName {
+  font-size: calc(22px * var(--ratio));
+  margin-bottom: calc(2px * var(--ratio));
+  font-weight: bold;
+}
+.newProducts .pageContent .container .containerRight .dataItem .itemLeft .dataSize {
+  font-size: calc(18px * var(--ratio));
+  padding-bottom: calc(20px * var(--ratio));
+  border-bottom: calc(1px * var(--ratio)) solid rgba(18, 40, 82, 0.15);
+  margin-bottom: calc(20px * var(--ratio));
+}
+.newProducts .pageContent .container .containerRight .dataItem .itemLeft .dataMsg {
+  color: rgba(18, 40, 82, 0.7);
+  font-size: calc(18px * var(--ratio));
+}
+.newProducts .pageContent .container .containerRight .dataItem .itemLeft .dataBtn {
+  margin-top: calc(36px * var(--ratio));
+  width: calc(145px * var(--ratio));
+  height: calc(54px * var(--ratio));
+}
+.newProducts .pageContent .container .containerRight .dataItem .itemRight {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.newProducts .pageContent .container .containerRight .dataItem .itemRight img {
+  cursor: pointer;
+  width: calc(var(--width) * var(--ratio));
+  height: calc(var(--height) * var(--ratio));
+  display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

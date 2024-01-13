@@ -144,17 +144,6 @@ document.oncontextmenu=stop;
         btns.removeClass('active')
         $(this).addClass('active')
         const img = $(this).find('img')[0];
-        if (img.width > img.height) {
-          detailImg.css({
-            '--height': 'auto',
-            '--width': '680px'
-          })
-        } else {
-          detailImg.css({
-            '--height': '430px',
-            '--width': 'auto'
-          })
-        }
         detailImg.attr({ src: img.src })
       })
     })

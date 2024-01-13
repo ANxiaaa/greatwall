@@ -1,11 +1,93 @@
 .newProducts {
   .pageContent {
     background: $grayBackground;
-    padding: 45px 0 118px;
+    padding: calc(45px * var(--ratio)) 0 calc(118px * var(--ratio));
+    color: $primaryColor;
     .container {
       display: flex;
-      .containerLeft{
-        width: 280px;margin-right: 35px;
+      .containerLeft {
+        width: calc(280px * var(--ratio));
+        margin-right: calc(35px * var(--ratio));
+      }
+      .containerRight {
+        width: 0;
+        flex: 1;
+        .rightTitle {
+          display: flex;
+          align-items: flex-end;
+          margin-top: calc(20px * var(--ratio));
+          margin-bottom: calc(26px * var(--ratio));
+        }
+        .classifyName {
+          font-size: calc(32px * var(--ratio));
+          font-weight: bold;
+          position: relative;
+          width: max-content;
+          margin-right: 12px;
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: calc(8px * var(--ratio));
+            background: $yellowBackground;
+          }
+          span {
+            position: relative;
+            z-index: 1;
+          }
+        }
+        .dataItem {
+          padding: calc(40px * var(--ratio)) calc(46px * var(--ratio));
+          height: calc(360px * var(--ratio));
+          margin-bottom: calc(20px * var(--ratio));
+          background: $mainBackground;
+          display: flex;
+          justify-content: space-between;
+          cursor: default;
+          transition: all 0.3s;
+          &:hover {
+            box-shadow: 0 calc(10px * var(--ratio)) calc(20px * var(--ratio)) 0
+              rgba($boxShadowColor, 0.1);
+          }
+          .itemLeft {
+            width: calc(512px * var(--ratio));
+            .dataName {
+              font-size: calc(22px * var(--ratio));
+              margin-bottom: calc(2px * var(--ratio));
+              font-weight: bold;
+            }
+            .dataSize {
+              font-size: calc(18px * var(--ratio));
+              padding-bottom: calc(20px * var(--ratio));
+              border-bottom: calc(1px * var(--ratio)) solid
+                rgba($borderColor2, 0.15);
+              margin-bottom: calc(20px * var(--ratio));
+            }
+            .dataMsg {
+              color: rgba($textColor4, 0.7);
+              font-size: calc(18px * var(--ratio));
+            }
+            .dataBtn {
+              margin-top: calc(36px * var(--ratio));
+              width: calc(145px * var(--ratio));
+              height: calc(54px * var(--ratio));
+            }
+          }
+          .itemRight {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            img {
+              cursor: pointer;
+              width: calc(var(--width) * var(--ratio));
+              height: calc(var(--height) * var(--ratio));
+              display: block;
+            }
+          }
+        }
       }
     }
   }
