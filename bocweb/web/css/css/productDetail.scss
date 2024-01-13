@@ -1,10 +1,10 @@
 .productDetail {
   color: $primaryColor;
   .container {
-    width: 1440px;
+    width: calc(1440px * var(--ratio));
   }
   .breadWrap {
-    height: 56px;
+    height: calc(56px * var(--ratio));
     background: $grayBackground;
     .container {
       height: 100%;
@@ -13,24 +13,24 @@
     }
   }
   .productDetaiWrap {
-    padding-top: 84px;
+    padding-top: calc(84px * var(--ratio));
     .container {
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
       .detailLeft {
-        width: 580px;
-        margin-right: 40px;
+        width: calc(580px * var(--ratio));
+        margin-right: calc(40px * var(--ratio));
         .productName {
-          font-size: 42px;
+          font-size: calc(42px * var(--ratio));
           font-weight: bold;
         }
         .productSize {
-          font-size: 28px;
-          margin-top: 10px;
-          padding-bottom: 20px;
-          border-bottom: 1px solid rgba($primaryColor, 0.1);
+          font-size: calc(28px * var(--ratio));
+          margin-top: calc(10px * var(--ratio));
+          padding-bottom: calc(20px * var(--ratio));
+          border-bottom: calc(1px * var(--ratio)) solid rgba($primaryColor, 0.1);
         }
         .introduction {
           margin-top: calc(48px * var(--ratio));
@@ -54,23 +54,23 @@
           }
         }
         .introductionList {
-          padding-left: 30px;
-          font-size: 18px;
-          height: 380px;
-          margin-bottom: 34px;
-          border-bottom: 1px solid rgba($primaryColor, 0.1);
+          padding-left: calc(30px * var(--ratio));
+          font-size: calc(18px * var(--ratio));
+          height: calc(380px * var(--ratio));
+          margin-bottom: calc(34px * var(--ratio));
+          border-bottom: calc(1px * var(--ratio)) solid rgba($primaryColor, 0.1);
           p {
-            margin-bottom: 10px;
+            margin-bottom: calc(10px * var(--ratio));
             position: relative;
             &::after {
               content: "";
               position: absolute;
-              width: 5px;
-              height: 5px;
-              border-radius: 2px;
+              width: calc(5px * var(--ratio));
+              height: calc(5px * var(--ratio));
+              border-radius: calc(2px * var(--ratio));
               background: currentColor;
-              left: -10px;
-              top: 10px;
+              left: calc(-10px * var(--ratio));
+              top: calc(10px * var(--ratio));
             }
           }
         }
@@ -82,11 +82,84 @@
         align-items: center;
         justify-content: center;
         .detailImg {
-          max-height: 430px;
-          max-width: 680px;
-          width: 100%;
-          height: 100%;
+          width: calc(var(--width) * var(--ratio));
+          height: calc(var(--height) * var(--ratio));
           display: block;
+        }
+      }
+    }
+    .downloadWrap {
+        margin-bottom: calc(76px * var(--ratio));
+        height: calc(88px * var(--ratio));
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .downloadBtn {
+        display: flex;
+        height: 100%;
+        width: calc(580px * var(--ratio));
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 calc(26px * var(--ratio));
+        font-size: calc(22px * var(--ratio));
+        border: calc(1px * var(--ratio)) solid rgba($primaryColor, 0.1);
+        margin-right: 40px;
+        .btnRight {
+          width: calc(50px * var(--ratio));
+          height: calc(50px * var(--ratio));
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: $primaryColor;
+          border-radius: calc(2px * var(--ratio));
+          cursor: pointer;
+          &:hover {
+            background: #000;
+          }
+          .downIcon {
+            width: calc(17px * var(--ratio));
+            height: calc(17px * var(--ratio));
+          }
+        }
+      }
+      .downloadImgWrap {
+        width: 0;
+        flex: 1;
+        display: flex;
+        height: 100%;
+        .downloadImgItem {
+          padding: calc(10px * var(--ratio));
+          height: 100%;
+          width: calc(90px * var(--ratio));
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: calc(26px * var(--ratio));
+          cursor: pointer;
+          border: calc(calc(1px * var(--ratio)) * var(--ratio)) solid
+            rgba($primaryColor, 0.1);
+          img {
+            max-width: 100%;
+            max-height: 100%;
+          }
+          &:hover,
+          &.active {
+            border-color: $primaryColor;
+          }
+        }
+      }
+      .rightIcon {
+        width: calc(22px * var(--ratio));
+        cursor: pointer;
+        box-sizing: content-box;
+        padding-right: 15px;
+        padding-left: 0;
+        transition: all 0.3s;
+        &:hover {
+          padding-right: 0;
+          padding-left: 15px;
         }
       }
     }

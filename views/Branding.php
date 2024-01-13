@@ -143,18 +143,20 @@ document.oncontextmenu=stop;
           </div>`
         })
         showCar.html(dom)
+        showCarImg.on('load', () => {
+          if (showCarImg.width() > showCarImg.height()) {
+            showCarImg.css({
+              '--height': 'auto',
+              '--width': '1184px'
+            })
+          } else {
+            showCarImg.css({
+              '--height': '750px',
+              '--width': 'auto'
+            })
+          }
+        })
         showCarImg.attr({ src: '/greatwall/bocweb/web/img/banner1.png' })
-        if (showCarImg.width() > showCarImg.height()) {
-          showCarImg.css({
-            height: 'auto',
-            '--width': '1184px'
-          })
-        } else {
-          showCarImg.css({
-            '--height': '750px',
-            width: 'auto'
-          })
-        }
         const btns = showCar.find('.showCarBtnItem')
         btns.eq(0).addClass('active')
         btns.on('click', function () {
@@ -163,13 +165,13 @@ document.oncontextmenu=stop;
           const img = $(this).find('img')[0];
           if (img.width > img.height) {
             showCarImg.css({
-              height: 'auto',
+              '--height': 'auto',
               '--width': '1184px'
             })
           } else {
             showCarImg.css({
               '--height': '750px',
-              width: 'auto'
+              '--width': 'auto'
             })
           }
           showCarImg.attr({ src: img.src })

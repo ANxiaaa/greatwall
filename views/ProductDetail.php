@@ -43,7 +43,30 @@ document.oncontextmenu=stop;
           </div>
         </div>
         <div class="detailRight">
-          <img class="detailImg" draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
+          <img class="detailImg" draggable="false" alt="">
+        </div>
+      </div>
+      <div class="downloadWrap">
+        <div class="container">
+          <div class="downloadBtn">
+            <span>产品说明书下载</span>
+            <div class="btnRight">
+              <img class="downIcon" draggable="false" src="<?php echo static_file('web/img/downIcon.webp') ?>" alt="">
+            </div>
+          </div>
+          <div class="downloadImgWrap">
+            <div class="downloadImgItem">
+              <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
+            </div>
+            <div class="downloadImgItem">
+              <img draggable="false" src="<?php echo static_file('web/img/banner4.png') ?>" alt="">
+            </div>
+            <div class="downloadImgItem">
+              <img draggable="false" src="<?php echo static_file('web/img/qianzi.webp') ?>" alt="">
+            </div>
+          </div>
+          <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/homeBannerRight.webp') ?>"
+            alt="">
         </div>
       </div>
     </div>
@@ -77,6 +100,39 @@ document.oncontextmenu=stop;
       }
     }
     $(function () {
+      const detailImg = $('.detailImg')
+      detailImg.on('load', () => {
+        if (detailImg.width() > detailImg.height()) {
+          detailImg.css({
+            '--height': 'auto',
+            '--width': '680px'
+          })
+        } else {
+          detailImg.css({
+            '--height': '430px',
+            '--width': 'auto'
+          })
+        }
+      })
+      detailImg.attr({ src: '/greatwall/bocweb/web/img/banner1.png' })
+      const btns = $('.downloadImgItem')
+      btns.on('click', function () {
+        btns.removeClass('active')
+        $(this).addClass('active')
+        const img = $(this).find('img')[0];
+        if (img.width > img.height) {
+          detailImg.css({
+            '--height': 'auto',
+            '--width': '680px'
+          })
+        } else {
+          detailImg.css({
+            '--height': '430px',
+            '--width': 'auto'
+          })
+        }
+        detailImg.attr({ src: img.src })
+      })
     })
   </script>
 </body>

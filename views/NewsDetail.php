@@ -18,7 +18,7 @@ document.oncontextmenu=stop;
       <div class="bread">
 
         <img class="homeIcon" draggable="false" src="<?php echo static_file('web/img/homeIcon.webp') ?>" alt="">
-        <span>首页 - 关羽我们 -</span>
+        <span>首页 - 关于我们 -</span>
         <span class="current">新闻动态</span>
       </div>
       <div class="newsTitle">
