@@ -65,8 +65,32 @@ document.oncontextmenu=stop;
               <img draggable="false" src="<?php echo static_file('web/img/qianzi.webp') ?>" alt="">
             </div>
           </div>
-          <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/homeBannerRight.webp') ?>"
-            alt="">
+          <div class="rightIconBox">
+            <img draggable="false" src="<?php echo static_file('web/img/homeBannerRight.webp') ?>" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="recommend">
+      <div class="container">
+        <div class="recommendTitle">
+          相关推荐
+        </div>
+        <div class="recommendList">
+          <div class="recommendItem">
+            <div class="recommendName">超级高挺尼龙包膜钢卷尺</div>
+            <div class="recommendImgBox">
+              <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
+            </div>
+            <div class="recommendSize">
+              <p>货号: 18645</p>
+              <p>规格: 2mx16mm</p>
+            </div>
+          </div>
+          <div class="recommendItem">2</div>
+          <div class="recommendItem">3</div>
+          <div class="recommendItem">4</div>
+          <div class="recommendItem">5</div>
         </div>
       </div>
     </div>

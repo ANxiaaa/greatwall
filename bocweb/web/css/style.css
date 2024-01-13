@@ -2221,7 +2221,7 @@ footer .footerBtm .container a:last-child {
   align-items: center;
   margin-right: calc(26px * var(--ratio));
   cursor: pointer;
-  border: calc(1px * var(--ratio) * var(--ratio)) solid rgba(7, 29, 73, 0.1);
+  border: calc(1px * var(--ratio)) solid rgba(7, 29, 73, 0.1);
 }
 .productDetail .productDetaiWrap .downloadWrap .downloadImgWrap .downloadImgItem img {
   max-width: 100%;
@@ -2230,17 +2230,63 @@ footer .footerBtm .container a:last-child {
 .productDetail .productDetaiWrap .downloadWrap .downloadImgWrap .downloadImgItem:hover, .productDetail .productDetaiWrap .downloadWrap .downloadImgWrap .downloadImgItem.active {
   border-color: #071d49;
 }
-.productDetail .productDetaiWrap .downloadWrap .rightIcon {
-  width: calc(22px * var(--ratio));
+.productDetail .productDetaiWrap .downloadWrap .rightIconBox {
   cursor: pointer;
   box-sizing: content-box;
-  padding-right: 15px;
-  padding-left: 0;
+}
+.productDetail .productDetaiWrap .downloadWrap .rightIconBox img {
+  width: calc(22px * var(--ratio));
   transition: all 0.3s;
 }
-.productDetail .productDetaiWrap .downloadWrap .rightIcon:hover {
-  padding-right: 0;
-  padding-left: 15px;
+.productDetail .productDetaiWrap .downloadWrap .rightIconBox:hover img {
+  transform: translate(calc(15px * var(--ratio)));
+}
+.productDetail .recommend {
+  height: 600px;
+  padding-top: 75px;
+  color: #071d49;
+}
+.productDetail .recommend .recommendTitle {
+  font-size: 28px;
+  margin-bottom: 34px;
+  font-weight: bold;
+}
+.productDetail .recommend .recommendList {
+  display: flex;
+}
+.productDetail .recommend .recommendList .recommendItem {
+  margin-right: 20px;
+  width: 268px;
+  height: 360px;
+  border: 1px solid #f5f5f5;
+  display: flex;
+  flex-direction: column;
+}
+.productDetail .recommend .recommendList .recommendItem .recommendName {
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  border-bottom: calc(2px * var(--ratio)) solid rgba(18, 40, 82, 0.1);
+}
+.productDetail .recommend .recommendList .recommendItem .recommendImgBox {
+  height: 0;
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.productDetail .recommend .recommendList .recommendItem .recommendImgBox img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.productDetail .recommend .recommendList .recommendItem .recommendSize {
+  height: 84px;
+  padding: 22px 26px;
+  font-size: 18px;
+  line-height: 22px;
 }
 
 /*# sourceMappingURL=style.css.map */
