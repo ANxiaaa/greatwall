@@ -77,20 +77,23 @@ document.oncontextmenu=stop;
           相关推荐
         </div>
         <div class="recommendList">
-          <div class="recommendItem">
-            <div class="recommendName">超级高挺尼龙包膜钢卷尺</div>
-            <div class="recommendImgBox">
+          <div class="productItem">
+            <div class="productName">超级高挺尼龙包膜钢卷尺</div>
+            <div class="productImgBox">
               <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
             </div>
-            <div class="recommendSize">
+            <div class="productSize">
               <p>货号: 18645</p>
               <p>规格: 2mx16mm</p>
             </div>
+            <div class="jumpBtn yellowBtn">
+              <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>" alt="">
+            </div>
           </div>
-          <div class="recommendItem">2</div>
-          <div class="recommendItem">3</div>
-          <div class="recommendItem">4</div>
-          <div class="recommendItem">5</div>
+          <div class="productItem">2</div>
+          <div class="productItem">3</div>
+          <div class="productItem">4</div>
+          <div class="productItem">5</div>
         </div>
       </div>
     </div>
