@@ -114,5 +114,35 @@
 
       paginationBox.html(html);
     }
+    // ---
+    $('form').on('submit', function (e) {
+      e.preventDefault()
+    })
+    $('.selectBox').each(function () {
+      const selectContainer = $(this);
+      const selectInput = selectContainer.find('.selectInput');
+      const selectOptions = selectContainer.find('.selectOptions');
+
+      selectInput.click(function (e) {
+        e.stopPropagation();
+        $('.selectBox .selectOptions').not(selectOptions).hide();
+        selectOptions.toggle();
+      });
+
+      selectContainer.on('click', '.selectOption', function () {
+        const optionValue = $(this).data('value') || $(this).text();
+        if (selectInput.val() !== optionValue) {
+          selectInput.prev().text($(this).text());
+          selectInput.val(optionValue).trigger('change');
+        }
+        selectOptions.hide();
+      });
+
+      $(document).on('click', function (event) {
+        if (!selectContainer.is(event.target) && !selectOptions.is(event.target) && selectOptions.has(event.target).length === 0) {
+          selectOptions.hide();
+        }
+      });
+    });
   })
 </script>

@@ -67,7 +67,94 @@ document.oncontextmenu=stop;
           </div>
         </div>
         <div class="formBox">
-          
+          <form class="myForm" action="#">
+            <div class="formRow">
+              <div class="formItem">
+                <div class="label">单位名称:</div>
+                <div class="inputBox">
+                  <input required autocomplete="off" type="text" name="dwmc">
+                </div>
+              </div>
+              <div class="formItem">
+                <div class="label">姓名:</div>
+                <div class="inputBox">
+                  <input autocomplete="off" type="text" name="name">
+                </div>
+              </div>
+            </div>
+            <div class="formRow">
+              <div class="formItem">
+                <div class="label">应用行业:</div>
+                <div class="inputBox selectBox">
+                  <span class="showValue">请选择</span>
+                  <input autocomplete="off" type="text" class="selectInput" readonly name="yyhy" placeholder="请选择">
+                  <ul class="selectOptions">
+                    <li class="selectOption">选项 1</li>
+                    <li class="selectOption">选项 2</li>
+                    <li class="selectOption">选项 3</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="formRow">
+              <div class="formItem">
+                <div class="label">移动电话:</div>
+                <div class="inputBox">
+                  <input required autocomplete="off" type="text" name="tel">
+                </div>
+              </div>
+              <div class="formItem">
+                <div class="label">Email:</div>
+                <div class="inputBox">
+                  <input autocomplete="off" type="text" name="email">
+                </div>
+              </div>
+            </div>
+            <div class="formRow">
+              <div class="formItem">
+                <div class="label">联系地址:</div>
+                <div class="inputBox selectBox">
+                  <span class="showValue">请选择</span>
+                  <input autocomplete="off" type="text" class="selectInput" id="lxdz" readonly name="lxdz"
+                    placeholder="请选择">
+                  <ul class="selectOptions">
+                    <li class="selectOption">选项 1</li>
+                    <li class="selectOption">选项 2</li>
+                    <li class="selectOption">选项 3</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="formItem">
+                <div class="inputBox selectBox">
+                  <span class="showValue">请选择</span>
+                  <input autocomplete="off" type="text" class="selectInput" readonly id="dizhi" name="dizhi"
+                    placeholder="请选择">
+                  <ul class="selectOptions">
+                    <li class="selectOption">选项 1</li>
+                    <li class="selectOption">选项 2</li>
+                    <li class="selectOption">选项 3</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="formRow">
+              <div class="formItem">
+                <div class="inputBox">
+                  <div class="label"></div>
+                  <input required autocomplete="off" type="text" name="xxdz" placeholder="详细地址">
+                </div>
+              </div>
+            </div>
+            <div class="formRow">
+              <div class="formItem">
+                <div class="label">留言内容:</div>
+                <div class="inputBox">
+                  <textarea required autocomplete="off" type="text" name="liuyan" placeholder="200字以内"></textarea>
+                </div>
+              </div>
+            </div>
+            <button>提交表单</button>
+          </form>
         </div>
       </div>
     </div>
@@ -121,6 +208,15 @@ document.oncontextmenu=stop;
       radios.on('click', function () {
         radios.removeClass('active')
         type = $(this).addClass('active').data('val')
+      })
+      // ---
+      $('#lxdz').on('change', function () {
+        $('#dizhi').prev().text('请选择')
+        $('#dizhi').next().html(`
+          <li class="selectOption" data-value="sss">杭州</li>
+          <li class="selectOption" data-value="ddd">绍兴</li>
+          <li class="selectOption" data-value="fff">哦哦</li>
+        `)
       })
     })
   </script>
