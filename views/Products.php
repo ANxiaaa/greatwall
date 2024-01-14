@@ -34,6 +34,200 @@ document.oncontextmenu=stop;
         </div>
       </div>
     </div>
+
+    <div class="productsTypeBox">
+      <div class="container">
+        <div class="typeLeft">
+          <div class="typeSearch">
+            <input type="text" placeholder="产品检索">
+            <div class="typeSearchBtn"></div>
+          </div>
+          <div class="typeList">
+            <div class="typeItem active">
+              <div class="typeImgBox">
+                <img class="homeIcon" draggable="false" src="<?php echo static_file('web/img/qianzi.webp') ?>" alt="">
+              </div>
+              <span>测量类</span>
+            </div>
+            <div class="typeItem">
+              <div class="typeImgBox">
+                <img class="homeIcon" draggable="false" src="<?php echo static_file('web/img/qianzi.webp') ?>" alt="">
+              </div>
+              <span>测量类</span>
+            </div>
+            <div class="typeItem">
+              <div class="typeImgBox">
+                <img class="homeIcon" draggable="false" src="<?php echo static_file('web/img/qianzi.webp') ?>" alt="">
+              </div>
+              <span>测量类</span>
+            </div>
+            <div class="typeItem">
+              <div class="typeImgBox">
+                <img class="homeIcon" draggable="false" src="<?php echo static_file('web/img/qianzi.webp') ?>" alt="">
+              </div>
+              <span>测量类</span>
+            </div>
+            <div class="typeItem">
+              <div class="typeImgBox">
+                <img class="homeIcon" draggable="false" src="<?php echo static_file('web/img/qianzi.webp') ?>" alt="">
+              </div>
+              <span>测量类</span>
+            </div>
+          </div>
+        </div>
+        <div class="typeRight">
+          <div class="bread">
+            <span>全线产品 - </span>
+            <span class="current">
+              <span>旋具类</span>
+            </span>
+          </div>
+          <div class="productList">
+            <div class="productItem">
+              <div class="productName">超级高挺尼龙包膜钢卷尺</div>
+              <div class="productImgBox">
+                <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
+              </div>
+              <div class="productSize">
+                <p>货号: 18645</p>
+                <p>规格: 2mx16mm</p>
+              </div>
+              <div class="jumpBtn yellowBtn">
+                <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
+                  alt="">
+              </div>
+            </div>
+            <div class="productItem">
+              <div class="productName">超级高挺尼龙包膜钢卷尺</div>
+              <div class="productImgBox">
+                <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
+              </div>
+              <div class="productSize">
+                <p>货号: 18645</p>
+                <p>规格: 2mx16mm</p>
+              </div>
+              <div class="jumpBtn yellowBtn">
+                <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
+                  alt="">
+              </div>
+            </div>
+            <div class="productItem">
+              <div class="productName">超级高挺尼龙包膜钢卷尺</div>
+              <div class="productImgBox">
+                <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
+              </div>
+              <div class="productSize">
+                <p>货号: 18645</p>
+                <p>规格: 2mx16mm</p>
+              </div>
+              <div class="jumpBtn yellowBtn">
+                <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
+                  alt="">
+              </div>
+            </div>
+            <div class="productItem">
+              <div class="productName">超级高挺尼龙包膜钢卷尺</div>
+              <div class="productImgBox">
+                <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
+              </div>
+              <div class="productSize">
+                <p>货号: 18645</p>
+                <p>规格: 2mx16mm</p>
+              </div>
+              <div class="jumpBtn yellowBtn">
+                <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
+                  alt="">
+              </div>
+            </div>
+            <div class="productItem">
+              <div class="productName">超级高挺尼龙包膜钢卷尺</div>
+              <div class="productImgBox">
+                <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
+              </div>
+              <div class="productSize">
+                <p>货号: 18645</p>
+                <p>规格: 2mx16mm</p>
+              </div>
+              <div class="jumpBtn yellowBtn">
+                <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
+                  alt="">
+              </div>
+            </div>
+            <div class="productItem">
+              <div class="productName">超级高挺尼龙包膜钢卷尺</div>
+              <div class="productImgBox">
+                <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
+              </div>
+              <div class="productSize">
+                <p>货号: 18645</p>
+                <p>规格: 2mx16mm</p>
+              </div>
+              <div class="jumpBtn yellowBtn">
+                <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
+                  alt="">
+              </div>
+            </div>
+            <div class="productItem">
+              <div class="productName">超级高挺尼龙包膜钢卷尺</div>
+              <div class="productImgBox">
+                <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
+              </div>
+              <div class="productSize">
+                <p>货号: 18645</p>
+                <p>规格: 2mx16mm</p>
+              </div>
+              <div class="jumpBtn yellowBtn">
+                <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
+                  alt="">
+              </div>
+            </div>
+            <div class="productItem">
+              <div class="productName">超级高挺尼龙包膜钢卷尺</div>
+              <div class="productImgBox">
+                <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
+              </div>
+              <div class="productSize">
+                <p>货号: 18645</p>
+                <p>规格: 2mx16mm</p>
+              </div>
+              <div class="jumpBtn yellowBtn">
+                <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
+                  alt="">
+              </div>
+            </div>
+            <div class="productItem">
+              <div class="productName">超级高挺尼龙包膜钢卷尺</div>
+              <div class="productImgBox">
+                <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
+              </div>
+              <div class="productSize">
+                <p>货号: 18645</p>
+                <p>规格: 2mx16mm</p>
+              </div>
+              <div class="jumpBtn yellowBtn">
+                <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
+                  alt="">
+              </div>
+            </div>
+            <div class="productItem">
+              <div class="productName">超级高挺尼龙包膜钢卷尺</div>
+              <div class="productImgBox">
+                <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
+              </div>
+              <div class="productSize">
+                <p>货号: 18645</p>
+                <p>规格: 2mx16mm</p>
+              </div>
+              <div class="jumpBtn yellowBtn">
+                <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
+                  alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="myPagination" id="pagination"></div>
+    </div>
   </div>
 
   <?php include_once VIEWPATH . 'inc/footer.php'; ?>

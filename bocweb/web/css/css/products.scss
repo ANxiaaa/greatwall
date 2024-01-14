@@ -1,0 +1,129 @@
+.products {
+  .productsTypeBox {
+    padding-top: calc(45px * var(--ratio));
+    background: $grayBackground;
+    .container {
+      display: flex;
+      justify-content: space-between;
+      .typeLeft {
+        width: calc(280px * var(--ratio));
+        margin-left: calc(-48px * var(--ratio));
+        .typeSearch {
+          height: calc(72px * var(--ratio));
+          background: $primaryColor;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 calc(20px * var(--ratio));
+          margin-bottom: calc(10px * var(--ratio));
+          input {
+            background: none;
+            border: none;
+            outline: none;
+            width: 0;
+            flex: 1;
+            color: $textColor3;
+            &::placeholder {
+              color: rgba($textColor3, 0.5);
+            }
+          }
+          .typeSearchBtn {
+            width: calc(40px * var(--ratio));
+            height: calc(40px * var(--ratio));
+            background: $yellowBackground url("../../web/img/search.webp")
+              no-repeat center center / calc(22px * var(--ratio))
+              calc(22px * var(--ratio));
+            border-radius: calc(4px * var(--ratio));
+            cursor: pointer;
+          }
+        }
+        .typeList {
+          width: 100%;
+          .typeItem {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: calc(1px * var(--ratio));
+            cursor: pointer;
+            background: $mainBackground;
+            border: calc(1px * var(--ratio)) solid $borderColor4;
+            margin-bottom: calc(1px * var(--ratio));
+            border-right: calc(4px * var(--ratio)) solid transparent;
+            .typeImgBox {
+              width: calc(48px * var(--ratio));
+              height: calc(48px * var(--ratio));
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background: rgba($primaryColor, 0.05);
+              border-radius: calc(2px * var(--ratio));
+              img {
+                max-width: calc(40px * var(--ratio));
+                max-height: calc(40px * var(--ratio));
+              }
+            }
+            span {
+              width: 0;
+              flex: 1;
+              margin-left: calc(25px * var(--ratio));
+              font-size: calc(22px * var(--ratio));
+            }
+            &:hover,
+            &.active {
+              border-right-color: $primaryColor;
+              .typeImgBox {
+                background: $primaryColor;
+              }
+            }
+          }
+        }
+      }
+      .typeRight {
+        width: 0;
+        flex: 1;
+        margin-left: calc(44px * var(--ratio));
+        .bread {
+          color: rgba($primaryColor, 0.5);
+          padding: calc(20px * var(--ratio)) 0;
+          font-size: calc(32px * var(--ratio));
+          .current {
+            font-weight: bold;
+            position: relative;
+            width: max-content;
+            color: $primaryColor;
+            &::after {
+              content: "";
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              height: calc(8px * var(--ratio));
+              background: $yellowBackground;
+            }
+            span {
+              position: relative;
+              z-index: 1;
+            }
+          }
+        }
+        .productList {
+          margin-right: calc(-176px * var(--ratio));
+          display: flex;
+          flex-wrap: wrap;
+          margin-bottom: calc(38px * var(--ratio));
+          .productItem {
+            margin-bottom: calc(32px * var(--ratio));
+            margin-right: calc(30px * var(--ratio));
+            &:nth-child(5n) {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+    .myPagination{
+        position: relative;
+        left: calc(150px * var(--ratio));
+    }
+  }
+}

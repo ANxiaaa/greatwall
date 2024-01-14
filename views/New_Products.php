@@ -120,6 +120,10 @@ document.oncontextmenu=stop;
         </div>
       </div>
     </div>
+
+    <div class="paginationBox">
+      <div class="myPagination" id="pagination"></div>
+    </div>
   </div>
 
   <?php include_once VIEWPATH . 'inc/footer.php'; ?>
@@ -148,7 +152,7 @@ document.oncontextmenu=stop;
       if (e.code == 'Enter') {
         console.log(e.target.value);
       }
-    } 
+    }
     $(function () {
       $('.itemImg').each((index, item) => {
         const itemImg = $(item)

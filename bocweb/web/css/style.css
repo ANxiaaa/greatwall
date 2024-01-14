@@ -318,6 +318,7 @@ body .myClassify .classifyItem:hover, body .myClassify .classifyItem.active {
   background-image: url("../../web/img/homeBannerRight.webp");
 }
 body .productItem {
+  background: #fff;
   position: relative;
   margin-right: calc(20px * var(--ratio));
   width: calc(268px * var(--ratio));
@@ -2436,6 +2437,135 @@ footer .footerBtm .container a:last-child {
   width: calc(var(--width) * var(--ratio));
   height: calc(var(--height) * var(--ratio));
   display: block;
+}
+.newProducts .paginationBox {
+  margin-top: 80px;
+  margin-bottom: 70px;
+}
+
+.products .productsTypeBox {
+  padding-top: calc(45px * var(--ratio));
+  background: #f5f5f5;
+}
+.products .productsTypeBox .container {
+  display: flex;
+  justify-content: space-between;
+}
+.products .productsTypeBox .container .typeLeft {
+  width: calc(280px * var(--ratio));
+  margin-left: calc(-48px * var(--ratio));
+}
+.products .productsTypeBox .container .typeLeft .typeSearch {
+  height: calc(72px * var(--ratio));
+  background: #071d49;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 calc(20px * var(--ratio));
+  margin-bottom: calc(10px * var(--ratio));
+}
+.products .productsTypeBox .container .typeLeft .typeSearch input {
+  background: none;
+  border: none;
+  outline: none;
+  width: 0;
+  flex: 1;
+  color: #fff;
+}
+.products .productsTypeBox .container .typeLeft .typeSearch input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+.products .productsTypeBox .container .typeLeft .typeSearch .typeSearchBtn {
+  width: calc(40px * var(--ratio));
+  height: calc(40px * var(--ratio));
+  background: #ffd100 url("../../web/img/search.webp") no-repeat center center/calc(22px * var(--ratio)) calc(22px * var(--ratio));
+  border-radius: calc(4px * var(--ratio));
+  cursor: pointer;
+}
+.products .productsTypeBox .container .typeLeft .typeList {
+  width: 100%;
+}
+.products .productsTypeBox .container .typeLeft .typeList .typeItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: calc(1px * var(--ratio));
+  cursor: pointer;
+  background: #fff;
+  border: calc(1px * var(--ratio)) solid #fff;
+  margin-bottom: calc(1px * var(--ratio));
+  border-right: calc(4px * var(--ratio)) solid transparent;
+}
+.products .productsTypeBox .container .typeLeft .typeList .typeItem .typeImgBox {
+  width: calc(48px * var(--ratio));
+  height: calc(48px * var(--ratio));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(7, 29, 73, 0.05);
+  border-radius: calc(2px * var(--ratio));
+}
+.products .productsTypeBox .container .typeLeft .typeList .typeItem .typeImgBox img {
+  max-width: calc(40px * var(--ratio));
+  max-height: calc(40px * var(--ratio));
+}
+.products .productsTypeBox .container .typeLeft .typeList .typeItem span {
+  width: 0;
+  flex: 1;
+  margin-left: calc(25px * var(--ratio));
+  font-size: calc(22px * var(--ratio));
+}
+.products .productsTypeBox .container .typeLeft .typeList .typeItem:hover, .products .productsTypeBox .container .typeLeft .typeList .typeItem.active {
+  border-right-color: #071d49;
+}
+.products .productsTypeBox .container .typeLeft .typeList .typeItem:hover .typeImgBox, .products .productsTypeBox .container .typeLeft .typeList .typeItem.active .typeImgBox {
+  background: #071d49;
+}
+.products .productsTypeBox .container .typeRight {
+  width: 0;
+  flex: 1;
+  margin-left: calc(44px * var(--ratio));
+}
+.products .productsTypeBox .container .typeRight .bread {
+  color: rgba(7, 29, 73, 0.5);
+  padding: calc(20px * var(--ratio)) 0;
+  font-size: calc(32px * var(--ratio));
+}
+.products .productsTypeBox .container .typeRight .bread .current {
+  font-weight: bold;
+  position: relative;
+  width: max-content;
+  color: #071d49;
+}
+.products .productsTypeBox .container .typeRight .bread .current::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: calc(8px * var(--ratio));
+  background: #ffd100;
+}
+.products .productsTypeBox .container .typeRight .bread .current span {
+  position: relative;
+  z-index: 1;
+}
+.products .productsTypeBox .container .typeRight .productList {
+  margin-right: calc(-176px * var(--ratio));
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: calc(38px * var(--ratio));
+}
+.products .productsTypeBox .container .typeRight .productList .productItem {
+  margin-bottom: calc(32px * var(--ratio));
+  margin-right: calc(30px * var(--ratio));
+}
+.products .productsTypeBox .container .typeRight .productList .productItem:nth-child(5n) {
+  margin-right: 0;
+}
+.products .productsTypeBox .myPagination {
+  position: relative;
+  left: calc(150px * var(--ratio));
 }
 
 /*# sourceMappingURL=style.css.map */
