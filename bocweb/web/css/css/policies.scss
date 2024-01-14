@@ -1,0 +1,59 @@
+.policies {
+  .policiesWrap {
+    padding-top: calc(100px * var(--ratio));
+    background: url("../../web/img/liuyanBg.webp") 100%;
+    color: $primaryColor;
+    padding-bottom: calc(164px * var(--ratio));
+    .container {
+      width: 1440px;
+      .topBorder {
+        display: flex;
+        justify-content: space-between;
+        height: 2px;
+        &::before {
+          content: "";
+          width: 940px;
+          background: $primaryColor;
+        }
+        &::after {
+          content: "";
+          width: 500px;
+          background: $yellowBackground;
+        }
+      }
+      .policieContent {
+        background: $mainBackground;
+        padding-top: 60px;
+        padding-left: 40px;
+        .policieItem {
+          padding-bottom: 86px;
+          padding-right: 135px;
+          .policieTitle {
+            display: flex;
+            margin-bottom: 24px;
+            .policieNum {
+              height: 40px;
+              background: rgba($primaryColor, 0.1);
+              border: 2px solid $primaryColor;
+              padding: 0 10px;
+              width: max-content;
+              line-height: 36px;
+              font-size: 16px;
+              margin-right: 18px;
+            }
+            span {
+              font-size: 22px;
+              font-weight: bold;
+              line-height: 40px;
+            }
+          }
+          .policieMsg {
+            padding-left: 60px;
+            font-size: 18px;
+            line-height: 36px;
+          }
+        }
+      }
+    }
+  }
+}

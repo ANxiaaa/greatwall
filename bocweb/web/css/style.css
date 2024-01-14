@@ -3096,4 +3096,62 @@ footer .footerBtm .container a:last-child {
   box-shadow: 0 calc(10px * var(--ratio)) calc(10px * var(--ratio)) 0 rgba(18, 40, 82, 0.1);
 }
 
+.policies .policiesWrap {
+  padding-top: calc(100px * var(--ratio));
+  background: url("../../web/img/liuyanBg.webp") 100%;
+  color: #071d49;
+  padding-bottom: calc(164px * var(--ratio));
+}
+.policies .policiesWrap .container {
+  width: 1440px;
+}
+.policies .policiesWrap .container .topBorder {
+  display: flex;
+  justify-content: space-between;
+  height: 2px;
+}
+.policies .policiesWrap .container .topBorder::before {
+  content: "";
+  width: 940px;
+  background: #071d49;
+}
+.policies .policiesWrap .container .topBorder::after {
+  content: "";
+  width: 500px;
+  background: #ffd100;
+}
+.policies .policiesWrap .container .policieContent {
+  background: #fff;
+  padding-top: 60px;
+  padding-left: 40px;
+}
+.policies .policiesWrap .container .policieContent .policieItem {
+  padding-bottom: 86px;
+  padding-right: 135px;
+}
+.policies .policiesWrap .container .policieContent .policieItem .policieTitle {
+  display: flex;
+  margin-bottom: 24px;
+}
+.policies .policiesWrap .container .policieContent .policieItem .policieTitle .policieNum {
+  height: 40px;
+  background: rgba(7, 29, 73, 0.1);
+  border: 2px solid #071d49;
+  padding: 0 10px;
+  width: max-content;
+  line-height: 36px;
+  font-size: 16px;
+  margin-right: 18px;
+}
+.policies .policiesWrap .container .policieContent .policieItem .policieTitle span {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 40px;
+}
+.policies .policiesWrap .container .policieContent .policieItem .policieMsg {
+  padding-left: 60px;
+  font-size: 18px;
+  line-height: 36px;
+}
+
 /*# sourceMappingURL=style.css.map */
