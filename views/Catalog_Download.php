@@ -47,7 +47,42 @@ document.oncontextmenu=stop;
         </div>
         <div class="myTabContent">
           <div class="myTabWrap show">
-            111
+            <div class="downloadItem">
+              <div class="itemLeft">
+                <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
+              </div>
+              <div class="itemRight">
+                <p>个人防护产品手册</p>
+                <div class="itemBtnBox">
+                  <div class="itemBtn">在线预览</div>
+                  <div class="itemBtn down">点击下载</div>
+                </div>
+              </div>
+            </div>
+            <div class="downloadItem">
+              <div class="itemLeft">
+                <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
+              </div>
+              <div class="itemRight">
+                <p>个人防护产品手册</p>
+                <div class="itemBtnBox">
+                  <div class="itemBtn">在线预览</div>
+                  <div class="itemBtn down">点击下载</div>
+                </div>
+              </div>
+            </div>
+            <div class="downloadItem">
+              <div class="itemLeft">
+                <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
+              </div>
+              <div class="itemRight">
+                <p>个人防护产品手册</p>
+                <div class="itemBtnBox">
+                  <div class="itemBtn">在线预览</div>
+                  <div class="itemBtn down">点击下载</div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="myTabWrap">222</div>
         </div>

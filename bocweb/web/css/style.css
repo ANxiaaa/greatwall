@@ -2703,85 +2703,64 @@ footer .footerBtm .container a:last-child {
 }
 .catalogDownload .main-content .container .myTabContent {
   margin-bottom: calc(88px * var(--ratio));
+  margin-top: 56px;
 }
-.catalogDownload .main-content .container .newsItem {
-  padding: calc(36px * var(--ratio)) calc(42px * var(--ratio));
-  width: 100%;
-  background: rgba(255, 255, 255, 0);
+.catalogDownload .main-content .container .myTabContent .myTabWrap.show {
+  display: block;
+}
+.catalogDownload .main-content .container .downloadItem {
   display: flex;
   justify-content: space-between;
-  transition: all 0.3s;
-  border: calc(1px * var(--ratio)) solid transparent;
-  border-bottom-color: rgba(18, 40, 82, 0.1);
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(18, 40, 82, 0.1);
+  margin-bottom: 30px;
+  color: #071d49;
 }
-.catalogDownload .main-content .container .newsItem:hover {
-  background: white;
-  border-color: #e3e5e6;
-  box-shadow: 0 0 calc(20px * var(--ratio)) 0 rgba(18, 40, 82, 0.2);
+.catalogDownload .main-content .container .downloadItem .itemLeft {
+  width: 254px;
+  height: 344px;
+  margin-right: 50px;
 }
-.catalogDownload .main-content .container .newsItem .imgBox {
-  margin-right: calc(58px * var(--ratio));
-  width: calc(334px * var(--ratio));
-  height: calc(227px * var(--ratio));
-  overflow: hidden;
+.catalogDownload .main-content .container .downloadItem .itemLeft img {
+  width: 254px;
+  height: 344px;
+  display: block;
 }
-.catalogDownload .main-content .container .newsItem .imgBox img {
-  transition: transform 0.3s;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.catalogDownload .main-content .container .newsItem .imgBox img:hover {
-  transform: scale(1.2);
-}
-.catalogDownload .main-content .container .newsItem .newsRight {
+.catalogDownload .main-content .container .downloadItem .itemRight {
   width: 0;
   flex: 1;
 }
-.catalogDownload .main-content .container .newsItem .newsRight .newsTitle {
-  font-size: calc(26px * var(--ratio));
+.catalogDownload .main-content .container .downloadItem .itemRight p {
+  margin-top: 26px;
+  font-size: 32px;
   font-weight: bold;
-  color: #071d49;
-  margin: calc(24px * var(--ratio)) 0;
-  width: 100%;
-  white-space: pre;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
-.catalogDownload .main-content .container .newsItem .newsRight .newsContent {
-  font-size: calc(18px * var(--ratio));
-  color: rgba(7, 29, 73, 0.5);
-  line-height: calc(28px * var(--ratio));
-}
-.catalogDownload .main-content .container .newsItem .newsRight .newsDate {
+.catalogDownload .main-content .container .downloadItem .itemRight .itemBtnBox {
   display: flex;
-  align-items: center;
-  margin-top: calc(27px * var(--ratio));
-  cursor: default;
+  margin-top: 50px;
+}
+.catalogDownload .main-content .container .downloadItem .itemRight .itemBtnBox .itemBtn {
   user-select: none;
-}
-.catalogDownload .main-content .container .newsItem .newsRight .newsDate .rili {
-  width: calc(22px * var(--ratio));
-  margin-right: calc(15px * var(--ratio));
-}
-.catalogDownload .main-content .container .newsItem .newsRight .newsDate .date {
-  color: #c7c7c7;
-  font-size: calc(18px * var(--ratio));
-}
-.catalogDownload .main-content .container .newsItem .newsRight .newsDate .line {
-  opacity: 0.2;
-  margin: 0 calc(24px * var(--ratio));
-}
-.catalogDownload .main-content .container .newsItem .newsRight .newsDate .more {
-  color: #071d49;
-  font-size: calc(18px * var(--ratio));
+  width: 160px;
+  height: 52px;
+  line-height: 50px;
+  border: 1px solid rgba(18, 40, 82, 0.1);
+  border-radius: 2px;
   cursor: pointer;
+  padding-left: 26px;
+  margin-right: 15px;
+  transition: all 0.3s;
+  font-weight: bold;
+  font-size: 18px;
+  background: url("../../web/img/yulan.webp") no-repeat right 15px center;
+  background-size: 13px;
 }
-.catalogDownload .main-content .container .newsItem .newsRight .newsDate .rightIcon {
-  width: calc(7px * var(--ratio));
-  margin-left: calc(13px * var(--ratio));
-  margin-top: calc(2px * var(--ratio));
-  cursor: pointer;
+.catalogDownload .main-content .container .downloadItem .itemRight .itemBtnBox .itemBtn.down {
+  background-image: url("../../web/img/download.webp");
+}
+.catalogDownload .main-content .container .downloadItem .itemRight .itemBtnBox .itemBtn:hover {
+  background-color: #ffd100;
+  border-color: transparent;
 }
 
 /*# sourceMappingURL=style.css.map */
