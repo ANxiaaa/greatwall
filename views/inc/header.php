@@ -96,11 +96,10 @@
             <a href="<?php echo site_url('New_Products') ?>" class="navName">产品中心</a>
           </div>
           <div class="navItem">
-            <!-- <span class="navName">关于我们</span> -->
             <a href="<?php echo site_url('About_US') ?>" class="navName">关于我们</a>
           </div>
           <div class="navItem">
-            <span class="navName">品牌形象</span>
+            <a href="<?php echo site_url('Contact_Us') ?>" class="navName">品牌形象</a>
           </div>
         </div>
         <img class="search" draggable="false" src="<?php echo static_file('web/img/search.webp') ?>" alt="">

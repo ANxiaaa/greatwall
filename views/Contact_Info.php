@@ -13,7 +13,7 @@ document.oncontextmenu=stop;
 <body>
   <?php include_once VIEWPATH . 'inc/header.php'; ?>
 
-  <div class="contactUs">
+  <div class="contactInfo">
     <div class="swiper-container" id="aboutUsBanner">
       <div class="swiper-wrapper" id="aboutUsBanner-wrapper"></div>
     </div>
@@ -35,6 +35,64 @@ document.oncontextmenu=stop;
       </div>
     </div>
 
+    <div class="infoWrap">
+      <div class="container">
+        <div class="indoItem">
+          <div class="infoLeft">
+            <img class="img" draggable="false" src="<?php echo static_file('web/img/info1.webp') ?>" alt="">
+            <img class="activeImg" draggable="false" src="<?php echo static_file('web/img/info1Active.webp') ?>" alt="">
+          </div>
+          <div class="infoRight">
+            <div class="innfoName">
+              <span>公司地址</span>
+            </div>
+            <div class="infoMsg">浙江省余姚市阳明科技工业园区 江丰路1号</div>
+          </div>
+          <img class="msgBg" draggable="false" src="<?php echo static_file('web/img/msgBg.webp') ?>" alt="">
+        </div>
+        <div class="indoItem">
+          <div class="infoLeft">
+            <img class="img" draggable="false" src="<?php echo static_file('web/img/info2.webp') ?>" alt="">
+            <img class="activeImg" draggable="false" src="<?php echo static_file('web/img/info2Active.webp') ?>" alt="">
+          </div>
+          <div class="infoRight">
+            <div class="innfoName">
+              <span>免费热线</span>
+            </div>
+            <div class="infoMsg">400-888-8200</div>
+          </div>
+          <img class="msgBg" draggable="false" src="<?php echo static_file('web/img/msgBg.webp') ?>" alt="">
+        </div>
+        <div class="indoItem">
+          <div class="infoLeft">
+            <img class="img" draggable="false" src="<?php echo static_file('web/img/info3.webp') ?>" alt="">
+            <img class="activeImg" draggable="false" src="<?php echo static_file('web/img/info3Active.webp') ?>" alt="">
+          </div>
+          <div class="infoRight">
+            <div class="innfoName">
+              <span>国内销售</span>
+            </div>
+            <div class="infoMsg">86-574-62880811</div>
+            <div class="infoMsg">ccjg@gwpstools.com</div>
+          </div>
+          <img class="msgBg" draggable="false" src="<?php echo static_file('web/img/msgBg.webp') ?>" alt="">
+        </div>
+        <div class="indoItem">
+          <div class="infoLeft">
+            <img class="img" draggable="false" src="<?php echo static_file('web/img/info1.webp') ?>" alt="">
+            <img class="activeImg" draggable="false" src="<?php echo static_file('web/img/info1Active.webp') ?>" alt="">
+          </div>
+          <div class="infoRight">
+            <div class="innfoName">
+              <span>出口销售</span>
+            </div>
+            <div class="infoMsg">86-574-62880818</div>
+            <div class="infoMsg">sales@gwpstools.com</div>
+          </div>
+          <img class="msgBg" draggable="false" src="<?php echo static_file('web/img/msgBg.webp') ?>" alt="">
+        </div>
+      </div>
+    </div>
   </div>
 
   <?php include_once VIEWPATH . 'inc/footer.php'; ?>

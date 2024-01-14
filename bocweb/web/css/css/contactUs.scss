@@ -1,28 +1,28 @@
 .contactUs {
   .formWrap {
-    padding-top: 100px;
+    padding-top: calc(100px * var(--ratio));
     background: url("../../web/img/liuyanBg.webp") 100%;
     .container {
-      width: 1440px;
+      width: calc(1440px * var(--ratio));
       color: $textColor6;
-      padding-bottom: 88px;
+      padding-bottom: calc(88px * var(--ratio));
       .formTop {
-        height: 66px;
+        height: calc(66px * var(--ratio));
         display: flex;
         justify-content: space-between;
-        line-height: 66px;
+        line-height: calc(66px * var(--ratio));
         .topLeft {
-          width: 345px;
+          width: calc(345px * var(--ratio));
           background: $yellowBackground;
-          padding-left: 46px;
-          font-size: 22px;
+          padding-left: calc(46px * var(--ratio));
+          font-size: calc(22px * var(--ratio));
         }
         .topRight {
           flex: 1;
-          font-size: 18px;
+          font-size: calc(18px * var(--ratio));
           background: $primaryColor;
           color: $textColor3;
-          padding-left: 68px;
+          padding-left: calc(68px * var(--ratio));
           display: flex;
           align-items: center;
           user-select: none;
@@ -30,16 +30,16 @@
             display: flex;
             align-items: center;
             cursor: pointer;
-            margin-right: 95px;
+            margin-right: calc(95px * var(--ratio));
             .checkBox {
-              width: 18px;
-              height: 18px;
-              border: 1px solid rgba($textColor3, 0.5);
+              width: calc(18px * var(--ratio));
+              height: calc(18px * var(--ratio));
+              border: calc(1px * var(--ratio)) solid rgba($textColor3, 0.5);
               position: relative;
-              margin-right: 16px;
+              margin-right: calc(16px * var(--ratio));
               i {
                 display: none;
-                font-size: 16px;
+                font-size: calc(16px * var(--ratio));
                 line-height: 1;
                 position: absolute;
                 top: 0;
@@ -61,34 +61,35 @@
       }
       .formBox {
         background: $mainBackground;
-        padding: 40px 20px 0 30px;
+        padding: calc(40px * var(--ratio)) calc(20px * var(--ratio)) 0
+          calc(30px * var(--ratio));
         .yanzhengma {
           flex: 0;
-          line-height: 50px;
+          line-height: calc(50px * var(--ratio));
           .label {
-            height: 50px;
+            height: calc(50px * var(--ratio));
           }
           .inputBox {
-            height: 50px;
-            width: 440px;
+            height: calc(50px * var(--ratio));
+            width: calc(440px * var(--ratio));
             position: relative;
             input {
-              padding-left: 60px;
-              padding-right: 120px;
+              padding-left: calc(60px * var(--ratio));
+              padding-right: calc(120px * var(--ratio));
               height: 100%;
-              border-left: 1px solid rgba(#000, 0.1);
+              border-left: calc(1px * var(--ratio)) solid rgba(#000, 0.1);
             }
           }
           .anquanBox,
           .yzmBox {
             position: absolute;
-            width: 1px;
-            height: 19px;
+            width: calc(1px * var(--ratio));
+            height: calc(19px * var(--ratio));
             background: rgba(#000, 0.1);
             top: 0;
             bottom: 0;
             margin: auto;
-            left: 53px;
+            left: calc(53px * var(--ratio));
             img {
               top: 0;
               bottom: 0;
@@ -99,17 +100,17 @@
             img {
               position: absolute;
               display: none;
-              width: 19px;
-              right: 18px;
+              width: calc(19px * var(--ratio));
+              right: calc(18px * var(--ratio));
             }
           }
           .yzmBox {
-            left: 322px;
+            left: calc(322px * var(--ratio));
             img {
               position: absolute;
-              width: 85px;
-              height: 22px;
-              left: 18px;
+              width: calc(85px * var(--ratio));
+              height: calc(22px * var(--ratio));
+              left: calc(18px * var(--ratio));
             }
           }
         }

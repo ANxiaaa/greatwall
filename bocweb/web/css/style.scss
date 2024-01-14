@@ -188,33 +188,33 @@ body {
 
   .myForm {
     width: 100%;
-    padding-bottom: 20px;
+    padding-bottom: calc(20px * var(--ratio));
     color: $textColor6;
     .formRow {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 25px;
+      margin-bottom: calc(25px * var(--ratio));
       .formItem {
         flex: 1;
         display: flex;
         justify-content: space-between;
-        margin-right: 40px;
+        margin-right: calc(40px * var(--ratio));
         height: 100%;
         .label {
-          width: 128px;
-          font-size: 18px;
-          line-height: 52px;
+          width: calc(128px * var(--ratio));
+          font-size: calc(18px * var(--ratio));
+          line-height: calc(52px * var(--ratio));
         }
         .inputBox {
           width: 0;
           flex: 1;
           height: 100%;
-          border: 1px solid rgba(#000, 0.1);
-          font-size: 16px;
+          border: calc(1px * var(--ratio)) solid rgba(#000, 0.1);
+          font-size: calc(16px * var(--ratio));
           input,
           textarea {
-            padding: 10px;
-            padding-right: 25px;
+            padding: calc(10px * var(--ratio));
+            padding-right: calc(25px * var(--ratio));
             width: 100%;
             background: none;
             outline: none;
@@ -222,22 +222,22 @@ body {
             resize: none;
           }
           input {
-            height: 52px;
+            height: calc(52px * var(--ratio));
           }
           textarea {
-            height: 150px;
+            height: calc(150px * var(--ratio));
           }
         }
         .selectBox {
           position: relative;
           background: rgba($markBackground, 0.05);
-          height: 52px;
+          height: calc(52px * var(--ratio));
           .showValue {
-            padding: 10px;
-            padding-right: 25px;
+            padding: calc(10px * var(--ratio));
+            padding-right: calc(25px * var(--ratio));
             width: 100%;
             height: 100%;
-            line-height: 52px;
+            line-height: calc(52px * var(--ratio));
           }
           input {
             opacity: 0;
@@ -252,14 +252,14 @@ body {
             display: none;
             background-color: $mainBackground;
             width: 100%;
-            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
-            border: 1px solid $borderColor3;
-            border-radius: 4px;
+            box-shadow: 0 calc(1px * var(--ratio)) 0 rgba(0, 0, 0, 0.06);
+            border: calc(1px * var(--ratio)) solid $borderColor3;
+            border-radius: calc(4px * var(--ratio));
             z-index: 1;
             .selectOption {
-              height: 52px;
-              line-height: 52px;
-              padding-left: 10px;
+              height: calc(52px * var(--ratio));
+              line-height: calc(52px * var(--ratio));
+              padding-left: calc(10px * var(--ratio));
               cursor: pointer;
               &:hover {
                 background-color: rgba($markBackground, 0.05);
@@ -270,10 +270,10 @@ body {
       }
     }
     .formSubmit {
-      width: 140px;
-      height: 50px;
-      line-height: 50px;
-      font-size: 18px;
+      width: calc(140px * var(--ratio));
+      height: calc(50px * var(--ratio));
+      line-height: calc(50px * var(--ratio));
+      font-size: calc(18px * var(--ratio));
       background: $yellowBackground;
       color: $primaryColor;
       text-align: center;
@@ -455,8 +455,8 @@ body {
       }
     }
     .popupContent {
-      width: 500px;
-      height: 500px;
+      width: calc(500px * var(--ratio));
+      height: calc(500px * var(--ratio));
       position: absolute;
       top: 0;
       bottom: 0;
@@ -465,10 +465,11 @@ body {
       margin: auto;
       background: $mainBackground;
       .popupClose {
-        width: 48px;
-        height: 48px;
+        width: calc(48px * var(--ratio));
+        height: calc(48px * var(--ratio));
         background: $yellowBackground url("../../web/img/pupopClose.webp")
-          no-repeat center center / 14px 16px;
+          no-repeat center center / calc(14px * var(--ratio))
+          calc(16px * var(--ratio));
         position: absolute;
         right: 0;
         top: 0;
@@ -652,3 +653,4 @@ img {
 @import "css/indusrialClients.scss";
 @import "css/catalogDownload.scss";
 @import "css/contactUs.scss";
+@import "css/contactInfo.scss";
