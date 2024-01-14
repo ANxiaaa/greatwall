@@ -2940,6 +2940,45 @@ footer .footerBtm .container a:last-child {
 .contactUs .formWrap .container .formBox .yanzhengma .inputBox {
   height: 50px;
   width: 440px;
+  position: relative;
+}
+.contactUs .formWrap .container .formBox .yanzhengma .inputBox input {
+  padding-left: 60px;
+  padding-right: 120px;
+  height: 100%;
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+.contactUs .formWrap .container .formBox .yanzhengma .anquanBox,
+.contactUs .formWrap .container .formBox .yanzhengma .yzmBox {
+  position: absolute;
+  width: 1px;
+  height: 19px;
+  background: rgba(0, 0, 0, 0.1);
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 53px;
+}
+.contactUs .formWrap .container .formBox .yanzhengma .anquanBox img,
+.contactUs .formWrap .container .formBox .yanzhengma .yzmBox img {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.contactUs .formWrap .container .formBox .yanzhengma .anquanBox img {
+  position: absolute;
+  display: none;
+  width: 19px;
+  right: 18px;
+}
+.contactUs .formWrap .container .formBox .yanzhengma .yzmBox {
+  left: 322px;
+}
+.contactUs .formWrap .container .formBox .yanzhengma .yzmBox img {
+  position: absolute;
+  width: 85px;
+  height: 22px;
+  left: 18px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -65,12 +65,52 @@
         .yanzhengma {
           flex: 0;
           line-height: 50px;
-          .label{
+          .label {
             height: 50px;
           }
           .inputBox {
             height: 50px;
             width: 440px;
+            position: relative;
+            input {
+              padding-left: 60px;
+              padding-right: 120px;
+              height: 100%;
+              border-left: 1px solid rgba(#000, 0.1);
+            }
+          }
+          .anquanBox,
+          .yzmBox {
+            position: absolute;
+            width: 1px;
+            height: 19px;
+            background: rgba(#000, 0.1);
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 53px;
+            img {
+              top: 0;
+              bottom: 0;
+              margin: auto;
+            }
+          }
+          .anquanBox {
+            img {
+              position: absolute;
+              display: none;
+              width: 19px;
+              right: 18px;
+            }
+          }
+          .yzmBox {
+            left: 322px;
+            img {
+              position: absolute;
+              width: 85px;
+              height: 22px;
+              left: 18px;
+            }
           }
         }
       }

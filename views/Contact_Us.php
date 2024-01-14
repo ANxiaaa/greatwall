@@ -157,7 +157,13 @@ document.oncontextmenu=stop;
               <div class="formItem yanzhengma">
                 <div class="label">验证码：</div>
                 <div class="inputBox">
-                  <input required autocomplete="off" type="text" name="dwmc">
+                  <div class="anquanBox">
+                    <img draggable="false" src="<?php echo static_file('web/img/anquan.webp') ?>" alt="">
+                  </div>
+                  <input required autocomplete="off" type="text" name="dwmc" id="dwmc">
+                  <div class="yzmBox">
+                    <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
+                  </div>
                 </div>
               </div>
               <div class="formItem">
@@ -230,13 +236,16 @@ document.oncontextmenu=stop;
       })
       $('.myForm').on('submit', function (e) {
         const formData = new FormData(event.target);
-
         const formObject = {};
         formData.forEach((value, key) => {
           formObject[key] = value;
         });
-
         console.log('留言主题:', type, '\nformData:', formObject);
+      })
+      // ---
+
+      $('#dwmc').on('input', function ({ target: { value } }) {
+        $(this).prev().find('img').toggle()
       })
     })
   </script>
