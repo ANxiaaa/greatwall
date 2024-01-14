@@ -177,4 +177,31 @@
       display: flex;
     }
   }
+  .tableWrap {
+    background: $grayBackground;
+    padding: calc(102px * var(--ratio)) 0 calc(180px * var(--ratio));
+    .tableTitle {
+      margin: 0 auto calc(60px * var(--ratio));
+      font-size: calc(32px * var(--ratio));
+      font-weight: bold;
+      position: relative;
+      width: max-content;
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: calc(8px * var(--ratio));
+        background: $yellowBackground;
+      }
+      span {
+        position: relative;
+        z-index: 1;
+      }
+    }
+    // .myTable {
+    //   margin-bottom: 180px;
+    // }
+  }
 }

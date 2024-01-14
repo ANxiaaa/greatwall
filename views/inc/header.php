@@ -110,5 +110,47 @@
 </header>
 
 <script>
+  $.fn.useTable = function (options) {
+    const settings = $.extend({
+      columns: [],
+      data: [],
+      onClick: null
+    }, options);
 
+    const generateTable = () => {
+      const tableHTML = `
+        <table>
+          <thead>
+            <tr>
+              ${settings.columns.map(column => `
+                <th style="${typeof column.width == 'number' ? '--width: ' + column.width + 'px' : 'width: ' + column.width}; text-align: ${column.headerAlign || 'center'}">${column.label}</th>
+              `).join('')}
+            </tr>
+          </thead>
+          <tbody>
+            ${settings.data.map(row => `
+              <tr>
+                ${settings.columns.map(column => `
+                  <td class="table-cell" style="text-align: ${column.align || 'center'}" data-key="${column.key}">${row[column.key]}</td>
+                `).join('')}
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      `;
+
+      return tableHTML;
+    };
+
+    const $tableContainer = $(this);
+    $tableContainer.html(generateTable());
+
+    $tableContainer.find('.table-cell').on('click', function () {
+      const key = $(this).data('key');
+      const rowIndex = $(this).parent().index();
+      const rowData = settings.data[rowIndex];
+
+      settings.onClick?.(key, rowData);
+    });
+  };
 </script>

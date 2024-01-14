@@ -126,6 +126,41 @@ body {
     }
   }
 
+  .myTable {
+    width: 100%;
+    table {
+      width: 100%;
+      font-size: 18px;
+      border-spacing: 0;
+      thead {
+        background: $primaryColor;
+        color: $textColor3;
+        th {
+          border-right: 1px solid rgba($borderColor4, 0.5);
+          &:last-child {
+            border-right: none;
+          }
+        }
+      }
+      tbody {
+        background: $mainBackground;
+        color: $primaryColor;
+      }
+      tr {
+        height: 70px;
+      }
+      th {
+        width: calc(var(--width) * var(--ratio));
+      }
+      td {
+        border-right: 1px solid rgba($primaryColor, 0.1);
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+
   .partTitle {
     .topName {
       display: flex;

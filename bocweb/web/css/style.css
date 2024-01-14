@@ -93,6 +93,40 @@ body .myPagination .myPaginationBtn a.active {
   background: #071d49;
   color: #fff;
 }
+body .myTable {
+  width: 100%;
+}
+body .myTable table {
+  width: 100%;
+  font-size: 18px;
+  border-spacing: 0;
+}
+body .myTable table thead {
+  background: #071d49;
+  color: #fff;
+}
+body .myTable table thead th {
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+body .myTable table thead th:last-child {
+  border-right: none;
+}
+body .myTable table tbody {
+  background: #fff;
+  color: #071d49;
+}
+body .myTable table tr {
+  height: 70px;
+}
+body .myTable table th {
+  width: calc(var(--width) * var(--ratio));
+}
+body .myTable table td {
+  border-right: 1px solid rgba(7, 29, 73, 0.1);
+}
+body .myTable table td:last-child {
+  border-right: none;
+}
 body .partTitle .topName {
   display: flex;
   align-items: center;
@@ -2346,6 +2380,30 @@ footer .footerBtm .container a:last-child {
 }
 .productDetail .recommend .recommendList {
   display: flex;
+}
+.productDetail .tableWrap {
+  background: #f5f5f5;
+  padding: calc(102px * var(--ratio)) 0 calc(180px * var(--ratio));
+}
+.productDetail .tableWrap .tableTitle {
+  margin: 0 auto calc(60px * var(--ratio));
+  font-size: calc(32px * var(--ratio));
+  font-weight: bold;
+  position: relative;
+  width: max-content;
+}
+.productDetail .tableWrap .tableTitle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: calc(8px * var(--ratio));
+  background: #ffd100;
+}
+.productDetail .tableWrap .tableTitle span {
+  position: relative;
+  z-index: 1;
 }
 
 .newProducts .pageContent {
