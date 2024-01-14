@@ -130,13 +130,35 @@ body {
     width: 100%;
     table {
       width: 100%;
-      font-size: 18px;
+      font-size: calc(18px * var(--ratio));
       border-spacing: 0;
+      &.col {
+        tr:hover {
+          th {
+            border-left-color: $primaryColor;
+          }
+          th,
+          td {
+            background: rgba($primaryColor, 0.05);
+          }
+        }
+        th {
+          text-align: left;
+          padding-left: calc(40px * var(--ratio));
+          border-left: calc(4px * var(--ratio)) solid transparent;
+          border-right: calc(1px * var(--ratio)) solid rgba($primaryColor, 0.1);
+          width: calc(720px * var(--ratio));
+        }
+        td {
+          padding-left: calc(48px * var(--ratio));
+          width: calc(720px * var(--ratio));
+        }
+      }
       thead {
         background: $primaryColor;
         color: $textColor3;
         th {
-          border-right: 1px solid rgba($borderColor4, 0.5);
+          border-right: calc(1px * var(--ratio)) solid rgba($borderColor4, 0.5);
           &:last-child {
             border-right: none;
           }
@@ -147,13 +169,13 @@ body {
         color: $primaryColor;
       }
       tr {
-        height: 70px;
+        height: calc(70px * var(--ratio));
       }
       th {
         width: calc(var(--width) * var(--ratio));
       }
       td {
-        border-right: 1px solid rgba($primaryColor, 0.1);
+        border-right: calc(1px * var(--ratio)) solid rgba($primaryColor, 0.1);
         &:last-child {
           border-right: none;
         }

@@ -112,14 +112,16 @@
 <script>
   $.fn.useTable = function (options) {
     const settings = $.extend({
+      // row / col
+      type: 'row',
       columns: [],
       data: [],
       onClick: null
     }, options);
 
-    const generateTable = () => {
+    const generateRowTable = () => {
       const tableHTML = `
-        <table>
+        <table class="${settings.type}">
           <thead>
             <tr>
               ${settings.columns.map(column => `
@@ -142,15 +144,32 @@
       return tableHTML;
     };
 
+    const generateColTable = () => {
+      const tableHTML = `
+        <table class="${settings.type}">
+          <tbody>
+            ${settings.data.map(row => `
+              <tr>
+                <th>${row.label}</th>
+                <td class="table-cell" data-key="${row.key}">${row.value}</td>
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+    `;
+
+      return tableHTML;
+    };
+
     const $tableContainer = $(this);
-    $tableContainer.html(generateTable());
+    $tableContainer.html(settings.type == 'col' ? generateColTable() : generateRowTable());
 
     $tableContainer.find('.table-cell').on('click', function () {
       const key = $(this).data('key');
       const rowIndex = $(this).parent().index();
       const rowData = settings.data[rowIndex];
 
-      settings.onClick?.(key, rowData);
+      settings.onClick?.(key, rowData, rowIndex);
     });
   };
 </script>

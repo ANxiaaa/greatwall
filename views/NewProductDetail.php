@@ -175,8 +175,8 @@ document.oncontextmenu=stop;
       $(".myTable").useTable({
         columns,
         data,
-        onClick(key, rowData) {
-          console.log(`点击了字段 ${key}`, rowData);
+        onClick(key, rowData, rowIndex) {
+          console.log(`在第 ${rowIndex} 行点击了字段 ${key}`, rowData);
         }
       });
     })

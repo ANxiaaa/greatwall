@@ -97,132 +97,23 @@ document.oncontextmenu=stop;
                   alt="">
               </div>
             </div>
-            <div class="productItem">
-              <div class="productName">超级高挺尼龙包膜钢卷尺</div>
-              <div class="productImgBox">
-                <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
-              </div>
-              <div class="productSize">
-                <p>货号: 18645</p>
-                <p>规格: 2mx16mm</p>
-              </div>
-              <div class="jumpBtn yellowBtn">
-                <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
-                  alt="">
-              </div>
-            </div>
-            <div class="productItem">
-              <div class="productName">超级高挺尼龙包膜钢卷尺</div>
-              <div class="productImgBox">
-                <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
-              </div>
-              <div class="productSize">
-                <p>货号: 18645</p>
-                <p>规格: 2mx16mm</p>
-              </div>
-              <div class="jumpBtn yellowBtn">
-                <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
-                  alt="">
-              </div>
-            </div>
-            <div class="productItem">
-              <div class="productName">超级高挺尼龙包膜钢卷尺</div>
-              <div class="productImgBox">
-                <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
-              </div>
-              <div class="productSize">
-                <p>货号: 18645</p>
-                <p>规格: 2mx16mm</p>
-              </div>
-              <div class="jumpBtn yellowBtn">
-                <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
-                  alt="">
-              </div>
-            </div>
-            <div class="productItem">
-              <div class="productName">超级高挺尼龙包膜钢卷尺</div>
-              <div class="productImgBox">
-                <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
-              </div>
-              <div class="productSize">
-                <p>货号: 18645</p>
-                <p>规格: 2mx16mm</p>
-              </div>
-              <div class="jumpBtn yellowBtn">
-                <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
-                  alt="">
-              </div>
-            </div>
-            <div class="productItem">
-              <div class="productName">超级高挺尼龙包膜钢卷尺</div>
-              <div class="productImgBox">
-                <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
-              </div>
-              <div class="productSize">
-                <p>货号: 18645</p>
-                <p>规格: 2mx16mm</p>
-              </div>
-              <div class="jumpBtn yellowBtn">
-                <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
-                  alt="">
-              </div>
-            </div>
-            <div class="productItem">
-              <div class="productName">超级高挺尼龙包膜钢卷尺</div>
-              <div class="productImgBox">
-                <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
-              </div>
-              <div class="productSize">
-                <p>货号: 18645</p>
-                <p>规格: 2mx16mm</p>
-              </div>
-              <div class="jumpBtn yellowBtn">
-                <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
-                  alt="">
-              </div>
-            </div>
-            <div class="productItem">
-              <div class="productName">超级高挺尼龙包膜钢卷尺</div>
-              <div class="productImgBox">
-                <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
-              </div>
-              <div class="productSize">
-                <p>货号: 18645</p>
-                <p>规格: 2mx16mm</p>
-              </div>
-              <div class="jumpBtn yellowBtn">
-                <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
-                  alt="">
-              </div>
-            </div>
-            <div class="productItem">
-              <div class="productName">超级高挺尼龙包膜钢卷尺</div>
-              <div class="productImgBox">
-                <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
-              </div>
-              <div class="productSize">
-                <p>货号: 18645</p>
-                <p>规格: 2mx16mm</p>
-              </div>
-              <div class="jumpBtn yellowBtn">
-                <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
-                  alt="">
-              </div>
-            </div>
-            <div class="productItem">
-              <div class="productName">超级高挺尼龙包膜钢卷尺</div>
-              <div class="productImgBox">
-                <img draggable="false" src="<?php echo static_file('web/img/banner3.png') ?>" alt="">
-              </div>
-              <div class="productSize">
-                <p>货号: 18645</p>
-                <p>规格: 2mx16mm</p>
-              </div>
-              <div class="jumpBtn yellowBtn">
-                <img class="rightIcon" draggable="false" src="<?php echo static_file('web/img/rightIcon.webp') ?>"
-                  alt="">
-              </div>
-            </div>
+            <div class="productItem">1</div>
+            <div class="productItem">2</div>
+            <div class="productItem">3</div>
+            <div class="productItem">4</div>
+            <div class="productItem">5</div>
+            <div class="productItem">6</div>
+            <div class="productItem">7</div>
+            <div class="productItem">8</div>
+            <div class="productItem">9</div>
+            <div class="productItem">10</div>
+            <div class="productItem">11</div>
+            <div class="productItem">12</div>
+            <div class="productItem">13</div>
+            <div class="productItem">14</div>
+            <div class="productItem">15</div>
+            <div class="productItem">15</div>
+            <div class="productItem">15</div>
           </div>
         </div>
       </div>

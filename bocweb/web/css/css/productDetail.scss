@@ -200,6 +200,13 @@
         z-index: 1;
       }
     }
+    .chanpin {
+      th {
+        text-align: left;
+        padding-left: 40px;
+        border-left: 4px solid transparent;
+      }
+    }
     // .myTable {
     //   margin-bottom: 180px;
     // }

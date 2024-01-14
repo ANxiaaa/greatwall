@@ -71,6 +71,14 @@ document.oncontextmenu=stop;
         </div>
       </div>
     </div>
+    <div class="tableWrap">
+      <div class="container">
+        <div class="tableTitle">
+          <span>规格参数</span>
+        </div>
+        <div class="myTable"></div>
+      </div>
+    </div>
     <div class="recommend">
       <div class="container">
         <div class="recommendTitle">
@@ -149,6 +157,19 @@ document.oncontextmenu=stop;
         const img = $(this).find('img')[0];
         detailImg.attr({ src: img.src })
       })
+      // ---
+      const data = [
+        { label: '货号', value: 'aaa' },
+        { label: '齿数', value: 'bbb' },
+        { label: '啊啊', value: 'ccc' },
+      ];
+      $(".myTable").useTable({
+        type: 'col',  
+        data,
+        onClick(key, rowData, rowIndex) {
+          console.log(`在第 ${rowIndex} 行点击了字段 ${key}`, rowData);
+        }
+      });
     })
   </script>
 </body>

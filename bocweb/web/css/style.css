@@ -98,15 +98,33 @@ body .myTable {
 }
 body .myTable table {
   width: 100%;
-  font-size: 18px;
+  font-size: calc(18px * var(--ratio));
   border-spacing: 0;
+}
+body .myTable table.col tr:hover th {
+  border-left-color: #071d49;
+}
+body .myTable table.col tr:hover th,
+body .myTable table.col tr:hover td {
+  background: rgba(7, 29, 73, 0.05);
+}
+body .myTable table.col th {
+  text-align: left;
+  padding-left: calc(40px * var(--ratio));
+  border-left: calc(4px * var(--ratio)) solid transparent;
+  border-right: calc(1px * var(--ratio)) solid rgba(7, 29, 73, 0.1);
+  width: calc(720px * var(--ratio));
+}
+body .myTable table.col td {
+  padding-left: calc(48px * var(--ratio));
+  width: calc(720px * var(--ratio));
 }
 body .myTable table thead {
   background: #071d49;
   color: #fff;
 }
 body .myTable table thead th {
-  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: calc(1px * var(--ratio)) solid rgba(255, 255, 255, 0.5);
 }
 body .myTable table thead th:last-child {
   border-right: none;
@@ -116,13 +134,13 @@ body .myTable table tbody {
   color: #071d49;
 }
 body .myTable table tr {
-  height: 70px;
+  height: calc(70px * var(--ratio));
 }
 body .myTable table th {
   width: calc(var(--width) * var(--ratio));
 }
 body .myTable table td {
-  border-right: 1px solid rgba(7, 29, 73, 0.1);
+  border-right: calc(1px * var(--ratio)) solid rgba(7, 29, 73, 0.1);
 }
 body .myTable table td:last-child {
   border-right: none;
@@ -2404,6 +2422,11 @@ footer .footerBtm .container a:last-child {
 .productDetail .tableWrap .tableTitle span {
   position: relative;
   z-index: 1;
+}
+.productDetail .tableWrap .chanpin th {
+  text-align: left;
+  padding-left: 40px;
+  border-left: 4px solid transparent;
 }
 
 .newProducts .pageContent {
