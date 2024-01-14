@@ -13,7 +13,7 @@ document.oncontextmenu=stop;
 <body>
   <?php include_once VIEWPATH . 'inc/header.php'; ?>
 
-  <div class="contactUs">
+  <div class="socialMedia">
     <div class="swiper-container" id="aboutUsBanner">
       <div class="swiper-wrapper" id="aboutUsBanner-wrapper"></div>
     </div>
@@ -34,7 +34,22 @@ document.oncontextmenu=stop;
         </div>
       </div>
     </div>
-
+    <div class="socialWrap">
+      <div class="container">
+        <div class="qrItem">
+          <img class="activeImg" draggable="false" src="<?php echo static_file('web/img/banner2.png') ?>" alt="">
+          <p class="qrName">公众号</p>
+        </div>
+        <div class="qrItem">
+          <img class="activeImg" draggable="false" src="<?php echo static_file('web/img/banner2.png') ?>" alt="">
+          <p class="qrName">视频号</p>
+        </div>
+        <div class="qrItem">
+          <img class="activeImg" draggable="false" src="<?php echo static_file('web/img/banner2.png') ?>" alt="">
+          <p class="qrName">抖 音</p>
+        </div>
+      </div>
+    </div>
   </div>
 
   <?php include_once VIEWPATH . 'inc/footer.php'; ?>

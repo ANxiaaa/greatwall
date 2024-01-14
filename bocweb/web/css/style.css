@@ -3069,4 +3069,31 @@ footer .footerBtm .container a:last-child {
   display: block;
 }
 
+.socialMedia .socialWrap {
+  padding-top: calc(100px * var(--ratio));
+  background: url("../../web/img/liuyanBg.webp") 100%;
+  color: #071d49;
+  padding-bottom: calc(253px * var(--ratio));
+}
+.socialMedia .socialWrap .container {
+  width: 1038px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+}
+.socialMedia .socialWrap .container .qrItem {
+  width: 278px;
+  text-align: center;
+  font-weight: bold;
+}
+.socialMedia .socialWrap .container .qrItem img {
+  padding: 20px;
+  display: block;
+  background: #fff;
+  width: 278px;
+  height: 278px;
+  margin-bottom: 48px;
+  box-shadow: 0 calc(10px * var(--ratio)) calc(10px * var(--ratio)) 0 rgba(18, 40, 82, 0.1);
+}
+
 /*# sourceMappingURL=style.css.map */
