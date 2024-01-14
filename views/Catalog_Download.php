@@ -34,6 +34,27 @@ document.oncontextmenu=stop;
         </div>
       </div>
     </div>
+
+    <div class="main-content">
+      <div class="container">
+        <div class="myTab" id="newsTab">
+          <div class="myTabItem active" data-index="0">重点信息</div>
+          <div class="myTabItem" data-index="1">媒体报道</div>
+        </div>
+        <div class="mySearchInput">
+          <input id="searchInput" onkeypress="searchFn(event)" type="text" placeholder="请输入您感兴趣的内容！">
+          <div class="mySearchBtn" onclick="search()"></div>
+        </div>
+        <div class="myTabContent">
+          <div class="myTabWrap show">
+            111
+          </div>
+          <div class="myTabWrap">222</div>
+        </div>
+
+        <div class="myPagination" id="pagination"></div>
+      </div>
+    </div>
   </div>
 
   <?php include_once VIEWPATH . 'inc/footer.php'; ?>
@@ -78,6 +99,15 @@ document.oncontextmenu=stop;
           autoplay: 5000,
         });
       });
+      // ---
+      const newsTabs = $('#newsTab .myTabItem')
+      const newsContents = $('.myTabContent .myTabWrap')
+      newsTabs.on('click', function () {
+        newsTabs.removeClass('active')
+        newsContents.removeClass('show')
+        $(this).addClass('active')
+        newsContents.eq($(this).attr('data-index')).addClass('show')
+      })
     })
   </script>
 </body>
