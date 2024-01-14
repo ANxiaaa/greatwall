@@ -1,0 +1,44 @@
+.indusrialClients {
+  .pageContent {
+    background: $grayBackground;
+    padding: calc(45px * var(--ratio)) 0 calc(118px * var(--ratio));
+    color: $primaryColor;
+    .container {
+      display: flex;
+      .containerLeft {
+        width: calc(280px * var(--ratio));
+        margin-right: calc(35px * var(--ratio));
+      }
+      .containerRight {
+        width: 0;
+        flex: 1;
+        padding-bottom: 170px;
+        .indusrialItem {
+          border-top: 1px solid $primaryColor;
+          padding-bottom: 72px;
+          .indusrialTitle {
+            font-size: 32px;
+            width: max-content;
+            border-top: 6px solid $yellowBackground;
+            font-weight: bold;
+            padding: 16px 95px 24px 0;
+            line-height: 1;
+          }
+          .indusrialItemImgBox {
+            height: 480px;
+            overflow: hidden;
+            .indusrialItemImg {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: all 0.3s;
+              &:hover {
+                transform: scale(1.2);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

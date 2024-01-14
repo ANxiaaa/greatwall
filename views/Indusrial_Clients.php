@@ -34,6 +34,36 @@ document.oncontextmenu=stop;
         </div>
       </div>
     </div>
+
+    <div class="pageContent">
+      <div class="container">
+        <div class="containerLeft">
+          <div class="myClassify">
+            <div class="classifyTitle">
+              新品推荐
+            </div>
+            <div class="classifyItem active">2023年</div>
+            <div class="classifyItem">早期产品</div>
+          </div>
+        </div>
+        <div class="containerRight">
+          <div class="indusrialItem">
+            <p class="indusrialTitle">钢铁煤炭行业定制产品</p>
+            <div class="indusrialItemImgBox">
+              <img class="indusrialItemImg" draggable="false"
+                src="<?php echo static_file('web/img/banner4.png') ?>" alt="">
+            </div>
+          </div>
+          <div class="indusrialItem">
+            <p class="indusrialTitle">钢铁煤炭行业定制产品</p>
+            <div class="indusrialItemImgBox">
+              <img class="indusrialItemImg" draggable="false"
+                src="<?php echo static_file('web/img/banner4.png') ?>" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <?php include_once VIEWPATH . 'inc/footer.php'; ?>
