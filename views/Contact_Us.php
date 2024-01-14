@@ -35,6 +35,42 @@ document.oncontextmenu=stop;
       </div>
     </div>
 
+    <div class="formWrap">
+      <div class="container">
+        <div class="formTop">
+          <div class="topLeft">选择留言主题：</div>
+          <div class="topRight">
+            <div data-val="11" class="radioItem active">
+              <div class="checkBox">
+                <i>✓</i>
+              </div>
+              <span>咨询</span>
+            </div>
+            <div data-val="22" class="radioItem">
+              <div class="checkBox">
+                <i>✓</i>
+              </div>
+              <span>售后</span>
+            </div>
+            <div data-val="33" class="radioItem">
+              <div class="checkBox">
+                <i>✓</i>
+              </div>
+              <span>意见</span>
+            </div>
+            <div data-val="44" class="radioItem">
+              <div class="checkBox">
+                <i>✓</i>
+              </div>
+              <span>其他</span>
+            </div>
+          </div>
+        </div>
+        <div class="formBox">
+          
+        </div>
+      </div>
+    </div>
   </div>
 
   <?php include_once VIEWPATH . 'inc/footer.php'; ?>
@@ -79,6 +115,13 @@ document.oncontextmenu=stop;
           autoplay: 5000,
         });
       });
+      // ---
+      const radios = $('.topRight .radioItem')
+      let type = radios.eq(0).data('val')
+      radios.on('click', function () {
+        radios.removeClass('active')
+        type = $(this).addClass('active').data('val')
+      })
     })
   </script>
 </body>

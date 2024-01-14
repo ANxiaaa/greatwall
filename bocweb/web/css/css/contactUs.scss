@@ -1,0 +1,68 @@
+.contactUs {
+  .formWrap {
+    padding-top: 100px;
+    background: url("../../web/img/liuyanBg.webp") 100%;
+    .container {
+      width: 1440px;
+      color: $textColor6;
+      padding-bottom: 88px;
+      .formTop {
+        height: 66px;
+        display: flex;
+        justify-content: space-between;
+        line-height: 66px;
+        .topLeft {
+          width: 345px;
+          background: $yellowBackground;
+          padding-left: 46px;
+          font-size: 22px;
+        }
+        .topRight {
+          flex: 1;
+          font-size: 18px;
+          background: $primaryColor;
+          color: $textColor3;
+          padding-left: 68px;
+          display: flex;
+          align-items: center;
+          user-select: none;
+          .radioItem {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            margin-right: 95px;
+            .checkBox {
+              width: 18px;
+              height: 18px;
+              border: 1px solid rgba($textColor3, 0.5);
+              position: relative;
+              margin-right: 16px;
+              i {
+                display: none;
+                font-size: 16px;
+                line-height: 1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-weight: bold;
+              }
+            }
+            &.active {
+              .checkBox {
+                color: $yellotextColor;
+                border-color: currentColor;
+                i {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+      .formBox {
+        background: $mainBackground;
+        padding: 40px 60px 0 50px;
+      }
+    }
+  }
+}

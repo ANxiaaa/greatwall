@@ -8,7 +8,7 @@
       width: calc(1440px * var(--ratio));
       .myTabContent {
         margin-bottom: calc(88px * var(--ratio));
-        margin-top: 56px;
+        margin-top: calc(56px * var(--ratio));
         .myTabWrap.show {
           display: block;
         }
@@ -16,17 +16,17 @@
       .downloadItem {
         display: flex;
         justify-content: space-between;
-        padding-bottom: 20px;
-        border-bottom: 1px solid rgba($borderColor2, 0.1);
-        margin-bottom: 30px;
+        padding-bottom: calc(20px * var(--ratio));
+        border-bottom: calc(1px * var(--ratio)) solid rgba($borderColor2, 0.1);
+        margin-bottom: calc(30px * var(--ratio));
         color: $primaryColor;
         .itemLeft {
-          width: 254px;
-          height: 344px;
-          margin-right: 50px;
+          width: calc(254px * var(--ratio));
+          height: calc(344px * var(--ratio));
+          margin-right: calc(50px * var(--ratio));
           img {
-            width: 254px;
-            height: 344px;
+            width: calc(254px * var(--ratio));
+            height: calc(344px * var(--ratio));
             display: block;
           }
         }
@@ -34,29 +34,29 @@
           width: 0;
           flex: 1;
           p {
-            margin-top: 26px;
-            font-size: 32px;
+            margin-top: calc(26px * var(--ratio));
+            font-size: calc(32px * var(--ratio));
             font-weight: bold;
           }
           .itemBtnBox {
             display: flex;
-            margin-top: 50px;
+            margin-top: calc(50px * var(--ratio));
             .itemBtn {
               user-select: none;
-              width: 160px;
-              height: 52px;
-              line-height: 50px;
-              border: 1px solid rgba($borderColor2, 0.1);
-              border-radius: 2px;
+              width: calc(160px * var(--ratio));
+              height: calc(52px * var(--ratio));
+              line-height: calc(50px * var(--ratio));
+              border: calc(1px * var(--ratio)) solid rgba($borderColor2, 0.1);
+              border-radius: calc(2px * var(--ratio));
               cursor: pointer;
-              padding-left: 26px;
-              margin-right: 15px;
+              padding-left: calc(26px * var(--ratio));
+              margin-right: calc(15px * var(--ratio));
               transition: all 0.3s;
               font-weight: bold;
-              font-size: 18px;
-              background: url("../../web/img/yulan.webp") no-repeat right 15px
-                center;
-              background-size: 13px;
+              font-size: calc(18px * var(--ratio));
+              background: url("../../web/img/yulan.webp") no-repeat right
+                calc(15px * var(--ratio)) center;
+              background-size: calc(13px * var(--ratio));
               &.down {
                 background-image: url("../../web/img/download.webp");
               }
