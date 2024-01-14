@@ -153,7 +153,17 @@ document.oncontextmenu=stop;
                 </div>
               </div>
             </div>
-            <button>提交表单</button>
+            <div class="formRow">
+              <div class="formItem yanzhengma">
+                <div class="label">验证码：</div>
+                <div class="inputBox">
+                  <input required autocomplete="off" type="text" name="dwmc">
+                </div>
+              </div>
+              <div class="formItem">
+                <button class="formSubmit">提交表单</button>
+              </div>
+            </div>
           </form>
         </div>
       </div>
@@ -217,6 +227,16 @@ document.oncontextmenu=stop;
           <li class="selectOption" data-value="ddd">绍兴</li>
           <li class="selectOption" data-value="fff">哦哦</li>
         `)
+      })
+      $('.myForm').on('submit', function (e) {
+        const formData = new FormData(event.target);
+
+        const formObject = {};
+        formData.forEach((value, key) => {
+          formObject[key] = value;
+        });
+
+        console.log('留言主题:', type, '\nformData:', formObject);
       })
     })
   </script>

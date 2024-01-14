@@ -62,6 +62,17 @@
       .formBox {
         background: $mainBackground;
         padding: 40px 20px 0 30px;
+        .yanzhengma {
+          flex: 0;
+          line-height: 50px;
+          .label{
+            height: 50px;
+          }
+          .inputBox {
+            height: 50px;
+            width: 440px;
+          }
+        }
       }
     }
   }

@@ -234,6 +234,20 @@ body .myForm .formRow .formItem .selectBox .selectOptions .selectOption {
 body .myForm .formRow .formItem .selectBox .selectOptions .selectOption:hover {
   background-color: rgba(18, 40, 82, 0.05);
 }
+body .myForm .formSubmit {
+  width: 140px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  background: #ffd100;
+  color: #071d49;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  border: none;
+}
 body .partTitle .topName {
   display: flex;
   align-items: center;
@@ -2915,6 +2929,17 @@ footer .footerBtm .container a:last-child {
 .contactUs .formWrap .container .formBox {
   background: #fff;
   padding: 40px 20px 0 30px;
+}
+.contactUs .formWrap .container .formBox .yanzhengma {
+  flex: 0;
+  line-height: 50px;
+}
+.contactUs .formWrap .container .formBox .yanzhengma .label {
+  height: 50px;
+}
+.contactUs .formWrap .container .formBox .yanzhengma .inputBox {
+  height: 50px;
+  width: 440px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -269,6 +269,20 @@ body {
         }
       }
     }
+    .formSubmit {
+      width: 140px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 18px;
+      background: $yellowBackground;
+      color: $primaryColor;
+      text-align: center;
+      font-weight: bold;
+      cursor: pointer;
+      user-select: none;
+      outline: none;
+      border: none;
+    }
   }
 
   .partTitle {
