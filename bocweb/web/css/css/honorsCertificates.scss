@@ -19,7 +19,7 @@
 
         .bannerImg {
           width: 80%;
-          height: calc(270px * var(--ratio));
+          // height: calc(270px * var(--ratio));
           margin-bottom: calc(38px * var(--ratio));
           transition: all 0.3s;
           display: block;
@@ -71,7 +71,7 @@
           //   transform: scale(1.3);
           .bannerImg {
             width: 100%;
-            height: calc(400px * var(--ratio));
+            // height: calc(400px * var(--ratio));
           }
           .p1 {
             opacity: 1;
@@ -157,7 +157,7 @@
                 left: 0;
                 right: 0;
                 margin: auto;
-                background: #c00;
+                background: url("../../web/img/certificateHover.webp") center center / 100% 100%;
               }
               .certificateName {
                 height: calc(107px * var(--ratio));

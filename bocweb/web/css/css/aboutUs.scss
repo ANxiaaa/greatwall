@@ -157,6 +157,9 @@
         .courseName2 {
           font-weight: bold;
           font-size: calc(22px * var(--ratio));
+          span {
+            color: $yellotextColor;
+          }
         }
         .shuxian {
           width: calc(2px * var(--ratio));
