@@ -270,6 +270,9 @@ body .partTitle .topTitle {
   margin-top: calc(30px * var(--ratio));
   margin-bottom: calc(46px * var(--ratio));
 }
+body .partTitle .topTitle span {
+  color: #ffd100;
+}
 body .yellowBtn {
   background: #ffd100;
   display: flex;
@@ -279,6 +282,9 @@ body .yellowBtn {
   user-select: none;
   position: relative;
   z-index: 1;
+  font-size: calc(18px * var(--ratio));
+  color: #071d49;
+  text-decoration: none;
 }
 body .yellowBtn .rightIcon {
   margin-left: calc(18px * var(--ratio));
@@ -551,6 +557,9 @@ img {
   body {
     --ratio: 2;
   }
+  body .mb {
+    display: none;
+  }
 }
 @media screen and (max-width: 3000px) {
   body {
@@ -575,6 +584,16 @@ img {
 @media screen and (max-width: 1640px) {
   body {
     --ratio: 0.7;
+  }
+}
+@media screen and (max-width: 1300px) {
+  body {
+    --ratio: 0.5;
+  }
+}
+@media screen and (max-width: 960) {
+  body .mb {
+    display: block;
   }
 }
 header {
@@ -969,6 +988,9 @@ footer .footerBtm .container a:last-child {
   background: #fff;
   position: relative;
 }
+.home #searchBox .inputBox form {
+  height: 100%;
+}
 .home #searchBox .inputBox .search {
   width: calc(20px * var(--ratio));
   height: calc(21px * var(--ratio));
@@ -1161,9 +1183,6 @@ footer .footerBtm .container a:last-child {
   margin-top: calc(60px * var(--ratio));
   width: 100%;
   height: calc(685px * var(--ratio));
-}
-.home .recommendation .container .recommendation-right #recommendationSwiper .swiper-slide-active {
-  background: #c00 !important;
 }
 .home .recommendation .container .recommendation-right #recommendationSwiper .recommendationItem {
   background: #fff;

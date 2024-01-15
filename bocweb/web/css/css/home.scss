@@ -84,6 +84,9 @@
       height: calc(88px * var(--ratio));
       background: $inputBackground;
       position: relative;
+      form{
+        height: 100%;
+      }
       .search {
         width: calc(20px * var(--ratio));
         height: calc(21px * var(--ratio));
@@ -284,9 +287,6 @@
           margin-top: calc(60px * var(--ratio));
           width: 100%;
           height: calc(685px * var(--ratio));
-          .swiper-slide-active {
-            background: #c00 !important;
-          }
           .recommendationItem {
             background: $mainBackground;
             width: calc(570px * var(--ratio));
