@@ -33,6 +33,9 @@ ul,
 li {
   list-style: none;
 }
+a {
+  text-decoration: none;
+}
 body {
   --ratio: 1;
   background: $mainBackground;
@@ -103,12 +106,13 @@ body {
     }
   }
 
-  .myPagination {
+  .myPagination .pagination/*  */{
     width: max-content;
     display: flex;
     margin: auto;
-    .myPaginationBtn a {
+    a {
       color: $textColor2;
+      font-size: calc(16px * var(--ratio));
       width: calc(41px * var(--ratio));
       height: calc(41px * var(--ratio));
       border-radius: calc(4px * var(--ratio));
@@ -307,7 +311,7 @@ body {
       font-weight: bold;
       margin-top: calc(30px * var(--ratio));
       margin-bottom: calc(46px * var(--ratio));
-      span{
+      span {
         color: $yellotextColor;
         // white-space: pre;
       }
@@ -518,6 +522,9 @@ body {
       font-weight: bold;
     }
     .classifyItem {
+      font-size: calc(18px * var(--ratio));
+      display: block;
+      color: $primaryColor;
       padding-left: calc(28px * var(--ratio));
       padding-right: calc(35px * var(--ratio));
       height: calc(52px * var(--ratio));
@@ -617,7 +624,7 @@ img {
 @media screen and (max-width: 4080px) {
   body {
     --ratio: 2;
-    .mb{
+    .mb {
       display: none;
     }
   }
@@ -654,7 +661,7 @@ img {
 }
 @media screen and (max-width: 960) {
   body {
-    .mb{
+    .mb {
       display: block;
     }
   }

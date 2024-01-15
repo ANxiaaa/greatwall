@@ -17,6 +17,7 @@
           align-items: flex-end;
           margin-top: calc(20px * var(--ratio));
           margin-bottom: calc(26px * var(--ratio));
+          font-size: calc(18px * var(--ratio));
         }
         .classifyName {
           font-size: calc(32px * var(--ratio));
@@ -40,13 +41,14 @@
         }
         .dataItem {
           padding: calc(40px * var(--ratio)) calc(46px * var(--ratio));
-          height: calc(360px * var(--ratio));
+          // height: calc(360px * var(--ratio));
           margin-bottom: calc(20px * var(--ratio));
           background: $mainBackground;
           display: flex;
           justify-content: space-between;
           cursor: default;
           transition: all 0.3s;
+          color: $primaryColor;
           &:hover {
             box-shadow: 0 calc(10px * var(--ratio)) calc(20px * var(--ratio)) 0
               rgba($boxShadowColor, 0.1);
@@ -77,14 +79,15 @@
           }
           .itemRight {
             flex: 1;
+            width: 0;
             display: flex;
             justify-content: flex-end;
             align-items: center;
-            img {
-              cursor: pointer;
+            .itemImg {
               width: calc(var(--width) * var(--ratio));
               height: calc(var(--height) * var(--ratio));
               display: block;
+              max-height: 100%;
             }
           }
         }
