@@ -411,7 +411,6 @@
             .achievementItem {
               padding-left: calc(12px * var(--ratio));
               position: relative;
-              white-space: pre;
               width: 50%;
               &::before {
                 content: "";
