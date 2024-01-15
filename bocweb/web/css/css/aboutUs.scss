@@ -90,6 +90,7 @@
               line-height: 1;
               transform: translateY(calc(var(--num) * (-60px * var(--ratio))));
               transition: transform 0.3s;
+              font-weight: bold;
             }
           }
           .numUnit {

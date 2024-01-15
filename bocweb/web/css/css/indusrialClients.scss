@@ -12,24 +12,25 @@
       .containerRight {
         width: 0;
         flex: 1;
-        padding-bottom: 170px;
+        padding-bottom: calc(170px * var(--ratio));
         .indusrialItem {
-          border-top: 1px solid $primaryColor;
-          padding-bottom: 72px;
+          border-top: calc(1px * var(--ratio)) solid $primaryColor;
+          padding-bottom: calc(72px * var(--ratio));
           .indusrialTitle {
-            font-size: 32px;
+            font-size: calc(32px * var(--ratio));
             width: max-content;
-            border-top: 6px solid $yellowBackground;
+            border-top: calc(6px * var(--ratio)) solid $yellowBackground;
             font-weight: bold;
-            padding: 16px 95px 24px 0;
+            padding: calc(16px * var(--ratio)) calc(95px * var(--ratio))
+              calc(24px * var(--ratio)) 0;
             line-height: 1;
           }
           .indusrialItemImgBox {
-            height: 480px;
+            // height: calc(480px * var(--ratio));
             overflow: hidden;
             .indusrialItemImg {
               width: 100%;
-              height: 100%;
+              // height: 100%;
               object-fit: cover;
               transition: all 0.3s;
               &:hover {
